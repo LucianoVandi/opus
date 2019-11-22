@@ -166,6 +166,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Xinax\LaravelGettext\LaravelGettextServiceProvider::class,
 
         //
 
