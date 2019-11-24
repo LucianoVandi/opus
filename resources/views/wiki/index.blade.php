@@ -11,7 +11,7 @@
                             <ul class="list-unstyled list-inline pull-left">
                                 <li>
                                     @if(empty($isUserWatchWiki))
-                                        <a href="{{ route('wikis.watch', [$team->slug, $wiki->space->slug, $wiki->slug]) }}" style="padding: 5px 6px;"><i class="fa fa-eye icon"></i> Watch</a>
+                                        <a href="{{ route('wikis.watch', [$team->slug, $wiki->space->slug, $wiki->slug]) }}" style="padding: 5px 6px;"><i class="fa fa-eye icon"></i> {{_i('Watch')}}</a>
                                     @else
                                     	<a href="{{ route('wikis.unwatch', [$team->slug, $wiki->space->slug, $wiki->slug]) }}" style="padding: 5px 6px;"><i class="fa fa-eye icon"></i> Watching</a>
                                     @endif 
@@ -21,24 +21,24 @@
 								</li> --}}
                                 <li>
                                     @if(empty($isWikiInReadList)) 
-                                        <a href="{{ route('wikis.readlater.create', [$team->slug, $wiki->space->slug, $wiki->slug]) }}" style="padding: 5px 6px;"><i class="fa fa-check-square-o icon"></i> Read Later</a>
+                                        <a href="{{ route('wikis.readlater.create', [$team->slug, $wiki->space->slug, $wiki->slug]) }}" style="padding: 5px 6px;"><i class="fa fa-check-square-o icon"></i> {{_i('Read Later')}}</a>
                                     @else
-                                        <a href="{{ route('wikis.readlater.destroy', [$team->slug, $wiki->space->slug, $wiki->slug]) }}" data-method="delete" style="padding: 5px 6px;"><i class="fa fa-check-square-o icon"></i> Added in Read Later</a>
+                                        <a href="{{ route('wikis.readlater.destroy', [$team->slug, $wiki->space->slug, $wiki->slug]) }}" data-method="delete" style="padding: 5px 6px;"><i class="fa fa-check-square-o icon"></i> {{_i('Added in Read Later')}}</a>
                                     @endif
                                 </li>
                             </ul>
                             <ul class="list-unstyled list-inline pull-right">
                                 <li>
-                                    <a href="{{ route('wikis.word', [$team->slug, $wiki->space->slug, $wiki->slug]) }}" style="padding: 5px 6px;"><i class="fa fa-file-word-o icon"></i> Export to Word</a>
+                                    <a href="{{ route('wikis.word', [$team->slug, $wiki->space->slug, $wiki->slug]) }}" style="padding: 5px 6px;"><i class="fa fa-file-word-o icon"></i> {{_i('Export to Word')}}</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('wikis.pdf', [$team->slug, $wiki->space->slug, $wiki->slug]) }}" style="padding: 5px 6px;"><i class="fa fa-file-pdf-o icon"></i> Export to PDF</a>
+                                    <a href="{{ route('wikis.pdf', [$team->slug, $wiki->space->slug, $wiki->slug]) }}" style="padding: 5px 6px;"><i class="fa fa-file-pdf-o icon"></i> {{_i('Export to PDF')}}</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('wikis.edit', [$team->slug, $space->slug, $wiki->slug, ]) }}" style="padding: 5px 6px;"><i class="fa fa-pencil icon"></i> Edit</a>
+                                    <a href="{{ route('wikis.edit', [$team->slug, $space->slug, $wiki->slug, ]) }}" style="padding: 5px 6px;"><i class="fa fa-pencil icon"></i> {{_i('Edit')}}</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('wikis.destroy', [$team->slug, $wiki->space->slug, $wiki->slug]) }}" data-method="delete" data-confirm="Are you sure?" style="padding: 5px 6px;"><i class="fa fa-trash-o icon"></i> Delete</a>
+                                    <a href="{{ route('wikis.destroy', [$team->slug, $wiki->space->slug, $wiki->slug]) }}" data-method="delete" data-confirm="{{_i('Are you sure?')}}" style="padding: 5px 6px;"><i class="fa fa-trash-o icon"></i> {{_i('Delete')}}</a>
                                 </li>
                             </ul>
                             <div class="clearfix"></div>
@@ -71,7 +71,7 @@
                                     @endforeach
                                 </ul>
                             @else
-                                <h1 class="nothing-found" style="margin: 0px; line-height: 20px;"><i class="fa fa-exclamation-triangle fa-fw icon"></i> Nothing found</h1>
+                                <h1 class="nothing-found" style="margin: 0px; line-height: 20px;"><i class="fa fa-exclamation-triangle fa-fw icon"></i> {{_i('Nothing found')}}</h1>
                             @endif
                         </div>
                     </div>

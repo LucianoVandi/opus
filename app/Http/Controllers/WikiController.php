@@ -85,7 +85,7 @@ class WikiController extends Controller
 
         if ($spaces->count() == 0) {
             return redirect()->route('spaces.create', [$team->slug])->with([
-                'alert'      => 'You need to create space before creating wiki!',
+                'alert'      => _i('You need to create space before creating wiki!'),
                 'alert_type' => 'info',
             ]);
         }
@@ -110,7 +110,7 @@ class WikiController extends Controller
         }
 
         return redirect()->route('wikis.show', [$team->slug, $wiki->space->slug, $wiki->slug])->with([
-            'alert'      => 'Wiki successfully created.',
+            'alert'      => _i('Wiki successfully created.'),
             'alert_type' => 'success',
         ]);
     }
@@ -177,7 +177,7 @@ class WikiController extends Controller
         }
 
         return redirect()->route('wikis.show', [$team->slug, $wiki->space->slug, $wiki->slug])->with([
-            'alert'      => 'Wiki successfully updated.',
+            'alert'      => _i('Wiki successfully updated.'),
             'alert_type' => 'success',
         ]);
     }
@@ -205,7 +205,7 @@ class WikiController extends Controller
         }
 
         return redirect()->back()->with([
-            'alert'      => 'Wiki successfully updated.',
+            'alert'      => _i('Wiki successfully updated.'),
             'alert_type' => 'success',
         ]);
     }
@@ -223,7 +223,7 @@ class WikiController extends Controller
         $this->wiki->deleteWiki($wiki->id);
 
         return redirect()->route('dashboard', [$team->slug])->with([
-            'alert'      => 'Wiki successfully deleted.',
+            'alert'      => _i('Wiki successfully deleted.'),
             'alert_type' => 'success',
         ]);
     }
@@ -322,7 +322,7 @@ class WikiController extends Controller
         $this->watchWiki->watchWiki($wiki->id);
 
         return redirect()->back()->with([
-            'alert'      => 'You are now watching this wiki.',
+            'alert'      => _i('You are now watching this wiki.'),
             'alert_type' => 'success',
         ]);
     }
@@ -340,7 +340,7 @@ class WikiController extends Controller
         $this->watchWiki->unwatchWiki($wiki->id);
 
         return redirect()->back()->with([
-            'alert'      => 'You are now ignoring this wiki.',
+            'alert'      => _i('You are now ignoring this wiki.'),
             'alert_type' => 'success',
         ]);
     }
@@ -358,7 +358,7 @@ class WikiController extends Controller
         $this->readList->createSubject($wiki->id, Wiki::class);
 
         return redirect()->back()->with([
-            'alert'      => 'Wiki successfully added to read list.',
+            'alert'      => _i('Wiki successfully added to read list.'),
             'alert_type' => 'success',
         ]);
     }
@@ -376,7 +376,7 @@ class WikiController extends Controller
         $this->readList->deleteSubject($wiki->id, Wiki::class);
 
         return redirect()->back()->with([
-            'alert'      => 'Wiki successfully removed from read list.',
+            'alert'      => _i('Wiki successfully removed from read list.'),
             'alert_type' => 'success',
         ]);
     }

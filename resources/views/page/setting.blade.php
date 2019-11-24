@@ -16,7 +16,7 @@
 			                    	<div class="row">
 			                    		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 					                    	<div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
-					                    		<label for="name" class="control-label">Name</label>
+					                    		<label for="name" class="control-label">{{_i('Name')}}</label>
 					                    		<input type="text" name="name" class="form-control" id="name" value="{{ $page->name }}" required>
 					                    		@if($errors->has('name'))
 					                    		    <p class="help-block has-error">{{ $errors->first('name') }}</p>
@@ -27,7 +27,7 @@
 			                    			<div class="form-group {{ $errors->has('page_parent') ? 'has-error' : '' }}">
 			                    			    <label for="page-parent" class="control-label">Page Parent</label>
 			                    			    <select name="page_parent" id="page-parent" class="form-control">
-			                    			        <option value="">Select a option</option>
+			                    			        <option value="">{{_i('Select a option')}}</option>
 			                    			        @foreach($pages as $item)
 			                    			        	@if($page->id != $item->id)
 				                    			            <option value="{{ $item->id }}" @if($item->id === $page->parent_id) selected @endif>{{ $item->name }}</option>
@@ -41,7 +41,7 @@
 			                    		</div>
 			                    	</div>
 			                    	<div class="form-group">
-			                    		<label for="description">Description</label>
+			                    		<label for="description">{{_i('Description')}}</label>
 			                    		<input type="text" name="outline" class="form-control" id="description" value="{{ $page->outline }}">
 			                    	</div>
 			                    	<div class="form-group">
@@ -52,7 +52,7 @@
 			                    			@endforeach
 			                    		</select>
 			                    	</div>
-			                    	<button type="submit" class="btn btn-success"><i class="fa fa-save fa-fw" style="font-size: 14px;"></i> Update</button>
+			                    	<button type="submit" class="btn btn-success"><i class="fa fa-save fa-fw" style="font-size: 14px;"></i> {{_i('Update')}}</button>
 			                    </form>
 			                </div>
 						</div>
@@ -81,11 +81,11 @@
 					<div class="row no-container">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 							<div class="delete-team" style="border-bottom: 0px;">
-	                            <h2>Delete Page</h2>
+	                            <h2>{{_i('Delete Page')}}</h2>
 	                            <p class="text-muted action-info">
 	                                This page will be permanently deleted from this wiki and you can't restore it.
 	                            </p>
-	                            <a href="{{ route('pages.destroy', [$team->slug, $space->slug, $wiki->slug, $page->slug]) }}" class="btn btn-danger" data-method="delete" data-confirm="Are you sure?" style="padding: 5px 6px;"><i class="fa fa-trash fa-fw"></i> Yes I understand, delete this page</a>
+	                            <a href="{{ route('pages.destroy', [$team->slug, $space->slug, $wiki->slug, $page->slug]) }}" class="btn btn-danger" data-method="delete" data-confirm="{{_i('Are you sure?')}}" style="padding: 5px 6px;"><i class="fa fa-trash fa-fw"></i> Yes I understand, delete this page</a>
 	                        </div>
 						</div>
 					</div>

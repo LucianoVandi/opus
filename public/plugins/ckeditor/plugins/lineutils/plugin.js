@@ -271,7 +271,7 @@
 
 					found = this.doc.$.elementFromPoint( xStart, y );
 
-					// Nothing found. This is crazy... but...
+					// {{_i('Nothing found')}}. This is crazy... but...
 					// It might be that a line, which is in different document,
 					// covers that pixel (elementFromPoint is doc-sensitive).
 					// Better let's have another try.

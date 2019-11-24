@@ -1,19 +1,1020 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MultilanguageLaravelApplication\n"
-"POT-Creation-Date: 2019-11-22 19:46+0000\n"
-"PO-Revision-Date: 2019-11-22 19:46+0000\n"
+"POT-Creation-Date: 2019-11-24 15:21+0100\n"
+"PO-Revision-Date: 2019-11-24 15:23+0100\n"
 "Last-Translator: James Translator <james@translations.colm>\n"
 "Language-Team: James Translator <james@translations.colm>\n"
 "Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 2.2.4\n"
 "X-Poedit-KeywordsList: _;__;_i;_s;gettext;_n:1,2;ngettext:1,2;dgettext:2\n"
 "X-Poedit-Basepath: ../../../../../app\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: Http\n"
 "X-Poedit-SearchPath-1: ../resources/views\n"
 "X-Poedit-SearchPath-2: Console\n"
-"X-Poedit-SearchPath-3: ../storage/framework/messages/\n"
+"X-Poedit-SearchPath-3: ../storage/framework/messages\n"
+
+#: ../storage/framework/messages/0b69ae458e0cc4ecd7944bd1633b217ae050b872.php.php:65
+msgid "You created space"
+msgstr "Hai creato lo spazio"
+
+#: ../storage/framework/messages/0b69ae458e0cc4ecd7944bd1633b217ae050b872.php.php:69
+msgid "You deleted space"
+msgstr "Hai eliminato lo spazio"
+
+#: ../storage/framework/messages/0b69ae458e0cc4ecd7944bd1633b217ae050b872.php.php:73
+msgid "You updated space"
+msgstr "Hai aggiornato lo spazio"
+
+#: ../storage/framework/messages/0b69ae458e0cc4ecd7944bd1633b217ae050b872.php.php:77
+msgid "You created wiki"
+msgstr "Hai creato la wiki"
+
+#: ../storage/framework/messages/0b69ae458e0cc4ecd7944bd1633b217ae050b872.php.php:81
+msgid "You deleted wiki"
+msgstr "Hai eliminato la wiki"
+
+#: ../storage/framework/messages/0b69ae458e0cc4ecd7944bd1633b217ae050b872.php.php:85
+msgid "You updated wiki"
+msgstr "Hai aggiornato la wiki"
+
+#: ../storage/framework/messages/0b69ae458e0cc4ecd7944bd1633b217ae050b872.php.php:89
+msgid "You created page"
+msgstr "Hai creato la pagina"
+
+#: ../storage/framework/messages/0b69ae458e0cc4ecd7944bd1633b217ae050b872.php.php:89
+#: ../storage/framework/messages/0b69ae458e0cc4ecd7944bd1633b217ae050b872.php.php:93
+#: ../storage/framework/messages/0b69ae458e0cc4ecd7944bd1633b217ae050b872.php.php:97
+#: ../storage/framework/messages/0b69ae458e0cc4ecd7944bd1633b217ae050b872.php.php:104
+#: ../storage/framework/messages/0b69ae458e0cc4ecd7944bd1633b217ae050b872.php.php:112
+#: ../storage/framework/messages/0b69ae458e0cc4ecd7944bd1633b217ae050b872.php.php:120
+#: ../storage/framework/messages/35e3a589f07adaf72c94ee37a4bc5ebe699252cf.php.php:89
+#: ../storage/framework/messages/35e3a589f07adaf72c94ee37a4bc5ebe699252cf.php.php:93
+#: ../storage/framework/messages/35e3a589f07adaf72c94ee37a4bc5ebe699252cf.php.php:97
+#: ../storage/framework/messages/35e3a589f07adaf72c94ee37a4bc5ebe699252cf.php.php:104
+#: ../storage/framework/messages/35e3a589f07adaf72c94ee37a4bc5ebe699252cf.php.php:112
+#: ../storage/framework/messages/35e3a589f07adaf72c94ee37a4bc5ebe699252cf.php.php:120
+#: ../storage/framework/messages/c0b4b738f58d268e9af73c9433d98fbaba0dc8ed.php.php:89
+#: ../storage/framework/messages/c0b4b738f58d268e9af73c9433d98fbaba0dc8ed.php.php:93
+#: ../storage/framework/messages/c0b4b738f58d268e9af73c9433d98fbaba0dc8ed.php.php:97
+#: ../storage/framework/messages/c0b4b738f58d268e9af73c9433d98fbaba0dc8ed.php.php:104
+#: ../storage/framework/messages/c0b4b738f58d268e9af73c9433d98fbaba0dc8ed.php.php:112
+#: ../storage/framework/messages/c0b4b738f58d268e9af73c9433d98fbaba0dc8ed.php.php:120
+msgid "at wiki"
+msgstr "nella wiki"
+
+#: ../storage/framework/messages/0b69ae458e0cc4ecd7944bd1633b217ae050b872.php.php:93
+msgid "You deleted page"
+msgstr "Hai eliminato la pagina"
+
+#: ../storage/framework/messages/0b69ae458e0cc4ecd7944bd1633b217ae050b872.php.php:97
+msgid "You updated page"
+msgstr "Hai aggiornato la pagina"
+
+#: ../storage/framework/messages/0b69ae458e0cc4ecd7944bd1633b217ae050b872.php.php:102
+msgid "You commented on wiki"
+msgstr "Hai commentato la wiki"
+
+#: ../storage/framework/messages/0b69ae458e0cc4ecd7944bd1633b217ae050b872.php.php:104
+msgid "You commented on page"
+msgstr "Hai commentato la pagina"
+
+#: ../storage/framework/messages/0b69ae458e0cc4ecd7944bd1633b217ae050b872.php.php:110
+msgid "You deleted comment from wiki"
+msgstr "Hai eliminato un commento dalla wiki"
+
+#: ../storage/framework/messages/0b69ae458e0cc4ecd7944bd1633b217ae050b872.php.php:112
+msgid "You deleted comment from page"
+msgstr "Hai eliminato un commento dalla pagina"
+
+#: ../storage/framework/messages/0b69ae458e0cc4ecd7944bd1633b217ae050b872.php.php:118
+msgid "You updated comment on wiki"
+msgstr "Hai aggiornato un commento nella wiki"
+
+#: ../storage/framework/messages/0b69ae458e0cc4ecd7944bd1633b217ae050b872.php.php:120
+msgid "You updated comment on page"
+msgstr "Hai aggiornato un commento dalla pagina"
+
+#: ../storage/framework/messages/0b69ae458e0cc4ecd7944bd1633b217ae050b872.php.php:139
+#: ../storage/framework/messages/22c9807600e947f91ffc216db88894de7d98daf8.php.php:53
+#: ../storage/framework/messages/29f79280a21e9cbe604d6491575c29af3e03fd94.php.php:53
+#: ../storage/framework/messages/35e3a589f07adaf72c94ee37a4bc5ebe699252cf.php.php:139
+#: ../storage/framework/messages/3ce37e18c7e84b1fe69d091ca1a7eda7b4a573e1.php.php:67
+#: ../storage/framework/messages/4255ac59c0f4f1fa69e0c6b29554f6c03a425a80.php.php:35
+#: ../storage/framework/messages/4255ac59c0f4f1fa69e0c6b29554f6c03a425a80.php.php:63
+#: ../storage/framework/messages/6dd8bc6c2f1839c3cd3837defc2008532c1066f7.php.php:76
+#: ../storage/framework/messages/800732bc45ee8a9c0c90a8d146f9a848ca207f31.php.php:64
+#: ../storage/framework/messages/8482ff361dbdff9aa23cf47dae6c9c3942aa2bbb.php.php:66
+#: ../storage/framework/messages/9635778cfa1b3a01fe9ecaf5a2d654a9dc850d7f.php.php:56
+#: ../storage/framework/messages/96d568c48c247e3d65a1d1e2596924ea5110b5fe.php.php:74
+#: ../storage/framework/messages/9b01b17bdab3aa4d5e46a3891786c27700015990.php.php:78
+#: ../storage/framework/messages/b068d55011dcacaec75f82fabb823a3c9ccd5322.php.php:71
+#: ../storage/framework/messages/c0b4b738f58d268e9af73c9433d98fbaba0dc8ed.php.php:139
+msgid "Nothing found"
+msgstr "Nessun risultato"
+
+#: ../storage/framework/messages/0c5bf0af2f57078011f0ed176623ecb5f094ccbf.php.php:22
+#: ../storage/framework/messages/4255ac59c0f4f1fa69e0c6b29554f6c03a425a80.php.php:6
+#: ../storage/framework/messages/8482ff361dbdff9aa23cf47dae6c9c3942aa2bbb.php.php:8
+msgid "Activities"
+msgstr "Attività"
+
+#: ../storage/framework/messages/0d487b90a78504fe890ceb5c68ad57c0fcef9235.php.php:4
+#: ../storage/framework/messages/0e47fd26e7759f9e1151f65d77aca05e93cf6baa.php.php:4
+#: ../storage/framework/messages/10220461622939629332f9d6b60f9e34e5ced1c6.php.php:4
+#: ../storage/framework/messages/1ad403d0eb1010b98c20cc72304255cd6a62820a.php.php:4
+#: ../storage/framework/messages/3b564d4009fd8d689331ace4241c8d8b3dcbbbec.php.php:4
+#: ../storage/framework/messages/3de23bf948a34d11e2eaba8931019df460c96909.php.php:4
+#: ../storage/framework/messages/8482ff361dbdff9aa23cf47dae6c9c3942aa2bbb.php.php:32
+#: ../storage/framework/messages/986b12ff5d8fb01acd4d299fd498ae29f7b9cbfb.php.php:4
+#: ../storage/framework/messages/9b01b17bdab3aa4d5e46a3891786c27700015990.php.php:4
+#: ../storage/framework/messages/d1a70e6701536262ba36418cc9156863667c437b.php.php:4
+#: ../storage/framework/messages/e73ef2e8dd7478574be0f6c55a80c775cf7de589.php.php:4
+#: ../storage/framework/messages/fe86ad63b39a3c9aa5e29a5a9e2ac5218f036fd5.php.php:4
+msgid "Team Settings"
+msgstr "Configurazioni Team"
+
+#: ../storage/framework/messages/0d487b90a78504fe890ceb5c68ad57c0fcef9235.php.php:38
+#: ../storage/framework/messages/e73ef2e8dd7478574be0f6c55a80c775cf7de589.php.php:36
+msgid "Receive Notifications"
+msgstr "Ricevi Notifiche"
+
+#: ../storage/framework/messages/0d487b90a78504fe890ceb5c68ad57c0fcef9235.php.php:114
+#: ../storage/framework/messages/6123431f3dfbd7cc6f56a1ec69b8cde35ca916e7.php.php:20
+#: ../storage/framework/messages/8b522dd7d291a55963773530c162b84955b70a34.php.php:32
+#: ../storage/framework/messages/8ce195ff73c9634aa6dfd29933e909b2778f7853.php.php:46
+#: ../storage/framework/messages/8cf0a7400bab441708bd8d3e5b816c673ce3855e.php.php:47
+#: ../storage/framework/messages/b6efedaaf68f1ac140b441d708fbbd0a25520a81.php.php:53
+#: ../storage/framework/messages/d1a70e6701536262ba36418cc9156863667c437b.php.php:21
+#: ../storage/framework/messages/e73ef2e8dd7478574be0f6c55a80c775cf7de589.php.php:112
+msgid "Save"
+msgstr "Salva"
+
+#: ../storage/framework/messages/0d487b90a78504fe890ceb5c68ad57c0fcef9235.php.php:115
+#: ../storage/framework/messages/6123431f3dfbd7cc6f56a1ec69b8cde35ca916e7.php.php:21
+#: ../storage/framework/messages/8ce195ff73c9634aa6dfd29933e909b2778f7853.php.php:47
+#: ../storage/framework/messages/8cf0a7400bab441708bd8d3e5b816c673ce3855e.php.php:48
+#: ../storage/framework/messages/b6efedaaf68f1ac140b441d708fbbd0a25520a81.php.php:54
+#: ../storage/framework/messages/c690a2eefa1f324ccf08a516d7f65dba24e9699c.php.php:20
+#: ../storage/framework/messages/e73ef2e8dd7478574be0f6c55a80c775cf7de589.php.php:113
+msgid "Cancel"
+msgstr "Annulla"
+
+#: ../storage/framework/messages/0e1f31f770e3871431d7b811cc8cd09170413675.php.php:24
+msgid "updated a page"
+msgstr "ha aggiornato la pagina"
+
+#: ../storage/framework/messages/0e47fd26e7759f9e1151f65d77aca05e93cf6baa.php.php:24
+#: ../storage/framework/messages/3b564d4009fd8d689331ace4241c8d8b3dcbbbec.php.php:27
+msgid "Select Permissions"
+msgstr "Seleziona Permessi"
+
+#: ../storage/framework/messages/0e47fd26e7759f9e1151f65d77aca05e93cf6baa.php.php:29
+#: ../storage/framework/messages/3b564d4009fd8d689331ace4241c8d8b3dcbbbec.php.php:32
+#: ../storage/framework/messages/7d4d663140c5a8a9217b16fb31b2ba265142f54c.php.php:83
+#: ../storage/framework/messages/fe86ad63b39a3c9aa5e29a5a9e2ac5218f036fd5.php.php:38
+msgid "Delete Page"
+msgstr "Elimina Pagina"
+
+#: ../storage/framework/messages/0e47fd26e7759f9e1151f65d77aca05e93cf6baa.php.php:31
+#: ../storage/framework/messages/3b564d4009fd8d689331ace4241c8d8b3dcbbbec.php.php:34
+#: ../storage/framework/messages/fe86ad63b39a3c9aa5e29a5a9e2ac5218f036fd5.php.php:40
+msgid "Delete Comment"
+msgstr "Elimina Commento"
+
+#: ../storage/framework/messages/0e47fd26e7759f9e1151f65d77aca05e93cf6baa.php.php:35
+#: ../storage/framework/messages/3b564d4009fd8d689331ace4241c8d8b3dcbbbec.php.php:38
+#: ../storage/framework/messages/fe86ad63b39a3c9aa5e29a5a9e2ac5218f036fd5.php.php:44
+msgid "Select Members"
+msgstr "Seleziona Membri"
+
+#: ../storage/framework/messages/0e47fd26e7759f9e1151f65d77aca05e93cf6baa.php.php:40
+#: ../storage/framework/messages/3b564d4009fd8d689331ace4241c8d8b3dcbbbec.php.php:43
+#: ../storage/framework/messages/fe86ad63b39a3c9aa5e29a5a9e2ac5218f036fd5.php.php:53
+msgid "Close"
+msgstr "Chiudi"
+
+#: ../storage/framework/messages/0e67cc68f8ec46ef935cf93427b699ccd14c13a7.php.php:106
+#: Http/Controllers/TeamController.php:106
+msgid "Team name successfully updated."
+msgstr "Nome team aggiornato con successo."
+
+#: ../storage/framework/messages/0e67cc68f8ec46ef935cf93427b699ccd14c13a7.php.php:136
+#: Http/Controllers/TeamController.php:136
+msgid "Team successfully deleted."
+msgstr "Team eliminato con successo."
+
+#: ../storage/framework/messages/0e67cc68f8ec46ef935cf93427b699ccd14c13a7.php.php:151
+#: ../storage/framework/messages/0e67cc68f8ec46ef935cf93427b699ccd14c13a7.php.php:211
+#: Http/Controllers/TeamController.php:151
+#: Http/Controllers/TeamController.php:211
+msgid "Specified team does't exists."
+msgstr "Il team specificato non esiste."
+
+#: ../storage/framework/messages/0e67cc68f8ec46ef935cf93427b699ccd14c13a7.php.php:152
+#: Http/Controllers/TeamController.php:152
+msgid "This team has already a user with this email address."
+msgstr "Nel team è già presente un utente con questo indirizzo email."
+
+#: ../storage/framework/messages/0e67cc68f8ec46ef935cf93427b699ccd14c13a7.php.php:177
+#: Http/Controllers/TeamController.php:177
+msgid "Team successfully joined. You can login to this team now."
+msgstr "Ti sei unito a questo team, ora puoi eseguire l’accesso."
+
+#: ../storage/framework/messages/0e67cc68f8ec46ef935cf93427b699ccd14c13a7.php.php:223
+#: Http/Controllers/TeamController.php:223
+msgid "Email or password is not valid."
+msgstr "Email o password non valida."
+
+#: ../storage/framework/messages/0e67cc68f8ec46ef935cf93427b699ccd14c13a7.php.php:254
+#: Http/Controllers/TeamController.php:254
+msgid "Team successfully created. Now login to your team!"
+msgstr "Team creato con successo. Ora puoi accedere al tuo team!"
+
+#: ../storage/framework/messages/0e67cc68f8ec46ef935cf93427b699ccd14c13a7.php.php:347
+#: Http/Controllers/TeamController.php:347
+msgid "Team logo successfully uploaded."
+msgstr "Logo team aggiornato con successo."
+
+#: ../storage/framework/messages/10220461622939629332f9d6b60f9e34e5ced1c6.php.php:30
+#: ../storage/framework/messages/10220461622939629332f9d6b60f9e34e5ced1c6.php.php:32
+#: ../storage/framework/messages/10220461622939629332f9d6b60f9e34e5ced1c6.php.php:34
+#: ../storage/framework/messages/1ad403d0eb1010b98c20cc72304255cd6a62820a.php.php:46
+#: ../storage/framework/messages/3ce37e18c7e84b1fe69d091ca1a7eda7b4a573e1.php.php:24
+#: ../storage/framework/messages/3de23bf948a34d11e2eaba8931019df460c96909.php.php:38
+#: ../storage/framework/messages/6dd8bc6c2f1839c3cd3837defc2008532c1066f7.php.php:64
+#: ../storage/framework/messages/96d568c48c247e3d65a1d1e2596924ea5110b5fe.php.php:62
+#: ../storage/framework/messages/986b12ff5d8fb01acd4d299fd498ae29f7b9cbfb.php.php:38
+#: ../storage/framework/messages/b068d55011dcacaec75f82fabb823a3c9ccd5322.php.php:37
+msgid "Delete"
+msgstr "Elimina"
+
+#: ../storage/framework/messages/1ad403d0eb1010b98c20cc72304255cd6a62820a.php.php:17
+msgid "Add to Slack"
+msgstr "Aggiungi a Slack"
+
+#: ../storage/framework/messages/1ad403d0eb1010b98c20cc72304255cd6a62820a.php.php:41
+#: ../storage/framework/messages/3ce37e18c7e84b1fe69d091ca1a7eda7b4a573e1.php.php:21
+#: ../storage/framework/messages/3de23bf948a34d11e2eaba8931019df460c96909.php.php:34
+#: ../storage/framework/messages/6dd8bc6c2f1839c3cd3837defc2008532c1066f7.php.php:61
+#: ../storage/framework/messages/96d568c48c247e3d65a1d1e2596924ea5110b5fe.php.php:59
+#: ../storage/framework/messages/986b12ff5d8fb01acd4d299fd498ae29f7b9cbfb.php.php:34
+#: ../storage/framework/messages/b068d55011dcacaec75f82fabb823a3c9ccd5322.php.php:34
+msgid "Edit"
+msgstr "Modifica"
+
+#: ../storage/framework/messages/1ad403d0eb1010b98c20cc72304255cd6a62820a.php.php:45
+#: ../storage/framework/messages/3ce37e18c7e84b1fe69d091ca1a7eda7b4a573e1.php.php:24
+#: ../storage/framework/messages/3de23bf948a34d11e2eaba8931019df460c96909.php.php:38
+#: ../storage/framework/messages/7d4d663140c5a8a9217b16fb31b2ba265142f54c.php.php:87
+#: ../storage/framework/messages/986b12ff5d8fb01acd4d299fd498ae29f7b9cbfb.php.php:38
+#: ../storage/framework/messages/9b01b17bdab3aa4d5e46a3891786c27700015990.php.php:71
+#: ../storage/framework/messages/b068d55011dcacaec75f82fabb823a3c9ccd5322.php.php:37
+#: ../storage/framework/messages/fb11ab4a386a090f943c1cf3bd54b307f81bff62.php.php:90
+msgid "Are you sure?"
+msgstr "Sei sicuro?"
+
+#: ../storage/framework/messages/1b246433ebabf470eee54ede8b6df8ddb20aee80.php.php:24
+msgid "updated a wiki"
+msgstr "ha aggiornato una wiki"
+
+#: ../storage/framework/messages/20f42593c610dbf8e7af2ed8876860537d17c4c5.php.php:29
+msgid "Search..."
+msgstr "Cerca…"
+
+#: ../storage/framework/messages/20f42593c610dbf8e7af2ed8876860537d17c4c5.php.php:33
+msgid "Type something."
+msgstr "Digita qui."
+
+#: ../storage/framework/messages/20f42593c610dbf8e7af2ed8876860537d17c4c5.php.php:39
+#: ../storage/framework/messages/8cf0a7400bab441708bd8d3e5b816c673ce3855e.php.php:6
+msgid "Create wiki"
+msgstr "Crea Wiki"
+
+#: ../storage/framework/messages/20f42593c610dbf8e7af2ed8876860537d17c4c5.php.php:40
+#: ../storage/framework/messages/6123431f3dfbd7cc6f56a1ec69b8cde35ca916e7.php.php:3
+#: ../storage/framework/messages/8482ff361dbdff9aa23cf47dae6c9c3942aa2bbb.php.php:41
+msgid "Create space"
+msgstr "Crea Spazio"
+
+#: ../storage/framework/messages/20f42593c610dbf8e7af2ed8876860537d17c4c5.php.php:42
+#: ../storage/framework/messages/9b01b17bdab3aa4d5e46a3891786c27700015990.php.php:11
+msgid "Invite user"
+msgstr "Invita utente"
+
+#: ../storage/framework/messages/20f42593c610dbf8e7af2ed8876860537d17c4c5.php.php:56
+#: ../storage/framework/messages/db4b9232a3b0957f912084f26d9041e8a510bd6c.php.php:72
+msgid "Notifications"
+msgstr "Notifiche"
+
+#: ../storage/framework/messages/20f42593c610dbf8e7af2ed8876860537d17c4c5.php.php:106
+msgid "No unread notification."
+msgstr "Non sono presenti notifiche da leggere."
+
+#: ../storage/framework/messages/20f42593c610dbf8e7af2ed8876860537d17c4c5.php.php:117
+#: ../storage/framework/messages/dde222d311bd557381fce9567cefd617511ee7f3.php.php:3
+msgid "Profile"
+msgstr "Profilo"
+
+#: ../storage/framework/messages/20f42593c610dbf8e7af2ed8876860537d17c4c5.php.php:118
+#: ../storage/framework/messages/3ce37e18c7e84b1fe69d091ca1a7eda7b4a573e1.php.php:33
+msgid "Settings"
+msgstr "Configurazioni"
+
+#: ../storage/framework/messages/20f42593c610dbf8e7af2ed8876860537d17c4c5.php.php:120
+msgid "Logout"
+msgstr "Esci"
+
+#: ../storage/framework/messages/22c9807600e947f91ffc216db88894de7d98daf8.php.php:12
+msgid "Create Wiki"
+msgstr "Crea Wiki"
+
+#: ../storage/framework/messages/35e3a589f07adaf72c94ee37a4bc5ebe699252cf.php.php:65
+#: ../storage/framework/messages/c0b4b738f58d268e9af73c9433d98fbaba0dc8ed.php.php:65
+msgid "created space"
+msgstr "ha creato lo spazio"
+
+#: ../storage/framework/messages/35e3a589f07adaf72c94ee37a4bc5ebe699252cf.php.php:69
+#: ../storage/framework/messages/c0b4b738f58d268e9af73c9433d98fbaba0dc8ed.php.php:69
+msgid "deleted space"
+msgstr "ha eliminato lo spazio"
+
+#: ../storage/framework/messages/35e3a589f07adaf72c94ee37a4bc5ebe699252cf.php.php:73
+#: ../storage/framework/messages/c0b4b738f58d268e9af73c9433d98fbaba0dc8ed.php.php:73
+msgid "updated space"
+msgstr "ha aggiornato lo spazio"
+
+#: ../storage/framework/messages/35e3a589f07adaf72c94ee37a4bc5ebe699252cf.php.php:77
+#: ../storage/framework/messages/c0b4b738f58d268e9af73c9433d98fbaba0dc8ed.php.php:77
+msgid "created wiki"
+msgstr "ha creato la wiki"
+
+#: ../storage/framework/messages/35e3a589f07adaf72c94ee37a4bc5ebe699252cf.php.php:81
+#: ../storage/framework/messages/c0b4b738f58d268e9af73c9433d98fbaba0dc8ed.php.php:81
+msgid "deleted wiki"
+msgstr "ha eliminato la wiki"
+
+#: ../storage/framework/messages/35e3a589f07adaf72c94ee37a4bc5ebe699252cf.php.php:85
+#: ../storage/framework/messages/c0b4b738f58d268e9af73c9433d98fbaba0dc8ed.php.php:85
+msgid "updated wiki"
+msgstr "ha aggiornato la wiki"
+
+#: ../storage/framework/messages/35e3a589f07adaf72c94ee37a4bc5ebe699252cf.php.php:89
+#: ../storage/framework/messages/c0b4b738f58d268e9af73c9433d98fbaba0dc8ed.php.php:89
+msgid "created page"
+msgstr "ha creato la pagina"
+
+#: ../storage/framework/messages/35e3a589f07adaf72c94ee37a4bc5ebe699252cf.php.php:93
+#: ../storage/framework/messages/c0b4b738f58d268e9af73c9433d98fbaba0dc8ed.php.php:93
+msgid "deleted page"
+msgstr "ha eliminato la pagina"
+
+#: ../storage/framework/messages/35e3a589f07adaf72c94ee37a4bc5ebe699252cf.php.php:97
+#: ../storage/framework/messages/c0b4b738f58d268e9af73c9433d98fbaba0dc8ed.php.php:97
+msgid "updated page"
+msgstr "ha aggiornato la pagina"
+
+#: ../storage/framework/messages/35e3a589f07adaf72c94ee37a4bc5ebe699252cf.php.php:102
+#: ../storage/framework/messages/6cc85b4d79a7a3494671f140b9c7c3d4df85b5c4.php.php:26
+#: ../storage/framework/messages/c0b4b738f58d268e9af73c9433d98fbaba0dc8ed.php.php:102
+msgid "commented on wiki"
+msgstr "ha commentato la wiki"
+
+#: ../storage/framework/messages/35e3a589f07adaf72c94ee37a4bc5ebe699252cf.php.php:104
+#: ../storage/framework/messages/6cc85b4d79a7a3494671f140b9c7c3d4df85b5c4.php.php:35
+#: ../storage/framework/messages/c0b4b738f58d268e9af73c9433d98fbaba0dc8ed.php.php:104
+msgid "commented on page"
+msgstr "ha commentato la pagina"
+
+#: ../storage/framework/messages/35e3a589f07adaf72c94ee37a4bc5ebe699252cf.php.php:110
+#: ../storage/framework/messages/c0b4b738f58d268e9af73c9433d98fbaba0dc8ed.php.php:110
+msgid "deleted comment from wiki"
+msgstr "ha eliminato un commento dalla wiki"
+
+#: ../storage/framework/messages/35e3a589f07adaf72c94ee37a4bc5ebe699252cf.php.php:112
+#: ../storage/framework/messages/c0b4b738f58d268e9af73c9433d98fbaba0dc8ed.php.php:112
+msgid "deleted comment from page"
+msgstr "ha eliminato un commento dalla pagina"
+
+#: ../storage/framework/messages/35e3a589f07adaf72c94ee37a4bc5ebe699252cf.php.php:118
+#: ../storage/framework/messages/c0b4b738f58d268e9af73c9433d98fbaba0dc8ed.php.php:118
+msgid "updated comment on wiki"
+msgstr "ha aggiornato un commento nella wiki"
+
+#: ../storage/framework/messages/35e3a589f07adaf72c94ee37a4bc5ebe699252cf.php.php:120
+#: ../storage/framework/messages/c0b4b738f58d268e9af73c9433d98fbaba0dc8ed.php.php:120
+msgid "updated comment on page"
+msgstr "ha aggiornato un commento nella pagina"
+
+#: ../storage/framework/messages/3a1e87f44afb4adc480c93e4ad2d66eb55a19063.php.php:79
+#: Http/Controllers/SpaceController.php:79
+msgid "Space successfully created."
+msgstr "Spazio creato con successo."
+
+#: ../storage/framework/messages/3a1e87f44afb4adc480c93e4ad2d66eb55a19063.php.php:96
+#: Http/Controllers/SpaceController.php:96
+msgid "Space successfully deleted."
+msgstr "Spazio eliminato con successo."
+
+#: ../storage/framework/messages/3a1e87f44afb4adc480c93e4ad2d66eb55a19063.php.php:115
+#: Http/Controllers/SpaceController.php:115
+msgid "Space successfully updated."
+msgstr "Commento creato con successo."
+
+#: ../storage/framework/messages/3b564d4009fd8d689331ace4241c8d8b3dcbbbec.php.php:13
+#: ../storage/framework/messages/986b12ff5d8fb01acd4d299fd498ae29f7b9cbfb.php.php:18
+msgid "Create Role"
+msgstr "Crea Ruolo"
+
+#: ../storage/framework/messages/3b564d4009fd8d689331ace4241c8d8b3dcbbbec.php.php:19
+#: ../storage/framework/messages/fe86ad63b39a3c9aa5e29a5a9e2ac5218f036fd5.php.php:21
+msgid "Role Name"
+msgstr "Nome Ruolo"
+
+#: ../storage/framework/messages/3ce37e18c7e84b1fe69d091ca1a7eda7b4a573e1.php.php:13
+#: ../storage/framework/messages/b068d55011dcacaec75f82fabb823a3c9ccd5322.php.php:20
+msgid "Read Later"
+msgstr "Leggi più Tardi"
+
+#: ../storage/framework/messages/3ce37e18c7e84b1fe69d091ca1a7eda7b4a573e1.php.php:15
+#: ../storage/framework/messages/b068d55011dcacaec75f82fabb823a3c9ccd5322.php.php:22
+msgid "Added in Read Later"
+msgstr "Aggiunto all’Elenco di Lettura"
+
+#: ../storage/framework/messages/3ce37e18c7e84b1fe69d091ca1a7eda7b4a573e1.php.php:27
+#: ../storage/framework/messages/b068d55011dcacaec75f82fabb823a3c9ccd5322.php.php:28
+msgid "Export to Word"
+msgstr "Esporta in Word"
+
+#: ../storage/framework/messages/3ce37e18c7e84b1fe69d091ca1a7eda7b4a573e1.php.php:30
+#: ../storage/framework/messages/b068d55011dcacaec75f82fabb823a3c9ccd5322.php.php:31
+msgid "Export to PDF"
+msgstr "Esporta in PDF"
+
+#: ../storage/framework/messages/3e9d4d5f9ca8ea0e489181ac4175d8e180b64c0c.php.php:57
+#: Http/Controllers/IntegrationController.php:57
+msgid "Integration successfully set on team."
+msgstr "Integrazione avvenuta con successo."
+
+#: ../storage/framework/messages/3e9d4d5f9ca8ea0e489181ac4175d8e180b64c0c.php.php:147
+#: Http/Controllers/IntegrationController.php:147
+msgid "Integration successfully updated."
+msgstr "Integrazione aggiornata con successo."
+
+#: ../storage/framework/messages/3e9d4d5f9ca8ea0e489181ac4175d8e180b64c0c.php.php:187
+#: Http/Controllers/IntegrationController.php:187
+msgid "Integration successfully deleted."
+msgstr "Integrazione eliminata con successo."
+
+#: ../storage/framework/messages/4255ac59c0f4f1fa69e0c6b29554f6c03a425a80.php.php:13
+msgid "Recent Wikis"
+msgstr "Wiki Recenti"
+
+#: ../storage/framework/messages/4255ac59c0f4f1fa69e0c6b29554f6c03a425a80.php.php:41
+msgid "Favourite Wikis"
+msgstr "Wiki Preferite"
+
+#: ../storage/framework/messages/49e3755f9b1c54e3bd22c0c990230b2c9c51ab0f.php.php:49
+#: Http/Controllers/InviteController.php:49
+msgid "A user with this email already invited."
+msgstr "Un utente con questa mail è già stato invitato."
+
+#: ../storage/framework/messages/49e3755f9b1c54e3bd22c0c990230b2c9c51ab0f.php.php:50
+#: Http/Controllers/InviteController.php:50
+msgid "A user with this email already exists."
+msgstr "Esiste già un utente con questa mail."
+
+#: ../storage/framework/messages/49e3755f9b1c54e3bd22c0c990230b2c9c51ab0f.php.php:58
+#: Http/Controllers/InviteController.php:58
+msgid "Invitation is successfully sent to user."
+msgstr "Invito inviato correttamente."
+
+#: ../storage/framework/messages/49e3755f9b1c54e3bd22c0c990230b2c9c51ab0f.php.php:74
+#: Http/Controllers/InviteController.php:74
+msgid "Invitation request from "
+msgstr "Richiesta di invito da "
+
+#: ../storage/framework/messages/49e3755f9b1c54e3bd22c0c990230b2c9c51ab0f.php.php:93
+#: Http/Controllers/InviteController.php:93
+msgid "Invitation successfully removed."
+msgstr "Invito rimosso con successo."
+
+#: ../storage/framework/messages/4e85b4ee45025a8b8478f8f467b17745fd37271d.php.php:88
+#: Http/Controllers/WikiController.php:88
+msgid "You need to create space before creating wiki!"
+msgstr "Devi creare degli spazi prima di create una wiki!"
+
+#: ../storage/framework/messages/4e85b4ee45025a8b8478f8f467b17745fd37271d.php.php:113
+#: Http/Controllers/WikiController.php:113
+msgid "Wiki successfully created."
+msgstr "Wiki creata con successo."
+
+#: ../storage/framework/messages/4e85b4ee45025a8b8478f8f467b17745fd37271d.php.php:180
+#: ../storage/framework/messages/4e85b4ee45025a8b8478f8f467b17745fd37271d.php.php:208
+#: Http/Controllers/WikiController.php:180
+#: Http/Controllers/WikiController.php:208
+msgid "Wiki successfully updated."
+msgstr "Wiki aggiornata con successo."
+
+#: ../storage/framework/messages/4e85b4ee45025a8b8478f8f467b17745fd37271d.php.php:226
+#: Http/Controllers/WikiController.php:226
+msgid "Wiki successfully deleted."
+msgstr "Wiki eliminata con successo."
+
+#: ../storage/framework/messages/4e85b4ee45025a8b8478f8f467b17745fd37271d.php.php:325
+#: Http/Controllers/WikiController.php:325
+msgid "You are now watching this wiki."
+msgstr "Ora stai osservando questa wiki."
+
+#: ../storage/framework/messages/4e85b4ee45025a8b8478f8f467b17745fd37271d.php.php:343
+#: Http/Controllers/WikiController.php:343
+msgid "You are now ignoring this wiki."
+msgstr "Ora stai ignorando questa wiki."
+
+#: ../storage/framework/messages/4e85b4ee45025a8b8478f8f467b17745fd37271d.php.php:361
+#: Http/Controllers/WikiController.php:361
+msgid "Wiki successfully added to read list."
+msgstr "Wiki aggiunta all’elenco di lettura."
+
+#: ../storage/framework/messages/4e85b4ee45025a8b8478f8f467b17745fd37271d.php.php:379
+#: Http/Controllers/WikiController.php:379
+msgid "Wiki successfully removed from read list."
+msgstr "Wiki rimossa dall’elenco di lettura."
+
+#: ../storage/framework/messages/51b3bd657d4f2c02c0c52821d1e46724b4a7cc38.php.php:24
+msgid "just updated a space"
+msgstr "ha appena aggiornato uno spazio"
+
+#: ../storage/framework/messages/5e2d82a650d9462fa60b902b121647fb8da7becd.php.php:15
+#: ../storage/framework/messages/8482ff361dbdff9aa23cf47dae6c9c3942aa2bbb.php.php:4
+msgid "Quick Links"
+msgstr "Link Veloci"
+
+#: ../storage/framework/messages/5e2d82a650d9462fa60b902b121647fb8da7becd.php.php:19
+msgid "Create a Page"
+msgstr "Crea una Pagina"
+
+#: ../storage/framework/messages/5e2d82a650d9462fa60b902b121647fb8da7becd.php.php:25
+msgid "Wiki Settings"
+msgstr "Configurazioni Wiki"
+
+#: ../storage/framework/messages/5e2d82a650d9462fa60b902b121647fb8da7becd.php.php:31
+msgid "Page tree"
+msgstr "Albero Pagine"
+
+#: ../storage/framework/messages/6123431f3dfbd7cc6f56a1ec69b8cde35ca916e7.php.php:6
+msgid "Space Name"
+msgstr "Nome Spazio"
+
+#: ../storage/framework/messages/6123431f3dfbd7cc6f56a1ec69b8cde35ca916e7.php.php:11
+msgid "Enter space name here. e.g. Sales"
+msgstr "Inserisci il nome dello spazio ad es. Vendite"
+
+#: ../storage/framework/messages/6123431f3dfbd7cc6f56a1ec69b8cde35ca916e7.php.php:15
+#: ../storage/framework/messages/7d4d663140c5a8a9217b16fb31b2ba265142f54c.php.php:43
+#: ../storage/framework/messages/8ce195ff73c9634aa6dfd29933e909b2778f7853.php.php:43
+#: ../storage/framework/messages/8cf0a7400bab441708bd8d3e5b816c673ce3855e.php.php:44
+#: ../storage/framework/messages/b6efedaaf68f1ac140b441d708fbbd0a25520a81.php.php:50
+#: ../storage/framework/messages/fb11ab4a386a090f943c1cf3bd54b307f81bff62.php.php:40
+msgid "Description"
+msgstr "Descrizione"
+
+#: ../storage/framework/messages/6123431f3dfbd7cc6f56a1ec69b8cde35ca916e7.php.php:17
+msgid "Describe a little about space."
+msgstr "Breve descrizione sullo spazio."
+
+#: ../storage/framework/messages/6388c0a818e06168f406d6d9ffc2942645b05022.php.php:30
+msgid "deleted a wiki"
+msgstr "ha eliminato una wiki"
+
+#: ../storage/framework/messages/6dd8bc6c2f1839c3cd3837defc2008532c1066f7.php.php:101
+#: ../storage/framework/messages/96d568c48c247e3d65a1d1e2596924ea5110b5fe.php.php:96
+#: ../storage/framework/messages/a3a2fdb4893c0bada02f2fb91ed31fb466eb6383.php.php:65
+msgid "Submit"
+msgstr "Invia"
+
+#: ../storage/framework/messages/7d4d663140c5a8a9217b16fb31b2ba265142f54c.php.php:18
+#: ../storage/framework/messages/8ce195ff73c9634aa6dfd29933e909b2778f7853.php.php:12
+#: ../storage/framework/messages/8cf0a7400bab441708bd8d3e5b816c673ce3855e.php.php:13
+#: ../storage/framework/messages/b6efedaaf68f1ac140b441d708fbbd0a25520a81.php.php:14
+#: ../storage/framework/messages/fb11ab4a386a090f943c1cf3bd54b307f81bff62.php.php:18
+msgid "Name"
+msgstr "Nome"
+
+#: ../storage/framework/messages/7d4d663140c5a8a9217b16fb31b2ba265142f54c.php.php:29
+#: ../storage/framework/messages/8ce195ff73c9634aa6dfd29933e909b2778f7853.php.php:27
+#: ../storage/framework/messages/b6efedaaf68f1ac140b441d708fbbd0a25520a81.php.php:29
+msgid "Select a option"
+msgstr "Seleziona un opzione"
+
+#: ../storage/framework/messages/7d4d663140c5a8a9217b16fb31b2ba265142f54c.php.php:54
+#: ../storage/framework/messages/a3e51a5c5029a8e0701f424f7c4f19c284aa8458.php.php:211
+#: ../storage/framework/messages/b9b161d84a2ef7036d6dee50a77f7dc684cb70a9.php.php:37
+#: ../storage/framework/messages/c690a2eefa1f324ccf08a516d7f65dba24e9699c.php.php:19
+#: ../storage/framework/messages/fb11ab4a386a090f943c1cf3bd54b307f81bff62.php.php:51
+#: ../storage/framework/messages/fe86ad63b39a3c9aa5e29a5a9e2ac5218f036fd5.php.php:56
+msgid "Update"
+msgstr "Aggiorna"
+
+#: ../storage/framework/messages/800732bc45ee8a9c0c90a8d146f9a848ca207f31.php.php:6
+#: ../storage/framework/messages/800732bc45ee8a9c0c90a8d146f9a848ca207f31.php.php:27
+#: ../storage/framework/messages/800732bc45ee8a9c0c90a8d146f9a848ca207f31.php.php:29
+#: ../storage/framework/messages/8482ff361dbdff9aa23cf47dae6c9c3942aa2bbb.php.php:14
+msgid "Read List"
+msgstr "Elenco di Lettura"
+
+#: ../storage/framework/messages/800732bc45ee8a9c0c90a8d146f9a848ca207f31.php.php:27
+#: ../storage/framework/messages/800732bc45ee8a9c0c90a8d146f9a848ca207f31.php.php:29
+msgid "Remove from"
+msgstr "Rimuovi da"
+
+#: ../storage/framework/messages/8482ff361dbdff9aa23cf47dae6c9c3942aa2bbb.php.php:20
+#: ../storage/framework/messages/986b12ff5d8fb01acd4d299fd498ae29f7b9cbfb.php.php:14
+#: ../storage/framework/messages/d7bce5928320187edc029a603a2322b45aba226b.php.php:9
+msgid "Roles"
+msgstr "Ruoli"
+
+#: ../storage/framework/messages/8482ff361dbdff9aa23cf47dae6c9c3942aa2bbb.php.php:26
+#: ../storage/framework/messages/9b01b17bdab3aa4d5e46a3891786c27700015990.php.php:32
+#: ../storage/framework/messages/d7bce5928320187edc029a603a2322b45aba226b.php.php:6
+msgid "Members"
+msgstr "Membri"
+
+#: ../storage/framework/messages/8482ff361dbdff9aa23cf47dae6c9c3942aa2bbb.php.php:39
+msgid "Spaces"
+msgstr "Spazi"
+
+#: ../storage/framework/messages/8482ff361dbdff9aa23cf47dae6c9c3942aa2bbb.php.php:47
+msgid "Filter"
+msgstr "Filtra"
+
+#: ../storage/framework/messages/8c4a03a39c80caaf12e77ed09ee17d17c1afe761.php.php:105
+#: Http/Controllers/RoleController.php:105
+msgid "Role successfully created."
+msgstr "Ruolo creato con successo."
+
+#: ../storage/framework/messages/8c4a03a39c80caaf12e77ed09ee17d17c1afe761.php.php:162
+#: Http/Controllers/RoleController.php:162
+msgid "Role successfully updated."
+msgstr "Ruolo aggiornato con successo."
+
+#: ../storage/framework/messages/8c4a03a39c80caaf12e77ed09ee17d17c1afe761.php.php:179
+#: Http/Controllers/RoleController.php:179
+msgid "Role successfully deleted."
+msgstr "Ruolo eliminato con successo."
+
+#: ../storage/framework/messages/8ce195ff73c9634aa6dfd29933e909b2778f7853.php.php:19
+#: ../storage/framework/messages/8cf0a7400bab441708bd8d3e5b816c673ce3855e.php.php:34
+#: ../storage/framework/messages/b6efedaaf68f1ac140b441d708fbbd0a25520a81.php.php:21
+msgid "Outline"
+msgstr "Intro"
+
+#: ../storage/framework/messages/8cf0a7400bab441708bd8d3e5b816c673ce3855e.php.php:20
+#: ../storage/framework/messages/fb11ab4a386a090f943c1cf3bd54b307f81bff62.php.php:27
+msgid "Space"
+msgstr "Spazi"
+
+#: ../storage/framework/messages/8cf0a7400bab441708bd8d3e5b816c673ce3855e.php.php:22
+msgid "Select a space"
+msgstr "Selezione uno spazio"
+
+#: ../storage/framework/messages/8d17c19f92fc36cdcffcb71b2ae816d35d75820f.php.php:16
+#: ../storage/framework/messages/a3a2fdb4893c0bada02f2fb91ed31fb466eb6383.php.php:56
+#: ../storage/framework/messages/bce781a89ae356918156b47c36f8b5fd618a0f19.php.php:10
+#: ../storage/framework/messages/d1a70e6701536262ba36418cc9156863667c437b.php.php:11
+#: ../storage/framework/messages/e98b59d9c8d758b119ac5629d39219c79c418399.php.php:9
+msgid "Team Name"
+msgstr "Nome Team"
+
+#: ../storage/framework/messages/8d17c19f92fc36cdcffcb71b2ae816d35d75820f.php.php:21
+#: ../storage/framework/messages/a3a2fdb4893c0bada02f2fb91ed31fb466eb6383.php.php:61
+#: ../storage/framework/messages/bce781a89ae356918156b47c36f8b5fd618a0f19.php.php:15
+msgid "Enter your team name here. e.g. Google"
+msgstr "Inserisci il nome del team ad es. Google"
+
+#: ../storage/framework/messages/8d17c19f92fc36cdcffcb71b2ae816d35d75820f.php.php:25
+#: ../storage/framework/messages/a3a2fdb4893c0bada02f2fb91ed31fb466eb6383.php.php:9
+#: ../storage/framework/messages/a3e51a5c5029a8e0701f424f7c4f19c284aa8458.php.php:59
+#: ../storage/framework/messages/bce781a89ae356918156b47c36f8b5fd618a0f19.php.php:19
+#: ../storage/framework/messages/e98b59d9c8d758b119ac5629d39219c79c418399.php.php:13
+msgid "Email"
+msgstr "Email"
+
+#: ../storage/framework/messages/8d17c19f92fc36cdcffcb71b2ae816d35d75820f.php.php:32
+msgid "Forgot your password?"
+msgstr "Password dimenticata?"
+
+#: ../storage/framework/messages/8d17c19f92fc36cdcffcb71b2ae816d35d75820f.php.php:42
+msgid "Remember me"
+msgstr "Ricordami"
+
+#: ../storage/framework/messages/8d17c19f92fc36cdcffcb71b2ae816d35d75820f.php.php:51
+msgid "Don't have a team?"
+msgstr "Non hai un team?"
+
+#: ../storage/framework/messages/8d17c19f92fc36cdcffcb71b2ae816d35d75820f.php.php:51
+msgid "Create now"
+msgstr "Crealo ora"
+
+#: ../storage/framework/messages/953f247a7749c3060b26e481a361b0aeded6fa7a.php.php:109
+#: Http/Controllers/UserController.php:109
+msgid "Profile image successfully updated."
+msgstr "Foto Profilo aggiornata con successo."
+
+#: ../storage/framework/messages/953f247a7749c3060b26e481a361b0aeded6fa7a.php.php:193
+#: Http/Controllers/UserController.php:193
+msgid "Profile successfully updated."
+msgstr "Profilo aggiornato con successo."
+
+#: ../storage/framework/messages/953f247a7749c3060b26e481a361b0aeded6fa7a.php.php:216
+#: Http/Controllers/UserController.php:216
+msgid "Your password successfully changed. You have to login again."
+msgstr ""
+"La tua password è stata modificata con successo. Ora puoi procedere al login."
+
+#: ../storage/framework/messages/953f247a7749c3060b26e481a361b0aeded6fa7a.php.php:233
+#: Http/Controllers/UserController.php:233
+msgid "Your account successfully deleted."
+msgstr "Il tuo account è stato eliminato con successo."
+
+#: ../storage/framework/messages/953f247a7749c3060b26e481a361b0aeded6fa7a.php.php:317
+#: Http/Controllers/UserController.php:317
+msgid "Email does't exists in this team."
+msgstr "La mail non è presente in questo team."
+
+#: ../storage/framework/messages/953f247a7749c3060b26e481a361b0aeded6fa7a.php.php:318
+#: Http/Controllers/UserController.php:318
+msgid "The team does not exist."
+msgstr "Questo team non esiste."
+
+#: ../storage/framework/messages/953f247a7749c3060b26e481a361b0aeded6fa7a.php.php:333
+#: Http/Controllers/UserController.php:333
+msgid "Please check your inbox we sent you a link to change password."
+msgstr ""
+"Controlla la tua casella di posta. Ti abbiamo inviato un link per modificare "
+"la password."
+
+#: ../storage/framework/messages/953f247a7749c3060b26e481a361b0aeded6fa7a.php.php:395
+#: Http/Controllers/UserController.php:395
+msgid "Password successfully changed."
+msgstr "Password modificata con successo."
+
+#: ../storage/framework/messages/986b12ff5d8fb01acd4d299fd498ae29f7b9cbfb.php.php:15
+msgid "You can edit the roles and set their permissions."
+msgstr "Puoi modificare i ruoli e assegnare i permessi."
+
+#: ../storage/framework/messages/9938dd6a5a6d4e20652ef4d659e562e061f57b83.php.php:24
+msgid "just deleted a space"
+msgstr "ha appena eliminato uno spazio"
+
+#: ../storage/framework/messages/9b01b17bdab3aa4d5e46a3891786c27700015990.php.php:26
+msgid "Invite"
+msgstr "Invita"
+
+#: ../storage/framework/messages/9b01b17bdab3aa4d5e46a3891786c27700015990.php.php:62
+msgid "Pending Invitations"
+msgstr "Inviti in Attesa"
+
+#: ../storage/framework/messages/9b01b17bdab3aa4d5e46a3891786c27700015990.php.php:71
+msgid "Remove Invitation"
+msgstr "Rimuovi Invito"
+
+#: ../storage/framework/messages/a3a2fdb4893c0bada02f2fb91ed31fb466eb6383.php.php:6
+msgid "Create a Team"
+msgstr "Crea un Team"
+
+#: ../storage/framework/messages/a3a2fdb4893c0bada02f2fb91ed31fb466eb6383.php.php:18
+#: ../storage/framework/messages/a3e51a5c5029a8e0701f424f7c4f19c284aa8458.php.php:47
+#: ../storage/framework/messages/e98b59d9c8d758b119ac5629d39219c79c418399.php.php:19
+msgid "First name"
+msgstr "Nome"
+
+#: ../storage/framework/messages/a3a2fdb4893c0bada02f2fb91ed31fb466eb6383.php.php:27
+#: ../storage/framework/messages/a3e51a5c5029a8e0701f424f7c4f19c284aa8458.php.php:53
+#: ../storage/framework/messages/e98b59d9c8d758b119ac5629d39219c79c418399.php.php:28
+msgid "Last name"
+msgstr "Cognome"
+
+#: ../storage/framework/messages/a3a2fdb4893c0bada02f2fb91ed31fb466eb6383.php.php:69
+msgid "Already have a team?"
+msgstr "Hai già un team?"
+
+#: ../storage/framework/messages/a3a2fdb4893c0bada02f2fb91ed31fb466eb6383.php.php:69
+#: ../storage/framework/messages/e98b59d9c8d758b119ac5629d39219c79c418399.php.php:57
+msgid "Login now"
+msgstr "Accedi qui"
+
+#: ../storage/framework/messages/a3e51a5c5029a8e0701f424f7c4f19c284aa8458.php.php:4
+#: ../storage/framework/messages/b9b161d84a2ef7036d6dee50a77f7dc684cb70a9.php.php:4
+msgid "User Settings"
+msgstr "Configurazioni Utente"
+
+#: ../storage/framework/messages/a3e51a5c5029a8e0701f424f7c4f19c284aa8458.php.php:11
+msgid "Profile Picture"
+msgstr "Foto Profilo"
+
+#: ../storage/framework/messages/a3e51a5c5029a8e0701f424f7c4f19c284aa8458.php.php:22
+#: ../storage/framework/messages/d1a70e6701536262ba36418cc9156863667c437b.php.php:37
+msgid "Upload new picture"
+msgstr "Carica nuova foto"
+
+#: ../storage/framework/messages/a3e51a5c5029a8e0701f424f7c4f19c284aa8458.php.php:25
+#: ../storage/framework/messages/d1a70e6701536262ba36418cc9156863667c437b.php.php:40
+msgid "Browse file..."
+msgstr "Sfoglia file…"
+
+#: ../storage/framework/messages/a3e51a5c5029a8e0701f424f7c4f19c284aa8458.php.php:28
+#: ../storage/framework/messages/d1a70e6701536262ba36418cc9156863667c437b.php.php:43
+msgid "The maximum file size allowed is 200KB."
+msgstr "La dimensione massima consentita è di 200KB."
+
+#: ../storage/framework/messages/a3e51a5c5029a8e0701f424f7c4f19c284aa8458.php.php:39
+msgid "Personal Information"
+msgstr "Informazioni Personali"
+
+#: ../storage/framework/messages/a3e51a5c5029a8e0701f424f7c4f19c284aa8458.php.php:40
+msgid "Anyone who is the member of this organization can see this information."
+msgstr "Qualunque membro del team può vedere queste informazioni."
+
+#: ../storage/framework/messages/a3e51a5c5029a8e0701f424f7c4f19c284aa8458.php.php:63
+msgid "Time zone"
+msgstr "Fuso Orario"
+
+#: ../storage/framework/messages/a96aa4219bfec3528cf69dfd8ede5b24cf9ce71c.php.php:117
+msgid "Accept Invite"
+msgstr "Accetta Invito"
+
+#: ../storage/framework/messages/b068d55011dcacaec75f82fabb823a3c9ccd5322.php.php:12
+msgid "Watch"
+msgstr "Osserva"
+
+#: ../storage/framework/messages/b9b161d84a2ef7036d6dee50a77f7dc684cb70a9.php.php:11
+msgid "Change password"
+msgstr "Modifica password"
+
+#: ../storage/framework/messages/b9b161d84a2ef7036d6dee50a77f7dc684cb70a9.php.php:13
+msgid ""
+"After a successful password update, you will be redirected to the login page "
+"where you can log in with your new password."
+msgstr ""
+"Dopo l’avvenuto aggiornamento della password sarai rediretto alla pagina di "
+"login dove potrai accedere con la tua nuova password."
+
+#: ../storage/framework/messages/b9b161d84a2ef7036d6dee50a77f7dc684cb70a9.php.php:20
+msgid "Current password"
+msgstr "Password attuale"
+
+#: ../storage/framework/messages/b9b161d84a2ef7036d6dee50a77f7dc684cb70a9.php.php:26
+msgid "New password"
+msgstr "Nuova password"
+
+#: ../storage/framework/messages/b9b161d84a2ef7036d6dee50a77f7dc684cb70a9.php.php:32
+msgid "Password confirmation"
+msgstr "Conferma Password"
+
+#: ../storage/framework/messages/b9b161d84a2ef7036d6dee50a77f7dc684cb70a9.php.php:41
+msgid "Leave organization"
+msgstr "Abbandona organizzazione"
+
+#: ../storage/framework/messages/b9b161d84a2ef7036d6dee50a77f7dc684cb70a9.php.php:43
+msgid ""
+"Once you clicked the delete your account button your account will be deleted "
+"from this organization. Please be certain."
+msgstr ""
+"Cliccato elimina account il tuo account sarà eliminato in maniera "
+"permanente. L’operazione non è reversibile."
+
+#: ../storage/framework/messages/b9b161d84a2ef7036d6dee50a77f7dc684cb70a9.php.php:46
+msgid "Delete your account"
+msgstr "Elimina account"
+
+#: ../storage/framework/messages/bce781a89ae356918156b47c36f8b5fd618a0f19.php.php:26
+#: ../storage/framework/messages/f24b012abeea92b3f5daa2b174e843c37b470322.php.php:24
+msgid "Send Password Reset Link"
+msgstr "Invia Link per Resettare la Password"
+
+#: ../storage/framework/messages/d1a70e6701536262ba36418cc9156863667c437b.php.php:13
+msgid ""
+"Renaming team name will also change the team URL and will render all "
+"bookmarks to team pages invalid."
+msgstr ""
+"La modifica del nome del team modificherà anche le URL e renderà i preferiti "
+"non validi."
+
+#: ../storage/framework/messages/d1a70e6701536262ba36418cc9156863667c437b.php.php:26
+msgid "Team logo"
+msgstr "Logo Team"
+
+#: ../storage/framework/messages/d1a70e6701536262ba36418cc9156863667c437b.php.php:54
+msgid "Delete Team"
+msgstr "Elimina Team"
+
+#: ../storage/framework/messages/d1a70e6701536262ba36418cc9156863667c437b.php.php:56
+msgid ""
+"Deleting this team will permanently delete all wikis and users in this "
+"account."
+msgstr ""
+"L’eliminazione del team rimuoverà permanentemente le wiki e gli utenti di "
+"questo account."
+
+#: ../storage/framework/messages/d1a70e6701536262ba36418cc9156863667c437b.php.php:62
+msgid "Yes I understand, delete my account"
+msgstr "Si ho capito, elimina questo account"
+
+#: ../storage/framework/messages/d7bce5928320187edc029a603a2322b45aba226b.php.php:3
+msgid "General"
+msgstr "Generali"
+
+#: ../storage/framework/messages/db4b9232a3b0957f912084f26d9041e8a510bd6c.php.php:13
+msgid "Create Team"
+msgstr "Crea Team"
+
+#: ../storage/framework/messages/db4b9232a3b0957f912084f26d9041e8a510bd6c.php.php:14
+msgid "Login Team"
+msgstr "Accesso Team"
+
+#: ../storage/framework/messages/dde222d311bd557381fce9567cefd617511ee7f3.php.php:6
+msgid "Account"
+msgstr "Account"
+
+#: ../storage/framework/messages/e14b50a91188b67e2be9201fbcc4e0b65cf40032.php.php:22
+msgid "created a page"
+msgstr "ha creato una pagina"
+
+#: ../storage/framework/messages/e200319bc36e1b2d4a82bfc50436fd2fa25bdb6b.php.php:22
+msgid "created a new space"
+msgstr "ha creato un nuovo spazio"
+
+#: ../storage/framework/messages/e98b59d9c8d758b119ac5629d39219c79c418399.php.php:6
+msgid "Join Team"
+msgstr "Unisciti al Team"
+
+#: ../storage/framework/messages/e98b59d9c8d758b119ac5629d39219c79c418399.php.php:57
+msgid "Join"
+msgstr "Unisciti"
+
+#: ../storage/framework/messages/e98b59d9c8d758b119ac5629d39219c79c418399.php.php:57
+msgid "Already joined a team?"
+msgstr "Fai già parte di un team?"
+
+#: ../storage/framework/messages/f13ea54c26f7d4e5de90776dbe13565b03288962.php.php:82
+#: ../storage/framework/messages/f13ea54c26f7d4e5de90776dbe13565b03288962.php.php:149
+#: Http/Controllers/CommentController.php:82
+#: Http/Controllers/CommentController.php:149
+msgid "Comment successfully posted."
+msgstr "Commento inserito con successo."
+
+#: ../storage/framework/messages/f2f5e2f4e66d49f91a74ea58c919b29a53c447b9.php.php:24
+msgid "deleted a page"
+msgstr "ha eliminato una pagina"
+
+#: ../storage/framework/messages/fa0d6c6aee6f2fd4010cdcfeb432bc52384d27c9.php.php:25
+msgid "created a new wiki"
+msgstr "ha creato una nuova wiki"
+
+#: ../storage/framework/messages/fb11ab4a386a090f943c1cf3bd54b307f81bff62.php.php:86
+msgid "Delete Wiki"
+msgstr "Elimina Wiki"
+
+#: ../storage/framework/messages/fcaf76ce0a2aa86e9594d1ff0a68d82437afe9ee.php.php:245
+#: Http/Controllers/PageController.php:245
+msgid "Page successfully deleted."
+msgstr "Pagina eliminata con successo."
+
+#: ../storage/framework/messages/fcaf76ce0a2aa86e9594d1ff0a68d82437afe9ee.php.php:289
+#: Http/Controllers/PageController.php:289
+msgid "Page successfully created."
+msgstr "Pagina creata con successo."
+
+#: ../storage/framework/messages/fcaf76ce0a2aa86e9594d1ff0a68d82437afe9ee.php.php:401
+#: ../storage/framework/messages/fcaf76ce0a2aa86e9594d1ff0a68d82437afe9ee.php.php:538
+#: Http/Controllers/PageController.php:401
+#: Http/Controllers/PageController.php:538
+msgid "Page successfully updated."
+msgstr "Pagina aggiornata con successo."
+
+#: ../storage/framework/messages/fcaf76ce0a2aa86e9594d1ff0a68d82437afe9ee.php.php:468
+#: Http/Controllers/PageController.php:468
+msgid "Page successfully added to read list."
+msgstr "Pagina aggiunta con successo all’elenco di lettura."
+
+#: ../storage/framework/messages/fcaf76ce0a2aa86e9594d1ff0a68d82437afe9ee.php.php:487
+#: Http/Controllers/PageController.php:487
+msgid "Page successfully removed from read list."
+msgstr "Pagina rimossa con successo dall’elenco di lettura."
+
+#: ../storage/framework/messages/fe86ad63b39a3c9aa5e29a5a9e2ac5218f036fd5.php.php:13
+msgid "Edit Role"
+msgstr "Modifica Ruolo"
+
+#: ../storage/framework/messages/fe86ad63b39a3c9aa5e29a5a9e2ac5218f036fd5.php.php:33
+msgid "Permissions"
+msgstr "Permessi"
+
+#, fuzzy
+#~ msgid "deleted comment wiki"
+#~ msgstr "Hai eliminato la wiki"

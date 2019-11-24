@@ -19,7 +19,7 @@ class CreateSpaceNotification extends BaseNotification
     {
         return (new SlackMessage)
             ->from($this->from)
-            ->content(':file_cabinet: <' . route('users.show', [$this->space->team->slug, $this->space->user->slug,]) . '|' . $this->space->user->first_name . ' ' . $this->space->user->last_name . '> created a new space.')
+            ->content(':file_cabinet: <' . route('users.show', [$this->space->team->slug, $this->space->user->slug,]) . '|' . $this->space->user->first_name . ' ' . $this->space->user->last_name . '> '._i('created a new space').'.')
             ->attachment(function ($attachment) {
                 $attachment
                     ->title($this->space->name, route('categories.wikis', [$this->space->team->slug, $this->space->slug,]))

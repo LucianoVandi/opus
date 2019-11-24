@@ -3,7 +3,7 @@
 @section('content')
     <div class="team-setting">
         <div class="team-setting-header">
-            Team Settings
+            {{_i('Team Settings')}}
         </div>
         <div role="tabpanel">
             @include('team.partials.tab-menu')
@@ -17,7 +17,7 @@
                             <div style="width: 450px; text-align: center; margin: auto;">
                                 <h2 style="margin-bottom: 15px; font-size: 2.7em;">Opus for Slack</h2>
                                 <p style="font-size: 16px; margin-bottom: 18px;">Collaboration & communication combined. Link your Opus and Trello teams to build the ultimate productivity powerhouse.</p>
-                                <a href="{{ route('integrations.create', [$team->slug]) }}" class="btn btn-default"><img src="/img/slack.png" width="26" height="26" style="margin-right: 8px;"> <span style="position: relative; top: 2px;">Add to Slack</span></a>
+                                <a href="{{ route('integrations.create', [$team->slug]) }}" class="btn btn-default"><img src="/img/slack.png" width="26" height="26" style="margin-right: 8px;"> <span style="position: relative; top: 2px;">{{_i('Add to Slack')}}</span></a>
                             </div>
                         </div>
                     </div>
@@ -41,12 +41,12 @@
                                                         <ul class="list-unstyled list-inline" style="margin-bottom: 0;">
                                                             <li>
                                                                 <a href="{{ route('integrations.edit', [$team->slug, $integration->slug]) }}">
-                                                                    <i data-toggle="tooltip" data-placement="top" title="" class="fa fa-pencil fa-fw" data-original-title="Edit"></i>
+                                                                    <i data-toggle="tooltip" data-placement="top" title="" class="fa fa-pencil fa-fw" data-original-title="{{_i('Edit')}}"></i>
                                                                 </a>
                                                             </li>
                                                             <li>
-                                                                <a href="{{ route('integrations.delete', [$team->slug, $integration->slug]) }}" data-method="delete" data-confirm="Are you sure?">
-                                                                    <i data-toggle="tooltip" data-placement="top" title="" class="fa fa-trash-o fa-fw" data-original-title="Delete"></i>
+                                                                <a href="{{ route('integrations.delete', [$team->slug, $integration->slug]) }}" data-method="delete" data-confirm="{{_i('Are you sure?')}}">
+                                                                    <i data-toggle="tooltip" data-placement="top" title="" class="fa fa-trash-o fa-fw" data-original-title="{{_i('Delete')}}"></i>
                                                                 </a>
                                                             </li>
                                                         </ul>

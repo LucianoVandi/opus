@@ -12,28 +12,28 @@
                 <div class="clearfix"></div>
             </div>
             <ul class="list-unstyled side-menu-top">
-                <li class="nav-header" style="margin-bottom: 5px;">Quick Links</li>
+                <li class="nav-header" style="margin-bottom: 5px;">{{_i('Quick Links')}}</li>
                 <li class="item">
                     <a href="{{ route('pages.create', [ $team->slug, $space->slug, $wiki->slug]) }}">
                         <i class="fa fa-file-text-o fa-fw fa-lg icon"></i>
-                        <span class="item-name">Create a Page</span>
+                        <span class="item-name">{{_i('Create a Page')}}</span>
                     </a>
                 </li>
                 <li class="item {{ (Route::currentRouteName() == 'wikis.settings' ? 'active' : '') }}">
                     <a href="{{ route('wikis.settings', [$team->slug, $space->slug, $wiki->slug, ]) }}">
                         <i class="fa fa-gear fa-fw fa-lg icon"></i> 
-                        <span class="item-name">Wiki Settings</span>
+                        <span class="item-name">{{_i('Wiki Settings')}}</span>
                     </a>
                 </li>
             </ul>
             {{-- <div class="side-menu-page-shortcuts-list" style="margin-bottom: 25px;">
                 <ul class="list-unstyled">
                     <li class="nav-header">Shortcuts</li>
-                    <li class="nothing-found" style="margin-top: 14px; font-size: 12px;"><i class="fa fa-exclamation-triangle fa-fw icon"></i> Nothing found</li>
+                    <li class="nothing-found" style="margin-top: 14px; font-size: 12px;"><i class="fa fa-exclamation-triangle fa-fw icon"></i> {{_i('Nothing found')}}</li>
                 </ul>
             </div> --}}
             <div class="side-menu-page-tree-list" style="margin-bottom: 15px;">
-                <div class="nav-header" style="margin-bottom: 10px;" title="You can move any page by dragging it to a new position in the tree.">Page tree</div>
+                <div class="nav-header" style="margin-bottom: 10px;" title="You can move any page by dragging it to a new position in the tree.">{{_i('Page tree')}}</div>
                 @if(isset($page))
                     <span class="hidden" id="page-open" data-page="{{ $page->slug }}"></span>
                 @endif

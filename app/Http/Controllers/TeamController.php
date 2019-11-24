@@ -103,7 +103,7 @@ class TeamController extends Controller
     {
         if ($team->name === $this->request->get('team_name')) {
             return redirect()->back()->with([
-                'alert'      => 'Team name successfully updated.',
+                'alert'      => _i('Team name successfully updated.'),
                 'alert_type' => 'success',
             ]);
         }
@@ -133,7 +133,7 @@ class TeamController extends Controller
         Auth::logout();
 
         return redirect()->route('team.login')->with([
-            'alert'      => 'Team successfully deleted.',
+            'alert'      => _i('Team successfully deleted.'),
             'alert_type' => 'success',
         ]);
     }
@@ -148,8 +148,8 @@ class TeamController extends Controller
     public function postJoin(Team $team, $hash)
     {
         $this->validate($this->request, Team::JOIN_TEAM_RULES, [
-            'exists'         => 'Specified team does\'t exists.',
-            'team_has_email' => 'This team has already a user with this email address.',
+            'exists'         => _i('Specified team does\'t exists.'),
+            'team_has_email' => _i('This team has already a user with this email address.'),
         ]);
 
         $user = $this->user->createUser($this->request->all());
@@ -174,7 +174,7 @@ class TeamController extends Controller
         (new Invite)->claimAccount($team->id, $hash);
 
         return redirect()->route('home')->with([
-            'alert'      => 'Team successfully joined. You can login to this team now.',
+            'alert'      => _i('Team successfully joined. You can login to this team now.'),
             'alert_type' => 'success',
         ]);
     }
@@ -208,7 +208,7 @@ class TeamController extends Controller
     public function postLogin()
     {
         $this->validate($this->request, User::LOGIN_RULES, [
-            'exists' => 'Specified team does\'t exists..',
+            'exists' => _i('Specified team does\'t exists.'),
         ]);
 
         if ($data = $this->user->validate($this->request->all())) {
@@ -220,7 +220,7 @@ class TeamController extends Controller
         }
 
         return redirect()->back()->withErrors([
-            'wrong_credential' => 'Email or password is not valid.',
+            'wrong_credential' => _i('Email or password is not valid.'),
         ]);
     }
 
@@ -251,7 +251,7 @@ class TeamController extends Controller
         $this->createAdminsRole($team);
 
         return redirect()->route('home')->with([
-            'alert'      => 'Team successfully created. Now login to your team!',
+            'alert'      => _i('Team successfully created. Now login to your team!'),
             'alert_type' => 'success',
         ]);
     }
@@ -344,7 +344,7 @@ class TeamController extends Controller
         $this->team->updateImage($team->id, $imageName);
 
         return redirect()->back()->with([
-            'alert'      => 'Team logo successfully uploaded.',
+            'alert'      => _i('Team logo successfully uploaded.'),
             'alert_type' => 'success',
         ]);
     }

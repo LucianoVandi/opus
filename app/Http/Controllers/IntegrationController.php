@@ -54,7 +54,7 @@ class IntegrationController extends Controller
         $this->createIntegrationActions($this->request->integrations, $teamIntegration);
 
         return redirect()->route('integrations.index', [$team->slug])->with([
-            'alert'      => 'Integration successfully set on team.',
+            'alert'      => _i('Integration successfully set on team.'),
             'alert_type' => 'success',
         ]);
     }
@@ -144,7 +144,7 @@ class IntegrationController extends Controller
         $this->updateIntegrations($integration, $this->request->integrations);
 
         return redirect()->route('integrations.index', [$team->slug])->with([
-            'alert'      => 'Integration successfully updated.',
+            'alert'      => _i('Integration successfully updated.'),
             'alert_type' => 'success',
         ]);
     }
@@ -184,7 +184,7 @@ class IntegrationController extends Controller
         $this->integration->deleteIntegration($integration->id);
 
         return redirect()->route('integrations.index', [$team->slug])->with([
-            'alert'      => 'Integration successfully deleted.',
+            'alert'      => _i('Integration successfully deleted.'),
             'alert_type' => 'success',
         ]);
     }

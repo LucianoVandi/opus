@@ -22,7 +22,7 @@ return [
      * Default locale: this will be the default for your application.
      * Is to be supposed that all strings are written in this language.
      */
-    'locale' => 'en_US',
+    'locale' => 'it_IT',
 
     /**
      * Supported locales: An array containing all allowed languages
@@ -91,6 +91,7 @@ return [
         'Http',
         '../resources/views',
         'Console',
+        'Notifications'
     ],
 
     /**

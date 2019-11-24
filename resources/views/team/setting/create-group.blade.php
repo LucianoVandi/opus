@@ -3,7 +3,7 @@
 @section('content')
     <div class="team-setting">
         <div class="team-setting-header">
-          Team Settings
+          {{_i('Team Settings')}}
         </div>
         <div role="tabpanel">
             @include('team.partials.tab-menu')
@@ -22,23 +22,23 @@
                                 <i class="fa fa-users icon" style="line-height: 2.8;"></i>
                             </div> 
                             <div class="form-group">
-                                <label>Select Permissions</label> 
+                                <label>{{_i('Select Permissions')}}</label> 
                                 <select multiple="" name="permissions[]" class="form-control" id="permissions-select">
                                     <option value="1">Admin</option>
                                     <option value="2">View Page</option>
                                     <option value="3">Add Page</option>
-                                    <option value="4">Delete Page</option>
+                                    <option value="4">{{_i('Delete Page')}}</option>
                                     <option value="5">Add Comment</option>
-                                    <option value="6">Delete Comment</option>
+                                    <option value="6">{{_i('Delete Comment')}}</option>
                                 </select>
                             </div> 
                             <div class="form-group">
-                                <label for="group-member-select">Select Members</label> 
+                                <label for="group-member-select">{{_i('Select Members')}}</label> 
                                 <select multiple="" name="group_members[]" class="form-control" id="group-member-select" required></select>
                             </div> 
                             <ul class="list-unstyled list-inline pull-right">
                                 <li>
-                                    <a href="groups.html" class="btn btn-default pull-right">Close</a> 
+                                    <a href="groups.html" class="btn btn-default pull-right">{{_i('Close')}}</a> 
                                 </li>
                                 <li>
                                     <button type="submit" class="btn btn-success pull-right">Create</button> 

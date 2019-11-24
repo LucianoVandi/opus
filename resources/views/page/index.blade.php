@@ -14,27 +14,27 @@
                                 </li> --}}
                                 <li>
                                     @if(empty($isPageInReadList)) 
-                                        <a href="{{ route('pages.readlater.create', [$team->slug, $space->slug, $wiki->slug, $page->slug]) }}" style="padding: 5px 6px;"><i class="fa fa-check-square-o icon"></i> Read Later</a>
+                                        <a href="{{ route('pages.readlater.create', [$team->slug, $space->slug, $wiki->slug, $page->slug]) }}" style="padding: 5px 6px;"><i class="fa fa-check-square-o icon"></i> {{_i('Read Later')}}</a>
                                     @else
-                                        <a href="{{ route('pages.readlater.destroy', [$team->slug, $space->slug, $wiki->slug, $page->slug]) }}" data-method="delete" style="padding: 5px 6px;"><i class="fa fa-check-square-o icon"></i> Added in Read Later</a>
+                                        <a href="{{ route('pages.readlater.destroy', [$team->slug, $space->slug, $wiki->slug, $page->slug]) }}" data-method="delete" style="padding: 5px 6px;"><i class="fa fa-check-square-o icon"></i> {{_i('Added in Read Later')}}</a>
                                     @endif
                                 </li>
                             </ul>
                             <ul class="list-unstyled list-inline pull-right">
                                 <li>
-                                    <a href="{{ route('pages.edit', [$team->slug, $space->slug, $wiki->slug, $page->slug]) }}" style="padding: 5px 6px;"><i class="fa fa-pencil fa-lg icon"></i> Edit</a>
+                                    <a href="{{ route('pages.edit', [$team->slug, $space->slug, $wiki->slug, $page->slug]) }}" style="padding: 5px 6px;"><i class="fa fa-pencil fa-lg icon"></i> {{_i('Edit')}}</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('pages.destroy', [$team->slug, $space->slug, $wiki->slug, $page->slug]) }}" style="padding: 5px 6px;" data-method="delete" data-confirm="Are you sure?"><i class="fa fa-trash-o icon"></i> Delete</a>
+                                    <a href="{{ route('pages.destroy', [$team->slug, $space->slug, $wiki->slug, $page->slug]) }}" style="padding: 5px 6px;" data-method="delete" data-confirm="{{_i('Are you sure?')}}"><i class="fa fa-trash-o icon"></i> {{_i('Delete')}}</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('pages.word', [$team->slug, $space->slug, $wiki->slug, $page->slug]) }}" style="padding: 5px 6px;"><i class="fa fa-file-word-o icon"></i> Export to Word</a>
+                                    <a href="{{ route('pages.word', [$team->slug, $space->slug, $wiki->slug, $page->slug]) }}" style="padding: 5px 6px;"><i class="fa fa-file-word-o icon"></i> {{_i('Export to Word')}}</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('pages.pdf', [$team->slug, $space->slug, $wiki->slug, $page->slug]) }}" style="padding: 5px 6px;"><i class="fa fa-file-pdf-o icon"></i> Export to PDF</a>
+                                    <a href="{{ route('pages.pdf', [$team->slug, $space->slug, $wiki->slug, $page->slug]) }}" style="padding: 5px 6px;"><i class="fa fa-file-pdf-o icon"></i> {{_i('Export to PDF')}}</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('pages.settings', [$team->slug, $space->slug, $wiki->slug, $page->slug]) }}" style="padding: 5px 6px;"><i class="fa fa-cog icon"></i> Settings</a>
+                                    <a href="{{ route('pages.settings', [$team->slug, $space->slug, $wiki->slug, $page->slug]) }}" style="padding: 5px 6px;"><i class="fa fa-cog icon"></i> {{_i('Settings')}}</a>
                                 </li>
                             </ul>
                             <div class="clearfix"></div>
@@ -67,7 +67,7 @@
                                     @endforeach
                                 </ul>
                             @else
-                                <h1 class="nothing-found" style="margin: 0px; line-height: 20px;"><i class="fa fa-exclamation-triangle fa-fw icon"></i> Nothing found</h1>
+                                <h1 class="nothing-found" style="margin: 0px; line-height: 20px;"><i class="fa fa-exclamation-triangle fa-fw icon"></i> {{_i('Nothing found')}}</h1>
                             @endif  
                         </div>
                     </div>

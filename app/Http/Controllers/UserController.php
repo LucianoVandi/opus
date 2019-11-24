@@ -106,7 +106,7 @@ class UserController extends Controller
         $this->user->updateAvatar($user->id, $imgName);
 
         return redirect()->back()->with([
-            'alert'      => 'Profile image successfully updated.',
+            'alert'      => _i('Profile image successfully updated.'),
             'alert_type' => 'success',
         ]);
     }
@@ -190,7 +190,7 @@ class UserController extends Controller
         $this->user->updateUser($user->slug, $this->request->all());
 
         return redirect()->back()->with([
-            'alert'      => 'Profile successfully updated.',
+            'alert'      => _i('Profile successfully updated.'),
             'alert_type' => 'success',
         ]);
     }
@@ -213,7 +213,7 @@ class UserController extends Controller
         $this->user->updatePassword($user->slug, $this->request->all());
 
         return $this->logout()->with([
-            'alert'      => 'Your password successfully changed. You have to login again.',
+            'alert'      => _i('Your password successfully changed. You have to login again.'),
             'alert_type' => 'success',
         ]);
     }
@@ -230,7 +230,7 @@ class UserController extends Controller
         $this->user->where('slug', '=', $user->slug)->delete();
 
         return $this->logout()->with([
-            'alert'      => 'Your account successfully deleted.',
+            'alert'      => _i('Your account successfully deleted.'),
             'alert_type' => 'success',
         ]);
     }
@@ -314,8 +314,8 @@ class UserController extends Controller
             'team_name' => 'required|exists:teams,name',
             'email'     => 'required|is_email_exists_in_team|email',
         ], [
-            'is_email_exists_in_team' => 'Email does\'t exists in this team.',
-            'exists'                  => 'The team does not exist.',
+            'is_email_exists_in_team' => _i('Email does\'t exists in this team.'),
+            'exists'                  => _i('The team does not exist.'),
         ]);
 
         $token = str_rot13(base64_encode(str_rot13($this->request->get('team_name') . $this->request->get('email'))));
@@ -330,7 +330,7 @@ class UserController extends Controller
         $this->sendResetPasswordEmail($this->request->get('email'), $token);
 
         return redirect()->back()->with([
-            'alert' => 'Please check your inbox we sent you a link to change password.',
+            'alert' => _i('Please check your inbox we sent you a link to change password.'),
         ]);
     }
 
@@ -392,7 +392,7 @@ class UserController extends Controller
         $this->user->updatePassword($user->slug, $this->request->all());
 
         return redirect()->route('team.login')->with([
-            'alert'      => 'Password successfully changed.',
+            'alert'      => _i('Password successfully changed.'),
             'alert_type' => 'success',
         ]);
     }

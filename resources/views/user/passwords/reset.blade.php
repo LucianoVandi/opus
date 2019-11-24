@@ -23,7 +23,7 @@
                             @endif
                         </div>
                         <div style="margin-top: 30px; margin-bottom: 10px;">
-                            <input type="submit" class="btn btn-primary btn-block btn-lg" value="Send Password Reset Link">
+                            <input type="submit" class="btn btn-primary btn-block btn-lg" value="{{_i('Send Password Reset Link')}}">
                         </div>
                     </form>
                 @else

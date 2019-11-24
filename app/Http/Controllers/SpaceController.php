@@ -76,7 +76,7 @@ class SpaceController extends Controller
         $this->space->createSpace($this->request->all(), $team->id);
 
         return redirect()->route('dashboard', ['team_slug' => $team->slug])->with([
-            'alert'      => 'Space successfully created.',
+            'alert'      => _i('Space successfully created.'),
             'alert_type' => 'success',
         ]);
     }
@@ -93,7 +93,7 @@ class SpaceController extends Controller
         $this->space->deleteSpace($space->id);
 
         return redirect()->back()->with([
-            'alert'      => 'Space successfully deleted.',
+            'alert'      => _i('Space successfully deleted.'),
             'alert_type' => 'success',
         ]);
     }
@@ -112,7 +112,7 @@ class SpaceController extends Controller
         $this->space->updateSpace($this->request->all(), $space->id, $team->id);
 
         return redirect()->back()->with([
-            'alert'      => 'Space successfully updated.',
+            'alert'      => _i('Space successfully updated.'),
             'alert_type' => 'success',
         ]);
     }

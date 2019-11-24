@@ -242,7 +242,7 @@ class PageController extends Controller
         $this->page->deletePage($page->id);
 
         return redirect()->route('wikis.show', [$team->slug, $wiki->space->slug, $wiki->slug])->with([
-            'alert'      => 'Page successfully deleted.',
+            'alert'      => _i('Page successfully deleted.'),
             'alert_type' => 'success',
         ]);
     }
@@ -286,7 +286,7 @@ class PageController extends Controller
         }
 
         return redirect()->route('pages.show', [$team->slug, $space->slug, $wiki->slug, $page->slug])->with([
-            'alert'      => 'Page successfully created.',
+            'alert'      => _i('Page successfully created.'),
             'alert_type' => 'success',
         ]);
     }
@@ -398,7 +398,7 @@ class PageController extends Controller
         }
 
         return redirect()->route('pages.show', [$team->slug, $space->slug, $wiki->slug, $page->slug])->with([
-            'alert'      => 'Page successfully updated.',
+            'alert'      => _i('Page successfully updated.'),
             'alert_type' => 'success',
         ]);
     }
@@ -465,7 +465,7 @@ class PageController extends Controller
         ]);
 
         return redirect()->back()->with([
-            'alert'      => 'Page successfully added to read list.',
+            'alert'      => _i('Page successfully added to read list.'),
             'alert_type' => 'success',
         ]);
     }
@@ -484,7 +484,7 @@ class PageController extends Controller
         ReadList::where('user_id', Auth::user()->id)->where('subject_id', $page->id)->where('subject_type', Page::class)->delete();
 
         return redirect()->back()->with([
-            'alert'      => 'Page successfully removed from read list.',
+            'alert'      => _i('Page successfully removed from read list.'),
             'alert_type' => 'success',
         ]);
     }
@@ -535,7 +535,7 @@ class PageController extends Controller
         }
 
         return redirect()->back()->with([
-            'alert'      => 'Page successfully updated.',
+            'alert'      => _i('Page successfully updated.'),
             'alert_type' => 'success',
         ]);
     }

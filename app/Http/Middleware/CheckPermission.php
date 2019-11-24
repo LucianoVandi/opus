@@ -16,6 +16,7 @@ class CheckPermission
      */
     public function handle($request, Closure $next, $permissions = null)
     {
+        dd($permissions);
         if (Auth::user()) {
             if ($request->user()->hasPermission($permissions)) {
                 return $next($request);

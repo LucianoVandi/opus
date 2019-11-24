@@ -102,7 +102,7 @@ class RoleController extends Controller
         }
 
         return redirect()->route('roles.index', [$team->slug])->with([
-            'alert'      => 'Role successfully created.',
+            'alert'      => _i('Role successfully created.'),
             'alert_type' => 'success',
         ]);
     }
@@ -159,7 +159,7 @@ class RoleController extends Controller
         }
 
         return redirect()->route('roles.index', [$team->slug])->with([
-            'alert'      => 'Role successfully updated.',
+            'alert'      => _i('Role successfully updated.'),
             'alert_type' => 'success',
         ]);
     }
@@ -176,7 +176,7 @@ class RoleController extends Controller
         $this->role->find($role->id)->delete();
 
         return redirect()->route('roles.index', [$team->slug])->with([
-            'alert'      => 'Role successfully deleted.',
+            'alert'      => _i('Role successfully deleted.'),
             'alert_type' => 'success',
         ]);
     }

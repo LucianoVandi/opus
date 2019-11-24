@@ -25,20 +25,20 @@
 			<ul class="nav navbar-nav navbar-right">
 				<form class="navbar-form navbar-left dropdown" role="search">
 					<div class="form-group with-icon dropdown-toggle" data-toggle="dropdown" >
-						<input type="text" class="form-control overall-search-input" placeholder="Search...">
+						<input type="text" class="form-control overall-search-input" placeholder="{{_i('Search...')}}">
 						<i class="fa fa-search icon"></i>
 					</div>
 					<ul class="dropdown-menu dropdown-menu-right" id="overall-search-output" onClick="event.stopPropagation();" style="margin-top: 4px; margin-right: 15px; width: 250px; padding: 4px 5px; max-height: 250px; overflow: auto;">
-                   		<li style="font-style: italic; text-align: center; font-size: 13px;">Type something.</li>
+                   		<li style="font-style: italic; text-align: center; font-size: 13px;">{{_i('Type something.')}}</li>
                     </ul>
 				</form>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding-right: 9px; padding-left: 9px;"><i class="fa fa-plus fa-fw"></i></a>
 					<ul class="dropdown-menu dropdown-menu-right" style="margin-top: -3px; margin-right: -6px; margin-top: -3px; padding: 4px 5px;">
-                        <li><a href="{{ route('wikis.create', [ $team->slug ]) }}" style="padding: 5px 6px;">Create wiki</a></li>
-                        <li><a href="{{ route('spaces.create', [ $team->slug ]) }}" style="padding: 5px 6px;">Create space</a></li>
+                        <li><a href="{{ route('wikis.create', [ $team->slug ]) }}" style="padding: 5px 6px;">{{_i('Create wiki')}}</a></li>
+                        <li><a href="{{ route('spaces.create', [ $team->slug ]) }}" style="padding: 5px 6px;">{{_i('Create space')}}</a></li>
                         <li class="divider" style="margin: 0px;"></li>
-                        <li><a href="{{ route('teams.settings.members', [$team->slug,]) }}" style="padding: 5px 6px;">Invite user</a></li>
+                        <li><a href="{{ route('teams.settings.members', [$team->slug,]) }}" style="padding: 5px 6px;">{{_i('Invite user')}}</a></li>
                     </ul>
               	</li>
               	<li class="dropdown">
@@ -52,7 +52,7 @@
                         <div class="menu-notifications">
                         	<div class="notification-head" style="padding: 12px 15px;">
                         		<div class="pull-left" style="height: 18px; display: flex; align-items: center;">
-                        			<h2 style="font-size: 12px; color: #777;">Notifications</h2>
+                        			<h2 style="font-size: 12px; color: #777;">{{_i('Notifications')}}</h2>
                         		</div>
                         		<div class="pull-right" style="height: 18px; display: flex; align-items: center;">
                         			@if($notifications->count() > 0)
@@ -101,7 +101,7 @@
                         		@else 
 	                        		<div style="font-size: 12px; text-align: center; padding: 2px 15px 20px; color: #777;">
 	                        			<i class="fa fa-bell-o" style="transform: rotate(24deg); font-size: 14px; margin-right: 4px; position: relative; top: -2px;"></i>
-	                        			No unread notification.
+	                        			{{_i('No unread notification.')}}
 	                        		</div>
                         		@endif
                         	</div>
@@ -111,10 +111,10 @@
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->first_name . ' ' . Auth::user()->last_name }} <i class="fa fa-caret-down fa-fw"></i></a>
 					<ul class="dropdown-menu dropdown-menu-right" style="margin-top: -3px; padding: 4px 5px;">
-                        <li><a href="{{ route('users.show', [$team->slug, Auth::user()->slug]) }}" style="padding: 5px 6px;">Profile</a></li>
-                        <li><a href="{{ route('settings.profile', [$team->slug, Auth::user()->slug]) }}" style="padding: 5px 6px;">Settings</a></li>
+                        <li><a href="{{ route('users.show', [$team->slug, Auth::user()->slug]) }}" style="padding: 5px 6px;">{{_i('Profile')}}</a></li>
+                        <li><a href="{{ route('settings.profile', [$team->slug, Auth::user()->slug]) }}" style="padding: 5px 6px;">{{_i('Settings')}}</a></li>
                         <li class="divider" style="margin: 0px; background-color: #eee;"></li>
-                        <li><a href="{{ route('logout') }}" style="padding: 5px 6px;">Logout </a></li>
+                        <li><a href="{{ route('logout') }}" style="padding: 5px 6px;">{{_i('Logout')}} </a></li>
                     </ul>
 				</li>
 			</ul>

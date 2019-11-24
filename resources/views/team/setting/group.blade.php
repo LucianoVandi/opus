@@ -3,7 +3,7 @@
 @section('content')
     <div class="team-setting">
         <div class="team-setting-header">
-          Team Settings
+          {{_i('Team Settings')}}
         </div>
         <div role="tabpanel">
             @include('team.partials.tab-menu')
@@ -32,11 +32,11 @@
                                         <div class="pull-right">
                                             <ul class="list-unstyled list-inline">
                                                 <li>
-                                                    <a href="{{ route('roles.edit', [$team->slug, $group->slug]) }}"><i class="fa fa-pencil fa-fw" data-toggle="tooltip" data-placement="top" title="Edit"></i></a>
+                                                    <a href="{{ route('roles.edit', [$team->slug, $group->slug]) }}"><i class="fa fa-pencil fa-fw" data-toggle="tooltip" data-placement="top" title="{{_i('Edit')}}"></i></a>
                                                 </li>
                                                 @if($group->slug !== 'admins') 
                                                     <li>
-                                                        <a href="{{ route('roles.delete', [$team->slug, $group->slug]) }}" data-method="delete" data-confirm="Are you sure?"><i class="fa fa-trash-o fa-fw" data-toggle="tooltip" data-placement="top" title="Delete"></i></a>
+                                                        <a href="{{ route('roles.delete', [$team->slug, $group->slug]) }}" data-method="delete" data-confirm="{{_i('Are you sure?')}}"><i class="fa fa-trash-o fa-fw" data-toggle="tooltip" data-placement="top" title="{{_i('Delete')}}"></i></a>
                                                     </li>
                                                 @endif
                                             </ul>

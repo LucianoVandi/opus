@@ -10,7 +10,7 @@
 						{{ $space->name }}
 					</div>
 					<div class="pull-right">
-						<a href="{{ route('wikis.create', [$team->slug]) }}" class="btn btn-link" style="color: #000;"><i class="fa fa-plus fa-fw"></i> Create Wiki</a>
+						<a href="{{ route('wikis.create', [$team->slug]) }}" class="btn btn-link" style="color: #000;"><i class="fa fa-plus fa-fw"></i> {{_i('Create Wiki')}}</a>
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -49,7 +49,7 @@
 				        	{{ $wikis->links() }}
 				        </div>
 				    @else 
-						<h1 class="nothing-found side"><i class="fa fa-exclamation-triangle fa-fw icon"></i> Nothing found</h1>
+						<h1 class="nothing-found side"><i class="fa fa-exclamation-triangle fa-fw icon"></i> {{_i('Nothing found')}}</h1>
 				    @endif
 				</div>
 			</div>

@@ -49,7 +49,7 @@
 				        	{{ $pages->links() }}
 				        </div>
 				    @else 
-						<h1 class="nothing-found side"><i class="fa fa-exclamation-triangle fa-fw icon"></i> Nothing found</h1>
+						<h1 class="nothing-found side"><i class="fa fa-exclamation-triangle fa-fw icon"></i> {{_i('Nothing found')}}</h1>
 				    @endif
 				</div>
 			</div>

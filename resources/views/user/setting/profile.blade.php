@@ -3,13 +3,13 @@
 @section('content')
 	<div class="team-setting">
 		<div class="team-setting-header">
-		  User Settings
+		  {{_i('User Settings')}}
 		</div>
 		<div role="tabpanel">
 			@include('user.partials.tab-menu')
 			<div class="tab-content">
 				<div class="profile-pic-setting">
-                    <h2>Profile Picture</h2>
+                    <h2>{{_i('Profile Picture')}}</h2>
                     <div class="media">
                         <div class="pull-left">
                             @if(Auth::user()->profile_image)
@@ -20,13 +20,13 @@
                         </div>
                         <div class="media-body avatar-upload-form-con">
                             <form action="{{ route('users.avatar', [ $team->slug, Auth::user()->slug ]) }}" enctype="multipart/form-data" id="avatar-upload-form" method="POST">
-                                <h3 class="heading">Upload new picture</h3>
+                                <h3 class="heading">{{_i('Upload new picture')}}</h3>
                                 <div class="form-group">
                                     <label class="btn btn-default upload-btn" style="margin-bottom: 7px;">
-                                        Browse file... 
+                                        {{_i('Browse file...')}} 
                                         <input type="file" class="hide" name="profile_image" id="profile_image">
                                     </label>
-                                    <p class="text-muted">The maximum file size allowed is 200KB.</p>
+                                    <p class="text-muted">{{_i('The maximum file size allowed is 200KB.')}}</p>
                                     <input type="hidden" id="x" name="x" />
                                     <input type="hidden" id="y" name="y" />
                                     <input type="hidden" id="w" name="w" />
@@ -37,30 +37,30 @@
                     </div>
                 </div>
                 <div class="user-info">
-                    <h2 class="heading">Personal Information</h2>
-                    <p class="text-muted">Anyone who is the member of this organization can see this information.</p>
+                    <h2 class="heading">{{_i('Personal Information')}}</h2>
+                    <p class="text-muted">{{_i('Anyone who is the member of this organization can see this information.')}}</p>
                     <form action="{{ route('users.update', [$team->slug, Auth::user()->slug]) }}" method="POST" role="form">
                         {{ method_field('patch') }}
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <div class="form-group">
-                                    <label for="first-name">First name</label>
+                                    <label for="first-name">{{_i('First name')}}</label>
                                     <input type="text" name="first_name" id="first-name" class="form-control input" value="{{ Auth::user()->first_name }}" autocomplete="off">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <div class="form-group">
-                                    <label for="last-name">Last name</label>
+                                    <label for="last-name">{{_i('Last name')}}</label>
                                     <input type="text" name="last_name" id="last-name" class="form-control input" value="{{ Auth::user()->last_name }}" autocomplete="off">
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
+                            <label for="email">{{_i('Email')}}</label>
                             <input type="text" name="email" id="email" class="form-control input" value="{{ Auth::user()->email }}" required="required" autocomplete="off">
                         </div>
                         <div class="form-group">
-                            <label for="timezone">Time zone</label>
+                            <label for="timezone">{{_i('Time zone')}}</label>
                             <select class="form-control" name="timezone" id="timezone" data-selected="{{ Auth::user()->timezone }}">
                                 <option value="">Select your timezone</option>
                                 <option value="Pacific/Midway">(UTC-11:00) Midway Island</option>
@@ -208,7 +208,7 @@
                                 <option value="Pacific/Tongatapu">(UTC+13:00) Nuku'alofa</option>
                             </select>
                         </div>
-                        <input type="submit" class="btn btn-success update-btn" value="Update">  
+                        <input type="submit" class="btn btn-success update-btn" value="{{_i('Update')}}">  
                     </form>
                 </div>
 			</div>

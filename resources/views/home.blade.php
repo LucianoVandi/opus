@@ -12,8 +12,8 @@
                     <h1 style="line-height: 52px;font-size: 38px; font-weight: 700; width: 610px; margin: auto auto 24px;color: white;font-weight: 100;">Opus lets you work more collaboratively and get more done.</h1>
                     <p class="minor-text" style="font-size: 17px;width: 550px;margin: auto auto 24px;font-weight: normal;color: white;">Opus let you work more collaboratively to document who you are, what you do and how to achieve results.</p>
                     <div class="brand-buttons text-center">
-                        <a href="{{ route('team.create') }}" class="btn btn-default home-head-btn">Create Team</a>
-                        <a href="{{ route('team.login') }}" class="btn btn-default home-head-btn">Login Team</a>
+                        <a href="{{ route('team.create') }}" class="btn btn-default home-head-btn">{{_i('Create Team')}}</a>
+                        <a href="{{ route('team.login') }}" class="btn btn-default home-head-btn">{{_i('Login Team')}}</a>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
 							<img src="img/icons/megaphone.png" class="media-object">
 						</div>
 						<div class="media-body">
-							<h4 class="media-heading" style="margin-bottom: 10px; font-size: 16px; font-weight: 600; line-height: 26px; color: #444444;">Notifications</h4>
+							<h4 class="media-heading" style="margin-bottom: 10px; font-size: 16px; font-weight: 600; line-height: 26px; color: #444444;">{{_i('Notifications')}}</h4>
 							<p style="font-size: 14px; color: #444444; line-height: 22px; font-weight: 300;">
 								Instantly received notification when some one mention you in comment. Opus has first-class notifications out of the box.
 							</p>

@@ -57,10 +57,10 @@
                                                     </li>
                                                     @if($comment->user_id === Auth::user()->id)
                                                         <li>
-                                                            <a href="#" id="edit-comment"><i class="fa fa-pencil fa-fw" style="font-size: 14px;"></i> Edit</a>
+                                                            <a href="#" id="edit-comment"><i class="fa fa-pencil fa-fw" style="font-size: 14px;"></i> {{_i('Edit')}}</a>
                                                         </li>
                                                         <li>
-                                                            <a href="#" id="delete-comment" data-comment-id="{{ $comment->id }}"><i class="fa fa-trash-o fa-fw" style="font-size: 14px;"></i> Delete</a>
+                                                            <a href="#" id="delete-comment" data-comment-id="{{ $comment->id }}"><i class="fa fa-trash-o fa-fw" style="font-size: 14px;"></i> {{_i('Delete')}}</a>
                                                         </li>
                                                     @endif
                                                 </ul>
@@ -72,7 +72,7 @@
                         </div>
                     @endforeach
                 @else 
-                    <h1 class="nothing-found">Nothing found</h1>
+                    <h1 class="nothing-found">{{_i('Nothing found')}}</h1>
                 @endif
             </div>
         </div>
@@ -97,7 +97,7 @@
                 </div>
             </div>
         </div>
-        <input type="submit" class="btn btn-primary pull-right" value="Submit">
+        <input type="submit" class="btn btn-primary pull-right" value="{{_i('Submit')}}">
         <div class="clearfix"></div>
     </form>
 </div>

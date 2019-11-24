@@ -3,7 +3,7 @@
 @section('content')
     <div class="team-setting">
         <div class="team-setting-header">
-            Team Settings
+            {{_i('Team Settings')}}
         </div>
         <div role="tabpanel">
             @include('team.partials.tab-menu')
@@ -34,7 +34,7 @@
                             @endif
                         </div>
                         <div class="form-group">
-                            <label for="">Receive Notifications</label>
+                            <label for="">{{_i('Receive Notifications')}}</label>
                             <div class="row">
                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                                     <label style="width: 100%; border-bottom: 1px solid #ddd; padding-bottom: 5px;">Wiki</label>
@@ -110,8 +110,8 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-success">Save Configuration</button>
-                        <a href="{{ route('integrations.index', [$team->slug]) }}" class="btn btn-link">Cancel</a>
+                        <button type="submit" class="btn btn-success">{{_i('Save')}} Configuration</button>
+                        <a href="{{ route('integrations.index', [$team->slug]) }}" class="btn btn-link">{{_i('Cancel')}}</a>
                     </form>
                 </div>
             </div>

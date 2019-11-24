@@ -3,7 +3,7 @@
 @section('content')
     <div class="team-setting">
         <div class="team-setting-header">
-          Team Settings
+          {{_i('Team Settings')}}
         </div>
         <div role="tabpanel">
             @include('team.partials.tab-menu')
@@ -28,11 +28,11 @@
                                     <tr>
                                         <th class="text-center" style="font-family: lato;">Group</th> 
                                         <th class="text-center" style="font-family: lato;">Add</th> 
-                                        <th class="text-center" style="font-family: lato;">Delete</th> 
+                                        <th class="text-center" style="font-family: lato;">{{_i('Delete')}}</th> 
                                         <th class="text-center" style="font-family: lato;">Add</th> 
-                                        <th class="text-center" style="font-family: lato;">Delete</th> 
+                                        <th class="text-center" style="font-family: lato;">{{_i('Delete')}}</th> 
                                         <th class="text-center" style="font-family: lato;">Add</th> 
-                                        <th class="text-center" style="font-family: lato;">Delete</th>
+                                        <th class="text-center" style="font-family: lato;">{{_i('Delete')}}</th>
                                     </tr>
                                 </thead> 
                                 <tbody>

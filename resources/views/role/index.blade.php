@@ -3,7 +3,7 @@
 @section('content')
     <div class="team-setting">
         <div class="team-setting-header">
-          Team Settings
+          {{_i('Team Settings')}}
         </div>
         <div role="tabpanel">
             @include('team.partials.tab-menu')
@@ -12,11 +12,11 @@
                     <div class="s-group-header">
                         <div class="header">
                             <div class="pull-left">
-                                <h2 style="margin-bottom: 10px;">Roles</h2>
-                                <p class="text-muted">You can edit the roles and set their permissions.</p>
+                                <h2 style="margin-bottom: 10px;">{{_i('Roles')}}</h2>
+                                <p class="text-muted">{{_i('You can edit the roles and set their permissions.')}}</p>
                             </div>
                             <div class="pull-right">
-                                <a href="{{ route('roles.create', [ $team->slug ]) }}" class="btn btn-link create-group-btn"><i class="fa fa-plus fa-fw"></i> Create Role</a>
+                                <a href="{{ route('roles.create', [ $team->slug ]) }}" class="btn btn-link create-group-btn"><i class="fa fa-plus fa-fw"></i> {{_i('Create Role')}}</a>
                             </div>
                             <div class="clearfix"></div>
                         </div>
@@ -32,11 +32,11 @@
                                         <div class="pull-right">
                                             <ul class="list-unstyled list-inline" style="margin-bottom: 0px;">
                                                 <li>
-                                                    <a href="{{ route('roles.edit', [$team->slug, $role->slug]) }}"><i class="fa fa-pencil fa-fw" data-toggle="tooltip" data-placement="top" title="Edit"></i></a>
+                                                    <a href="{{ route('roles.edit', [$team->slug, $role->slug]) }}"><i class="fa fa-pencil fa-fw" data-toggle="tooltip" data-placement="top" title="{{_i('Edit')}}"></i></a>
                                                 </li>
                                                 @if($role->slug !== 'admins') 
                                                     <li>
-                                                        <a href="{{ route('roles.delete', [$team->slug, $role->slug]) }}" data-method="delete" data-confirm="Are you sure?"><i class="fa fa-trash-o fa-fw" data-toggle="tooltip" data-placement="top" title="Delete"></i></a>
+                                                        <a href="{{ route('roles.delete', [$team->slug, $role->slug]) }}" data-method="delete" data-confirm="{{_i('Are you sure?')}}"><i class="fa fa-trash-o fa-fw" data-toggle="tooltip" data-placement="top" title="{{_i('Delete')}}"></i></a>
                                                     </li>
                                                 @endif
                                             </ul>

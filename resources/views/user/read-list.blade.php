@@ -5,7 +5,7 @@
 	<div class="aside-content">
 		<div class="row no-container">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<div class="page-header"><i class="fa fa-check-square-o fa-fw fa-lg icon"></i> Read List</div>
+				<div class="page-header"><i class="fa fa-check-square-o fa-fw fa-lg icon"></i> {{_i('Read List')}}</div>
 				<div class="wikis-list">
 					@if($readList->count() > 0)
 						<div class="list-group">
@@ -26,9 +26,9 @@
 					                        	</div>
 					                        	<div class="pull-right" style="margin-right: 15px;">
 					                        		@if($item->subject_type === 'App\Models\Wiki')
-						                        		<object><a href="{{ route('wikis.readlater.destroy', [$team->slug, $item->subject->space->slug, $item->subject->slug]) }}" data-method="delete" data-toggle="tooltip" data-placement="top" title="Remove from Read List"><i class="fa fa-trash-o icon"></i></a></object>
+						                        		<object><a href="{{ route('wikis.readlater.destroy', [$team->slug, $item->subject->space->slug, $item->subject->slug]) }}" data-method="delete" data-toggle="tooltip" data-placement="top" title="{{_i('Remove from')}} {{_i('Read List')}}"><i class="fa fa-trash-o icon"></i></a></object>
 						                        	@else
-						                        		<object><a href="{{ route('pages.readlater.destroy', [$team->slug, $item->subject->wiki->space->slug, $item->subject->wiki->slug, $item->subject->slug]) }}" data-method="delete" data-toggle="tooltip" data-placement="top" title="Remove from Read List"><i class="fa fa-trash-o icon"></i></a></object>
+						                        		<object><a href="{{ route('pages.readlater.destroy', [$team->slug, $item->subject->wiki->space->slug, $item->subject->wiki->slug, $item->subject->slug]) }}" data-method="delete" data-toggle="tooltip" data-placement="top" title="{{_i('Remove from')}} {{_i('Read List')}}"><i class="fa fa-trash-o icon"></i></a></object>
 						                        	@endif
 					                        	</div>
 					                        	<div class="clearfix"></div>
@@ -61,7 +61,7 @@
 				        	{{ $readList->links() }}
 				        </div>
 					@else
-						<h1 class="nothing-found side"><i class="fa fa-exclamation-triangle fa-fw icon"></i> Nothing found</h1>
+						<h1 class="nothing-found side"><i class="fa fa-exclamation-triangle fa-fw icon"></i> {{_i('Nothing found')}}</h1>
 					@endif
 				</div>
 			</div>

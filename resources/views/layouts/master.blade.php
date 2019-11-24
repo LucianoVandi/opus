@@ -29,7 +29,7 @@
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary" onclick="$('#avatar-upload-form').submit();">Save changes</button>
+						<button type="button" class="btn btn-primary" onclick="$('#avatar-upload-form').submit();">{{_i('Save')}} changes</button>
 					</div>
 				</div>
 			</div>

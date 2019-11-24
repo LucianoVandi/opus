@@ -21,7 +21,7 @@ class DeleteSpaceNotification extends BaseNotification
             ->from($this->from)
             ->attachment(function ($attachment) {
                 $attachment
-                    ->content(':wastebasket: <' . route('users.show', [$this->space->team->slug, $this->space->user->slug,]) . '|' . $this->space->user->first_name . ' ' . $this->space->user->last_name . '> just deleted a space  <' . route('categories.wikis', [$this->space->team->slug, $this->space->slug,]) . '|' . $this->space->name . '>');
+                    ->content(':wastebasket: <' . route('users.show', [$this->space->team->slug, $this->space->user->slug,]) . '|' . $this->space->user->first_name . ' ' . $this->space->user->last_name . '> '._i('just deleted a space').'  <' . route('categories.wikis', [$this->space->team->slug, $this->space->slug,]) . '|' . $this->space->name . '>');
             });
     }
 }

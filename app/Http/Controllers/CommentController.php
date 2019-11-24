@@ -79,7 +79,7 @@ class CommentController extends Controller
         $this->comment->storeComment($wiki->id, Wiki::class, $this->request->all());
 
         return redirect()->route('wikis.show', [$team->slug, $space->slug, $wiki->slug])->with([
-            'alert'      => 'Comment successfully posted.',
+            'alert'      => _i('Comment successfully posted.'),
             'alert_type' => 'success',
         ]);
     }
@@ -146,7 +146,7 @@ class CommentController extends Controller
         $this->comment->storeComment($page->id, Page::class, $this->request->all());
 
         return redirect()->route('pages.show', [$team->slug, $space->slug, $wiki->slug, $page->slug])->with([
-            'alert'      => 'Comment successfully posted.',
+            'alert'      => _i('Comment successfully posted.'),
             'alert_type' => 'success',
         ]);
     }

@@ -19,7 +19,7 @@ class CreatePageNotification extends BaseNotification
     {
         return (new SlackMessage)
             ->from($this->from)
-            ->content(':memo: <' . route('users.show', [$this->page->wiki->team->slug, $this->page->user->slug,]) . '|' . $this->page->user->first_name . ' ' . $this->page->user->last_name . '> created a page.')
+            ->content(':memo: <' . route('users.show', [$this->page->wiki->team->slug, $this->page->user->slug,]) . '|' . $this->page->user->first_name . ' ' . $this->page->user->last_name . '> '._i('created a page').'.')
             ->attachment(function ($attachment) {
                 $attachment
                     ->title($this->page->wiki->name . '/' . $this->page->name, route('pages.show', [$this->page->wiki->team->slug, $this->page->wiki->space->slug, $this->page->wiki->slug, $this->page->slug]))

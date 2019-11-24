@@ -38,7 +38,7 @@ class InviteController extends Controller
     }
 
     /**
-     * Invite user to team.
+     * {{_i('Invite user')}} to team.
      *
      * @param \App\Models\Team $team
      * @return \Illuminate\Http\RedirectResponse
@@ -46,8 +46,8 @@ class InviteController extends Controller
     public function store(Team $team)
     {
         $this->validate($this->request, Invite::INVITE_RULES, [
-            'is_already_invited' => 'A user with this email already invited.',
-            'is_already_member'  => 'A user with this email already exists.',
+            'is_already_invited' => _i('A user with this email already invited.'),
+            'is_already_member'  => _i('A user with this email already exists.'),
         ]);
 
         $invitation = $this->invite->inviteUser($this->request->all());
@@ -55,7 +55,7 @@ class InviteController extends Controller
         $this->sendInvitationEmail($invitation, $team);
 
         return redirect()->back()->with([
-            'alert'      => 'Invitation is successfully sent to user.',
+            'alert'      => _i('Invitation is successfully sent to user.'),
             'alert_type' => 'success',
         ]);
     }
@@ -71,7 +71,7 @@ class InviteController extends Controller
     {
         Mail::send('mails.invitation', ['invitation' => $invitation, 'team' => $team], function ($message) use ($invitation, $team) {
             $message->from(config('opus.mail_sender_address'), config('opus.mail_sender_name'));
-            $message->subject('Invitation request from ' . $team->name . '.');
+            $message->subject(_i('Invitation request from ') . $team->name . '.');
             $message->to($invitation->email);
         });
 
@@ -90,7 +90,7 @@ class InviteController extends Controller
         $this->invite->deleteInvitation($invitationCode, $team->id);
 
         return redirect()->back()->with([
-            'alert'      => 'Invitation successfully removed.',
+            'alert'      => _i('Invitation successfully removed.'),
             'alert_type' => 'success',
         ]);
     }

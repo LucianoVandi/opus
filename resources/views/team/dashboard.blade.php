@@ -6,14 +6,14 @@
 	<div class="aside-content">
 		<div class="row no-container">
 			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-				<div class="page-header"><i class="fa fa-history fa-fw fa-lg icon"></i> Activities</div>
+				<div class="page-header"><i class="fa fa-history fa-fw fa-lg icon"></i> {{_i('Activities')}}</div>
 				@include('team.partials.activity')
 			</div>
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 				<div data-spy="affix" data-offset-top="1">
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							<i class="fa fa-history fa-fw" style="margin-right: 3px;"></i> Recent Wikis
+							<i class="fa fa-history fa-fw" style="margin-right: 3px;"></i> {{_i('Recent Wikis')}}
 						</div>
 						<div class="panel-body" style="padding: 0px 0px">
 							@if($wikis->count() > 0)
@@ -32,13 +32,13 @@
 									@endforeach
 								</ul>
 							@else 
-								<h1 class="nothing-found side"><i class="fa fa-exclamation-triangle fa-fw icon"></i> Nothing found</h1>
+								<h1 class="nothing-found side"><i class="fa fa-exclamation-triangle fa-fw icon"></i> {{_i('Nothing found')}}</h1>
 							@endif
 						</div>
 					</div>
 					<div class="panel panel-default">
 						<div class="panel-heading" style="position: relative;">
-							<i class="fa fa-star-o fa-fw" style="margin-right: 3px;"></i> Favourite Wikis 
+							<i class="fa fa-star-o fa-fw" style="margin-right: 3px;"></i> {{_i('Favourite Wikis')}} 
 							{{-- <a href="#" style="position: absolute; right: 12px; top: 10px; color: #337ab7;">
 								All
 							</a> --}}
@@ -60,7 +60,7 @@
 									@endforeach
 								</ul>
 							@else
-								<h1 class="nothing-found side"><i class="fa fa-exclamation-triangle fa-fw icon"></i> Nothing found</h1>
+								<h1 class="nothing-found side"><i class="fa fa-exclamation-triangle fa-fw icon"></i> {{_i('Nothing found')}}</h1>
 							@endif
 						</div>
 					</div>	

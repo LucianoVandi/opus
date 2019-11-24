@@ -21,7 +21,7 @@
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-					<div class="page-header">Activities</div>
+					<div class="page-header">{{_i('Activities')}}</div>
 					<div class="events-list">
 						@include('user.partials.activity')
 					</div>
