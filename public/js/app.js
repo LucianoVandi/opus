@@ -477,10 +477,10 @@ var App = {
             var form = `
                 <form action="#" id="update-comment-form" style="margin-top: 10px;">    
                     <div class="form-group" style="margin-bottom: 10px;">
-                        <textarea name="comment" class="form-control" id="comment-input-textarea" data-comment-id="` + commentId + `" placeholder="Write a comment" style="height: 80px; resize: none;">` + comment + `</textarea>
+                        <textarea name="comment" class="form-control" id="comment-input-textarea" data-comment-id="` + commentId + `" placeholder="` + window.Opus.i18n.write_comment + `" style="height: 80px; resize: none;">` + comment + `</textarea>
                     </div>
-                    <a href="#" class="btn btn-default btn-sm" id="close-comment-update">Cancel</a>
-                    <a href="#" class="btn btn-success btn-sm" id="update-comment-btn">Save Changes</a>
+                    <a href="#" class="btn btn-default btn-sm" id="close-comment-update">` + window.Opus.i18n.cancel + `</a>
+                    <a href="#" class="btn btn-success btn-sm" id="update-comment-btn">` + window.Opus.i18n.save_changes + `</a>
                 </form>
             `;
 
@@ -492,7 +492,7 @@ var App = {
 
         $(document).on('click', '#delete-comment', function (e) {
             e.preventDefault();
-            if (confirm('Are you sure?')) {
+            if (confirm(window.Opus.i18n.are_you_sure)) {
                 event.preventDefault();
                 var commentId = $(this).data('comment-id');
                 that.deleteComment(commentId, this);

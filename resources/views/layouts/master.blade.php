@@ -47,7 +47,15 @@
 			@endif
 			
 		</div>
-
+		<script>
+			window.Opus = {} || window.Opus;
+			window.Opus.i18n = {
+				write_comment: "{{_i('Write a comment')}}",
+				are_you_sure: "{{_i('Are you sure?')}}",
+				cancel: "{{_i('Cancel')}}",
+				save_changes: "{{_i('Save Changes')}}"
+			};
+		</script>
 		<script type="text/javascript" src="/js/jquery.js"></script>
 		<script type="text/javascript" src="/js/list.min.js"></script>
 		<script type="text/javascript" src="/js/laroute.js"></script>

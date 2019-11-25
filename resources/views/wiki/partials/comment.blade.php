@@ -88,7 +88,7 @@
             </div>
             <div class="media-body">
                 <div class="form-group {{ $errors->has('comment') ? 'has-error' : '' }}" style="margin-bottom: 0px;">
-                    <textarea name="comment" class="form-control" id="comment-input-textarea" placeholder="Write a comment" style="margin-bottom: 13px;"></textarea>
+                    <textarea name="comment" class="form-control" id="comment-input-textarea" placeholder="{{_i('Write a comment')}}" style="margin-bottom: 13px;"></textarea>
                     @if($errors->has('comment'))
                         <p class="help-block has-error" style="width: 230px; margin-bottom: 0; position: absolute;">{{ $errors->first('comment') }}</p>
                     @endif
