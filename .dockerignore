@@ -1,8 +1,5 @@
-*.docker
 *.log
 *.md
-.env.dist
 .gitattributes
 .gitignore
-*.yml
 phpunit.xml
