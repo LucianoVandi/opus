@@ -2,7 +2,7 @@ version: '2'
 services:
   web:
     build:
-      context: ./
+      context: .
       dockerfile: web.docker
     volumes:
       - ./:/var/www
@@ -27,7 +27,7 @@ services:
 
   app:
     build:
-      context: ./
+      context: .
       dockerfile: app.docker
     volumes:
       - ./:/var/www

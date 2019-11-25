@@ -12,6 +12,6 @@ RUN apt-get update \
 
 WORKDIR /var/www
 
-ADD ./ /var/www
+# ADD ./ /var/www
 
-RUN composer install && php artisan key:gen
+# RUN composer install && php artisan key:gen
