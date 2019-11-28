@@ -8,7 +8,7 @@
                 <ul class="list-unstyled list-inline" style="margin-bottom: 0;">
                     <li class="page-like-con">
                         <i class="fa fa-spinner fa-spin fa-lg fa-fw" id="spinner"></i>
-                        <a href="#" id="like-page" data-page="{{ $page->slug }}"><i class="fa fa-star-o fa-fw" style="font-size: 16px;" data-toggle="tooltip" data-placement="top" title="{{ $isUserLikePage ? 'Unlike' : 'Like' }}" style="margin-right: 2px;"></i></a> <span class="label" id="likes-counter" style="color: #9c9c9c; font-size: 12px; font-weight: 600; padding: 0px; margin-left: 2px;">{{ $page->likes->count() }}</span>
+                        <a href="#" id="like-page" data-page="{{ $page->slug }}"><i class="fa fa-star-o fa-fw" style="font-size: 16px;" data-toggle="tooltip" data-placement="top" title="{{ $isUserLikePage ? _i('Unlike') : _i('Like') }}" style="margin-right: 2px;"></i></a> <span class="label" id="likes-counter" style="color: #9c9c9c; font-size: 12px; font-weight: 600; padding: 0px; margin-left: 2px;">{{ $page->likes->count() }}</span>
                     </li>
                     <li>
                         <i class="fa fa-comments-o fa-fw" style="margin-right: 2px; font-size: 16px;"></i> <span class="label" style="color: #9c9c9c; font-size: 12px; font-weight: 600; padding: 0px; margin-left: 2px;">{{ $page->comments->count() }}</span>
@@ -53,7 +53,7 @@
                                                             @endif
                                                         @endforeach
                                                         <i class="fa fa-spinner fa-spin fa-lg fa-fw" id="spinner"></i>
-                                                        <a href="#" id="like-comment" data-comment-id="{{ $comment->id }}"><i class="fa fa-thumbs-o-up fa-fw" style="font-size: 14px;"></i> {{ $userLikeComment ? 'Unlike' : 'Like' }}</a>
+                                                        <a href="#" id="like-comment" data-comment-id="{{ $comment->id }}"><i class="fa fa-thumbs-o-up fa-fw" style="font-size: 14px;"></i> {{ $userLikeComment ? _i('Unlike') : _i('Like') }}</a>
                                                     </li>
                                                     @if($comment->user_id === Auth::user()->id)
                                                         <li>

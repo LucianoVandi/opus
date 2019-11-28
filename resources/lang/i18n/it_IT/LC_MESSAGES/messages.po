@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MultilanguageLaravelApplication\n"
-"POT-Creation-Date: 2019-11-25 07:42+0100\n"
-"PO-Revision-Date: 2019-11-25 07:42+0100\n"
+"POT-Creation-Date: 2019-11-28 13:27+0100\n"
+"PO-Revision-Date: 2019-11-28 13:28+0100\n"
 "Last-Translator: James Translator <james@translations.colm>\n"
 "Language-Team: James Translator <james@translations.colm>\n"
 "Language: it_IT\n"
@@ -556,6 +556,20 @@ msgstr "Wiki rimossa dall’elenco di lettura."
 #: Notifications/Space/UpdateSpaceNotification.php:24
 msgid "just updated a space"
 msgstr "ha appena aggiornato uno spazio"
+
+#: ../storage/framework/messages/5e2d82a650d9462fa60b902b121647fb8da7becd.php.php:10
+#: ../storage/framework/messages/6dd8bc6c2f1839c3cd3837defc2008532c1066f7.php.php:11
+#: ../storage/framework/messages/6dd8bc6c2f1839c3cd3837defc2008532c1066f7.php.php:57
+#: ../storage/framework/messages/96d568c48c247e3d65a1d1e2596924ea5110b5fe.php.php:55
+msgid "Unlike"
+msgstr "Non mi Piace"
+
+#: ../storage/framework/messages/5e2d82a650d9462fa60b902b121647fb8da7becd.php.php:10
+#: ../storage/framework/messages/6dd8bc6c2f1839c3cd3837defc2008532c1066f7.php.php:11
+#: ../storage/framework/messages/6dd8bc6c2f1839c3cd3837defc2008532c1066f7.php.php:57
+#: ../storage/framework/messages/96d568c48c247e3d65a1d1e2596924ea5110b5fe.php.php:55
+msgid "Like"
+msgstr "Mi Piace"
 
 #: ../storage/framework/messages/5e2d82a650d9462fa60b902b121647fb8da7becd.php.php:15
 #: ../storage/framework/messages/8482ff361dbdff9aa23cf47dae6c9c3942aa2bbb.php.php:4

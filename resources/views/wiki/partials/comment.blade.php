@@ -51,7 +51,7 @@
                                                                 <?php $userLikeComment = true; ?>
                                                             @endif
                                                         @endforeach
-                                                        <i class="fa fa-spinner fa-spin fa-lg fa-fw" id="spinner"></i> <a href="#" id="like-comment" data-comment-id="{{ $comment->id }}"><i class="fa fa-thumbs-o-up fa-fw" style="font-size: 14px;"></i> {{ $userLikeComment ? 'Unlike' : 'Like' }}</a>
+                                                        <i class="fa fa-spinner fa-spin fa-lg fa-fw" id="spinner"></i> <a href="#" id="like-comment" data-comment-id="{{ $comment->id }}"><i class="fa fa-thumbs-o-up fa-fw" style="font-size: 14px;"></i> {{ $userLikeComment ? _i('Unlike') : _i('Like') }}</a>
                                                     </li>
                                                     @if($comment->user_id === Auth::user()->id)
                                                         <li>
