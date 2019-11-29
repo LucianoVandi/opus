@@ -138,7 +138,7 @@ class WikiController extends Controller
             }
         }
 
-        return view('wiki.index', compact('pages', 'wiki', 'team', 'space', 'isUserLikeWiki', 'wikiTags', 'isUserWatchWiki', 'isWikiInReadList'));
+        return view('wiki.index', compact('wiki', 'team', 'space', 'isUserLikeWiki', 'wikiTags', 'isUserWatchWiki', 'isWikiInReadList'));
     }
 
     /**
@@ -256,8 +256,12 @@ class WikiController extends Controller
     {
         $isUserLikeWiki = self::isUserLikeWiki($wiki);
 
-        $wikiLastUpdated = Activity::where('subject_type', Wiki::class)->where('subject_id', $wiki->id)->orderBy('created_at', 'desc')->first()->updated_at->timezone(Auth::user()->timezone)->toDayDateTimeString();
-
+        $lastActivity = Activity::where('subject_type', Wiki::class)->where('subject_id', $wiki->id)->orderBy('created_at', 'desc')->first();
+        $wikiLastUpdated = null;
+        if(!is_null($lastActivity)){
+            $wikiLastUpdated = $lastActivity->updated_at->timezone(Auth::user()->timezone)->toDayDateTimeString();
+        }
+        
         $spaces = $this->space->getTeamSpaces($team->id);
 
         $wikiTags = $this->wiki->find($wiki->id)->tags()->get();
