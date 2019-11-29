@@ -7,7 +7,7 @@
                 </div>
                 <div class="pull-right wiki-like-con">
                     <i class="fa fa-spinner fa-spin fa-lg fa-fw" id="spinner"></i>
-                    <a href="#" id="like-wiki" data-wiki="{{ $wiki->slug }}"><i class="fa fa-star-o fa-fw" data-toggle="tooltip" data-placement="bottom" title="{{ $isUserLikeWiki ? 'Unlike' : 'Like' }}" style="margin-right: 3px; font-size: 16px;"></i></a> <span class="label" id="likes-counter" style="color: #9c9c9c; font-size: 12px; font-weight: 600; padding: 0px; margin-left: 2px;">{{ $wiki->likes->count() }}</span>
+                    <a href="#" id="like-wiki" data-wiki="{{ $wiki->slug }}"><i class="fa fa-star-o fa-fw" data-toggle="tooltip" data-placement="bottom" title="{{ $isUserLikeWiki ? _i('Unlike') : _i('Like') }}" style="margin-right: 3px; font-size: 16px;"></i></a> <span class="label" id="likes-counter" style="color: #9c9c9c; font-size: 12px; font-weight: 600; padding: 0px; margin-left: 2px;">{{ $wiki->likes->count() }}</span>
                 </div>
                 <div class="clearfix"></div>
             </div>
