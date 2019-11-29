@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MultilanguageLaravelApplication\n"
 "POT-Creation-Date: 2019-11-28 13:27+0100\n"
-"PO-Revision-Date: 2019-11-28 13:28+0100\n"
+"PO-Revision-Date: 2019-11-29 09:05+0100\n"
 "Last-Translator: James Translator <james@translations.colm>\n"
 "Language-Team: James Translator <james@translations.colm>\n"
 "Language: it_IT\n"
@@ -21,15 +21,15 @@ msgstr ""
 
 #: ../storage/framework/messages/0b69ae458e0cc4ecd7944bd1633b217ae050b872.php.php:65
 msgid "You created space"
-msgstr "Hai creato lo spazio"
+msgstr "Hai creato lo spazio di lavoro"
 
 #: ../storage/framework/messages/0b69ae458e0cc4ecd7944bd1633b217ae050b872.php.php:69
 msgid "You deleted space"
-msgstr "Hai eliminato lo spazio"
+msgstr "Hai eliminato lo spazio di lavoro"
 
 #: ../storage/framework/messages/0b69ae458e0cc4ecd7944bd1633b217ae050b872.php.php:73
 msgid "You updated space"
-msgstr "Hai aggiornato lo spazio"
+msgstr "Hai aggiornato lo spazio di lavoro"
 
 #: ../storage/framework/messages/0b69ae458e0cc4ecd7944bd1633b217ae050b872.php.php:77
 msgid "You created wiki"
@@ -304,7 +304,7 @@ msgstr "Crea Wiki"
 #: ../storage/framework/messages/6123431f3dfbd7cc6f56a1ec69b8cde35ca916e7.php.php:3
 #: ../storage/framework/messages/8482ff361dbdff9aa23cf47dae6c9c3942aa2bbb.php.php:41
 msgid "Create space"
-msgstr "Crea Spazio"
+msgstr "Crea Spazio di Lavoro"
 
 #: ../storage/framework/messages/20f42593c610dbf8e7af2ed8876860537d17c4c5.php.php:42
 #: ../storage/framework/messages/9b01b17bdab3aa4d5e46a3891786c27700015990.php.php:11
@@ -341,17 +341,17 @@ msgstr "Crea Wiki"
 #: ../storage/framework/messages/35e3a589f07adaf72c94ee37a4bc5ebe699252cf.php.php:65
 #: ../storage/framework/messages/c0b4b738f58d268e9af73c9433d98fbaba0dc8ed.php.php:65
 msgid "created space"
-msgstr "ha creato lo spazio"
+msgstr "ha creato lo spazio di lavoro"
 
 #: ../storage/framework/messages/35e3a589f07adaf72c94ee37a4bc5ebe699252cf.php.php:69
 #: ../storage/framework/messages/c0b4b738f58d268e9af73c9433d98fbaba0dc8ed.php.php:69
 msgid "deleted space"
-msgstr "ha eliminato lo spazio"
+msgstr "ha eliminato lo spazio di lavoro"
 
 #: ../storage/framework/messages/35e3a589f07adaf72c94ee37a4bc5ebe699252cf.php.php:73
 #: ../storage/framework/messages/c0b4b738f58d268e9af73c9433d98fbaba0dc8ed.php.php:73
 msgid "updated space"
-msgstr "ha aggiornato lo spazio"
+msgstr "ha aggiornato lo spazio di lavoro"
 
 #: ../storage/framework/messages/35e3a589f07adaf72c94ee37a4bc5ebe699252cf.php.php:77
 #: ../storage/framework/messages/c0b4b738f58d268e9af73c9433d98fbaba0dc8ed.php.php:77
@@ -420,12 +420,12 @@ msgstr "ha aggiornato un commento nella pagina"
 #: ../storage/framework/messages/3a1e87f44afb4adc480c93e4ad2d66eb55a19063.php.php:79
 #: Http/Controllers/SpaceController.php:79
 msgid "Space successfully created."
-msgstr "Spazio creato con successo."
+msgstr "Spazio di lavoro creato con successo."
 
 #: ../storage/framework/messages/3a1e87f44afb4adc480c93e4ad2d66eb55a19063.php.php:96
 #: Http/Controllers/SpaceController.php:96
 msgid "Space successfully deleted."
-msgstr "Spazio eliminato con successo."
+msgstr "Spazio di Lavoro eliminato con successo."
 
 #: ../storage/framework/messages/3a1e87f44afb4adc480c93e4ad2d66eb55a19063.php.php:115
 #: Http/Controllers/SpaceController.php:115
@@ -479,11 +479,11 @@ msgstr "Integrazione eliminata con successo."
 
 #: ../storage/framework/messages/4255ac59c0f4f1fa69e0c6b29554f6c03a425a80.php.php:13
 msgid "Recent Wikis"
-msgstr "Wiki Recenti"
+msgstr "Aggiornamenti Recenti"
 
 #: ../storage/framework/messages/4255ac59c0f4f1fa69e0c6b29554f6c03a425a80.php.php:41
 msgid "Favourite Wikis"
-msgstr "Wiki Preferite"
+msgstr "Preferiti"
 
 #: ../storage/framework/messages/49e3755f9b1c54e3bd22c0c990230b2c9c51ab0f.php.php:49
 #: Http/Controllers/InviteController.php:49
@@ -513,7 +513,7 @@ msgstr "Invito rimosso con successo."
 #: ../storage/framework/messages/4e85b4ee45025a8b8478f8f467b17745fd37271d.php.php:88
 #: Http/Controllers/WikiController.php:88
 msgid "You need to create space before creating wiki!"
-msgstr "Devi creare degli spazi prima di create una wiki!"
+msgstr "Devi creare degli spazi di lavoro prima di create una wiki!"
 
 #: ../storage/framework/messages/4e85b4ee45025a8b8478f8f467b17745fd37271d.php.php:113
 #: Http/Controllers/WikiController.php:113
@@ -555,7 +555,7 @@ msgstr "Wiki rimossa dall’elenco di lettura."
 #: ../storage/framework/messages/51b3bd657d4f2c02c0c52821d1e46724b4a7cc38.php.php:24
 #: Notifications/Space/UpdateSpaceNotification.php:24
 msgid "just updated a space"
-msgstr "ha appena aggiornato uno spazio"
+msgstr "ha appena aggiornato uno spazio di lavoro"
 
 #: ../storage/framework/messages/5e2d82a650d9462fa60b902b121647fb8da7becd.php.php:10
 #: ../storage/framework/messages/6dd8bc6c2f1839c3cd3837defc2008532c1066f7.php.php:11
@@ -590,11 +590,11 @@ msgstr "Albero Pagine"
 
 #: ../storage/framework/messages/6123431f3dfbd7cc6f56a1ec69b8cde35ca916e7.php.php:6
 msgid "Space Name"
-msgstr "Nome Spazio"
+msgstr "Nome Spazio di Lavoro"
 
 #: ../storage/framework/messages/6123431f3dfbd7cc6f56a1ec69b8cde35ca916e7.php.php:11
 msgid "Enter space name here. e.g. Sales"
-msgstr "Inserisci il nome dello spazio ad es. Vendite"
+msgstr "Inserisci il nome dello spazio di lavoro ad es. Vendite"
 
 #: ../storage/framework/messages/6123431f3dfbd7cc6f56a1ec69b8cde35ca916e7.php.php:15
 #: ../storage/framework/messages/7d4d663140c5a8a9217b16fb31b2ba265142f54c.php.php:43
@@ -607,7 +607,7 @@ msgstr "Descrizione"
 
 #: ../storage/framework/messages/6123431f3dfbd7cc6f56a1ec69b8cde35ca916e7.php.php:17
 msgid "Describe a little about space."
-msgstr "Breve descrizione sullo spazio."
+msgstr "Breve descrizione sullo spazio di lavoro."
 
 #: ../storage/framework/messages/6388c0a818e06168f406d6d9ffc2942645b05022.php.php:30
 #: Notifications/Wiki/DeleteWikiNotification.php:30
@@ -675,7 +675,7 @@ msgstr "Membri"
 
 #: ../storage/framework/messages/8482ff361dbdff9aa23cf47dae6c9c3942aa2bbb.php.php:39
 msgid "Spaces"
-msgstr "Spazi"
+msgstr "Spazi di Lavoro"
 
 #: ../storage/framework/messages/8482ff361dbdff9aa23cf47dae6c9c3942aa2bbb.php.php:47
 msgid "Filter"
@@ -709,11 +709,11 @@ msgstr "Intro"
 #: ../storage/framework/messages/8cf0a7400bab441708bd8d3e5b816c673ce3855e.php.php:20
 #: ../storage/framework/messages/fb11ab4a386a090f943c1cf3bd54b307f81bff62.php.php:27
 msgid "Space"
-msgstr "Spazi"
+msgstr "Spazio di Lavoro"
 
 #: ../storage/framework/messages/8cf0a7400bab441708bd8d3e5b816c673ce3855e.php.php:22
 msgid "Select a space"
-msgstr "Selezione uno spazio"
+msgstr "Selezione uno spazio di lavoro"
 
 #: ../storage/framework/messages/8d17c19f92fc36cdcffcb71b2ae816d35d75820f.php.php:16
 #: ../storage/framework/messages/a3a2fdb4893c0bada02f2fb91ed31fb466eb6383.php.php:56
@@ -803,7 +803,7 @@ msgstr "Puoi modificare i ruoli e assegnare i permessi."
 #: ../storage/framework/messages/9938dd6a5a6d4e20652ef4d659e562e061f57b83.php.php:24
 #: Notifications/Space/DeleteSpaceNotification.php:24
 msgid "just deleted a space"
-msgstr "ha appena eliminato uno spazio"
+msgstr "ha appena eliminato uno spazio di lavoro"
 
 #: ../storage/framework/messages/9b01b17bdab3aa4d5e46a3891786c27700015990.php.php:26
 msgid "Invite"
@@ -983,7 +983,7 @@ msgstr "ha creato una pagina"
 #: ../storage/framework/messages/e200319bc36e1b2d4a82bfc50436fd2fa25bdb6b.php.php:22
 #: Notifications/Space/CreateSpaceNotification.php:22
 msgid "created a new space"
-msgstr "ha creato un nuovo spazio"
+msgstr "ha creato un nuovo spazio di lavoro"
 
 #: ../storage/framework/messages/e98b59d9c8d758b119ac5629d39219c79c418399.php.php:6
 msgid "Join Team"
