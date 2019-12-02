@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Pdf;
 use Auth;
+use Dompdf\Dompdf;
+use Dompdf\Options;
 use App\Models\Tag;
 use App\Models\Team;
 use App\Models\Wiki;
@@ -297,7 +299,15 @@ class WikiController extends Controller
      */
     public function generatePdf(Team $team, Space $space, Wiki $wiki)
     {
-        return Pdf::loadView('pdf.page', compact('wiki'))->setOption('header-html', view('pdf.header', compact('wiki')))->inline($wiki->name . '.pdf');
+        //return Pdf::loadView('pdf.page', compact('wiki'))->setOption('header-html', view('pdf.header', compact('wiki')))->inline($wiki->name . '.pdf');
+        $options = new Options();
+        $options->set('defaultFont', 'Helvetica');
+        $dompdf = new Dompdf($options);
+        $dompdf->loadHtml($wiki->description);
+        $dompdf->render();
+        return response()->make($dompdf->output())
+            ->header("Content-type","application/pdf")
+            ->header("Content-disposition","attachment; filename=\"".$wiki->name.".pdf"."\"");
     }
 
     /**

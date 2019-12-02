@@ -185,7 +185,7 @@ return [
         Baum\Providers\BaumServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
 
-        Barryvdh\Snappy\ServiceProvider::class,
+        //Barryvdh\Snappy\ServiceProvider::class,
         Fenos\Notifynder\NotifynderServiceProvider::class,
         Laravel\Tinker\TinkerServiceProvider::class,
     ],
@@ -238,7 +238,7 @@ return [
         'ViewHelper'   => App\Helpers\ViewHelper::class,
         'Image'        => Intervention\Image\Facades\Image::class,
         'Emoji'        => App\Helpers\EmojiHelper::class,
-        'Pdf'          => Barryvdh\Snappy\Facades\SnappyPdf::class,
+        //'Pdf'          => Barryvdh\Snappy\Facades\SnappyPdf::class,
         'Notifynder'   => Fenos\Notifynder\Facades\Notifynder::class,
     ],
 
