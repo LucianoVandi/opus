@@ -231,7 +231,8 @@ class TeamController extends Controller
      */
     public function create()
     {
-        return view('team.create');
+        $createTeam = true;
+        return view('team.create', compact('createTeam'));
     }
 
     /**

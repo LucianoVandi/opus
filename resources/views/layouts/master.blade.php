@@ -36,7 +36,7 @@
 		</div>
 		<div id="app">
 			@if(Auth::user())
-				@if(!isset($editWiki))  
+				@if(!isset($editWiki) && !isset($createTeam))  
 					@include('partials.menu')
 				@endif
 				<div @if(!isset($editWiki)) style="position: absolute; top: 50px; width: 100%; height: calc(100% - 62px);" @endif>

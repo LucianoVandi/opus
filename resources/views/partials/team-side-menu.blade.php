@@ -14,6 +14,7 @@
 					<span class="item-name">{{_i('Read List')}}</span>
 				</a>
 			</li>
+			@if (Auth::user()->hasPermission('admin'))
 			<li class="item">
 				<a href="{{ route('roles.index', [$team->slug]) }}">
 					<i class="fa fa-shield fa-fw fa-lg icon"></i>
@@ -32,6 +33,7 @@
 					<span class="item-name">{{_i('Team Settings')}}</span>
 				</a>
 			</li>
+			@endif
 		</ul>
 		<div class="side-menu-wiki-list">
 			<ul class="list-unstyled" id="categories-list">

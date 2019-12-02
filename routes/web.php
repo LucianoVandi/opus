@@ -6,15 +6,17 @@ Route::group(['middleware' => 'guest'], function () {
     Route::get('/', 'HomeController@home')->name('home');
     Route::get('team/login', 'TeamController@login')->name('team.login');
     Route::post('team/login', 'TeamController@postLogin')->name('team.postlogin');
-    Route::get('team/create', 'TeamController@create')->name('team.create');
-    Route::post('team/create', 'TeamController@store')->name('team.store');
     Route::get('password/reset', 'UserController@showLinkRequestForm')->name('password.request');
     Route::post('password/email', 'UserController@sendResetLinkEmail')->name('password.email');
     Route::get('password/reset/{token}', 'UserController@showResetForm')->name('password.reset');
     Route::post('password/reset/{token}', 'UserController@reset')->name('password.reset');
 });
 
-Route::get('get-pages', 'WikiController@getWikiPages')->name('wikis.pages');
+Route::get('team/create', 'TeamController@create')->name('team.create')->middleware('acl:admin');
+Route::post('team/create', 'TeamController@store')->name('team.store')->middleware('acl:admin');
+
+// @todo: remove 
+// Route::get('get-pages', 'WikiController@getWikiPages')->name('wikis.pages');
 
 Route::group(['prefix' => 'api', 'middleware' => 'auth'], function () {
     Route::get('/team/members', 'UserController@getTeamMembers')->name('api.teams.members');
@@ -42,7 +44,7 @@ Route::group(['prefix' => 'teams', 'middleware' => 'auth'], function () {
         Route::get('pages', 'PageController@getTagPages')->name('tags.pages');
     });
 
-    Route::group(['prefix' => '{team_slug}/settings/roles'], function () {
+    Route::group(['prefix' => '{team_slug}/settings/roles', 'middleware'=>'acl:admin'], function () {
         Route::get('', 'RoleController@index')->name('roles.index');
         Route::delete('{role_slug}', 'RoleController@destroy')->name('roles.delete');
         Route::patch('{role_slug}', 'RoleController@update')->name('roles.update');
@@ -55,7 +57,7 @@ Route::group(['prefix' => 'teams', 'middleware' => 'auth'], function () {
         Route::get('read-all', 'NotificationController@readAll')->name('notifications.readall');
     });
 
-    Route::group(['prefix' => '{team_slug}/settings'], function () {
+    Route::group(['prefix' => '{team_slug}/settings', 'middleware'=>'acl:admin'], function () {
         Route::get('general', 'TeamController@generalSettings')->name('teams.settings.general');
         Route::get('members', 'TeamController@membersSettings')->name('teams.settings.members');
 
