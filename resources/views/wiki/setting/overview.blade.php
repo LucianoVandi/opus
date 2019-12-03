@@ -58,20 +58,20 @@
 								<div class="panel-body">
 									<div class="wiki-overview">
 										<div style="margin-bottom: 4px;">
-											<label style="margin-bottom: 0;">Created by</label>
+											<label style="margin-bottom: 0;">{{_i('Created by')}}</label>
 											<p><a href="{{ route('users.show', [$team->slug, $wiki->user->slug]) }}">{{ $wiki->user->name }}</a></p>
 										</div>
 										<div style="margin-bottom: 4px;">
-											<label style="margin-bottom: 0;">Created at</label>
+											<label style="margin-bottom: 0;">{{_i('Created at')}}</label>
 											<p>{{ $wiki->created_at->toDayDateTimeString() }}</p>
 										</div>
 										<div>
-											<label style="margin-bottom: 0;">Last updated</label>
+											<label style="margin-bottom: 0;">{{_i('Last updated')}}</label>
 											<p>{{ $wikiLastUpdated }}</p>
 										</div>
 										<hr>
 										<div>
-											<label class="pull-left" style="margin-bottom: 0;">Total Pages</label>
+											<label class="pull-left" style="margin-bottom: 0;">{{_i('Total Pages')}}</label>
 											<div class="pull-right label label-default" style="position: relative; top: 4px;">{{ $wiki->pages->count() }}</div>
 											<div class="clearfix"></div>
 										</div>
@@ -86,9 +86,9 @@
 							<div class="delete-team" style="border-bottom: 0px;">
 	                            <h2>{{_i('Delete Wiki')}}</h2>
 	                            <p class="text-muted action-info">
-	                                This wiki will be permanently deleted from this team and you can't restore it.
+	                                {{_i('This wiki will be permanently deleted from this team and you can\'t restore it.')}}
 	                            </p>
-	                            <a href="{{ route('wikis.destroy', [$team->slug, $space->slug, $wiki->slug]) }}" class="btn btn-danger" data-method="delete" data-confirm="{{_i('Are you sure?')}}" style="padding: 5px 6px;"><i class="fa fa-trash fa-fw"></i> Yes I understand, delete this wiki</a>
+	                            <a href="{{ route('wikis.destroy', [$team->slug, $space->slug, $wiki->slug]) }}" class="btn btn-danger" data-method="delete" data-confirm="{{_i('Are you sure?')}}" style="padding: 5px 6px;"><i class="fa fa-trash fa-fw"></i> {{_i('Yes I understand, delete this wiki')}}</a>
 	                        </div>
 						</div>
 					</div>

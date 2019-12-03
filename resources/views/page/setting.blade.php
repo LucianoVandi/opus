@@ -25,7 +25,7 @@
 			                    		</div>
 			                    		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 			                    			<div class="form-group {{ $errors->has('page_parent') ? 'has-error' : '' }}">
-			                    			    <label for="page-parent" class="control-label">Page Parent</label>
+			                    			    <label for="page-parent" class="control-label">{{_i('Page Parent')}}</label>
 			                    			    <select name="page_parent" id="page-parent" class="form-control">
 			                    			        <option value="">{{_i('Select a option')}}</option>
 			                    			        @foreach($pages as $item)
@@ -61,15 +61,15 @@
 								<div class="panel-body">
 									<div class="wiki-overview">
 										<div style="margin-bottom: 4px;">
-											<label style="margin-bottom: 0;">Created by</label>
+											<label style="margin-bottom: 0;">{{_i('Created by')}}</label>
 											<p><a href="{{ route('users.show', [$team->slug, $page->user->slug]) }}">{{ $page->user->name }}</a></p>
 										</div>
 										<div style="margin-bottom: 4px;">
-											<label style="margin-bottom: 0;">Created at</label>
+											<label style="margin-bottom: 0;">{{_i('Created at')}}</label>
 											<p>{{ $page->created_at->timezone(Auth::user()->timezone)->toDayDateTimeString() }}</p>
 										</div>
 										<div>
-											<label style="margin-bottom: 0;">Last updated</label>
+											<label style="margin-bottom: 0;">{{_i('Last updated')}}</label>
 											<p>{{ $pageLastUpdated }}</p>
 										</div>
 									</div>

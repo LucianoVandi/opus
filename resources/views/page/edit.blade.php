@@ -25,7 +25,7 @@
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                             <div class="form-group {{ $errors->has('page_parent') ? 'has-error' : '' }}">
-                                <label for="page-parent" class="control-label">Page Parent</label>
+                                <label for="page-parent" class="control-label">{{_i('Page Parent')}}</label>
                                 <select name="page_parent" id="page-parent" class="form-control">
                                     <option value="">{{_i('Select a option')}}</option>
                                     <?php $currentPage = $page->parent_id; ?>
