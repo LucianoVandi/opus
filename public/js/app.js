@@ -332,6 +332,26 @@ var App = {
             }
         });
     },
+    deleteAttachment(attachmentId, element) {
+        var that = this;
+        $.ajax({
+            url: '/api/attachments',
+            type: 'POST',
+            dataType: 'json',
+            data: {
+                _method: 'delete',
+                attachmentId
+            },
+            success(data) {
+                if (data.deleted === true) {
+                    $(element).closest('li').remove();
+                }
+            },
+            error(error) {
+                console.log(error);
+            }
+        });
+    },
     readURL(input) {
         var that = this;
         if (input.files && input.files[0]) {
@@ -499,6 +519,21 @@ var App = {
             }
         });
 
+        $(document).on('click', '#delete-attachment', function (e) {
+            e.preventDefault();
+            if (confirm(window.Opus.i18n.are_you_sure)) {
+                event.preventDefault();
+                var attachmentId = $(this).data('attachment-id');
+                that.deleteAttachment(attachmentId, this);
+            }
+        });
+
+        $(document).on('change', '#attachment', function (e) {
+            e.preventDefault();
+            var clone = $(this).clone();
+            $(this).parent().append(clone.val(null));
+        });
+        
         $(document).on('click', '#like-wiki', function (e) {
             e.preventDefault();
             let wiki = $(this).data('wiki');

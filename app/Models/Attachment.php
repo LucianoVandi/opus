@@ -9,7 +9,8 @@ class Attachment extends Model
     protected $fillable = [
         'name',
         'path',
-        'mimetype'
+        'mimetype',
+        'user_id'
     ];
     //
     public function attachable(){

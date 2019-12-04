@@ -91,8 +91,9 @@
                                     @foreach($wikiAttachments as $attachment)
                                         <li>
                                             <a href="{{route('attachments.url', [$team->slug, $space->slug, $wiki->slug])}}?path={{ $attachment->path }}" target="_blank">
-                                            {{ $attachment->name }}
+                                                {{ $attachment->name }}
                                             </a>
+                                            <a href="#" id="delete-attachment" data-attachment-id="{{$attachment->id}}">X</a>
                                         </li>
                                     @endforeach
                                 </ul>
@@ -101,12 +102,8 @@
                             @endif
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div style="border: 1px solid #eee; border-radius: 3px; margin-bottom: 20px; box-shadow: 0 1px 1px rgba(0,0,0,.05); padding: 12px 15px;">
                     <form action="{{route('attachments.store', [$team->slug, $space->slug, $wiki->slug])}}" method="post" class="form form-inline" enctype="multipart/form-data">
-                        <input type="file" name="attachment" id="attachment" style="display:inline">
+                        <input type="file" name="attachment[]" id="attachment" multiple style="display:inline">
                         <button type="submit">Carica File</button>
                     </form>
                 </div>

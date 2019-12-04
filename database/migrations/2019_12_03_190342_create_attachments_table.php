@@ -20,7 +20,13 @@ class CreateAttachmentsTable extends Migration
             $table->string('mimetype');
             $table->string('attachable_type');
             $table->integer('attachable_id');
+            $table->integer('user_id')->unsigned()->nullable();
             $table->timestamps();
+
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('set null');
         });
     }
 

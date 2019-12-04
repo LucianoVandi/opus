@@ -66,6 +66,7 @@ class DatabaseSeeder extends Seeder
      */
     private function emptyModels()
     {
+        DB::statement('SET FOREIGN_KEY_CHECKS = 0; ');
         Page::getQuery()->truncate();
         Role::getQuery()->truncate();
         Wiki::getQuery()->truncate();
@@ -79,5 +80,6 @@ class DatabaseSeeder extends Seeder
         DB::table('role_permissions')->truncate();
         IntegrationAction::getQuery()->truncate();
         NotificationCategory::getQuery()->delete();
+        DB::statement('SET FOREIGN_KEY_CHECKS = 1;');
     }
 }

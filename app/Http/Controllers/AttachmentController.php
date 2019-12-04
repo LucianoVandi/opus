@@ -55,39 +55,57 @@ class AttachmentController extends Controller
     }
 
     /**
-     * Create a new attachment.
-     *
-     * @param \App\Models\Team $team
+     * Store a new Attachment
+     * 
+     * @param Team $team
+     * @param Space $space
+     * @param Wiki $wiki
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Team $team, Space $space, Wiki $wiki)
     {
         // $this->validate($this->request, Wiki::WIKI_RULES);
 
-        $file = $this->request->file('attachment');
-        $path = $wiki->slug .'/'. urlencode($file->getClientOriginalName());
+        $files = $this->request->file('attachment');
+        foreach($files as $file){
+            $path = $wiki->slug .'/'. urlencode($file->getClientOriginalName());
+            $disk = Storage::disk('s3');
+            $disk->makeDirectory($wiki->slug); 
+            $result = $disk->put($path, file_get_contents($file), "private");
 
-        $disk = Storage::disk('s3');
-        $disk->makeDirectory($wiki->slug);
-        
-        $result = $disk->put($path, file_get_contents($file), "private");
-
-        if(!$result){
-            // error
+            if(!$result){
+                // error
+            }
+            
+            $attachment = new Attachment([
+                'name' => $file->getClientOriginalName(),
+                'path' => $path,
+                'mimetype' => $file->getClientMimeType(),
+                'user_id' => \Auth::id()
+            ]);
+    
+            $wiki->attachments()->save($attachment);
         }
-
-        $attachment = new Attachment([
-            'name' => $file->getClientOriginalName(),
-            'path' => $path,
-            'mimetype' => $file->getClientMimeType()
-        ]);
-
-        $wiki->attachments()->save($attachment);
 
         return redirect()->route('wikis.show', [$team->slug, $wiki->space->slug, $wiki->slug])->with([
             'alert'      => _i('Wiki successfully created.'),
             'alert_type' => 'success',
         ]);
+    }
+
+    public function destroy(){
+        $attachment = $this->attachment->find($this->request->attachmentId);
+        $deleteFile = Storage::disk('s3')->delete($attachment->path);
+        $deleted = false;
+
+        if($deleteFile){
+            $attachment->delete();
+            $deleted = true;
+        }
+
+        return response()->json([
+            'deleted' => $deleted,
+        ], 200);
     }
 
     public function getTemporaryUrl(){

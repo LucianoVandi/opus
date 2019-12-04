@@ -28,6 +28,7 @@ Route::group(['prefix' => 'api', 'middleware' => 'auth'], function () {
     Route::post('/team/members/filter', 'TeamController@filterMembers');
     Route::post('tags', 'TagController@index');
     Route::post('search', 'TeamController@search');
+    Route::delete('/attachments', 'AttachmentController@destroy')->name('attachments.delete');
 });
 
 Route::get('team/{team_slug}/invite/{hash}', 'TeamController@join')->name('team.join')->middleware('invitation');
@@ -141,6 +142,7 @@ Route::group(['prefix' => 'teams', 'middleware' => 'auth'], function () {
         Route::post('{wiki_slug}/comments', 'CommentController@storeWikiComment')->name('wikis.comments.store');
         Route::post('{wiki_slug}/pages/{page_slug}/comments', 'CommentController@storePageComment')->name('pages.comments.store');
         Route::delete('{wiki_slug}/pages/{page_slug}/{comment_id}', 'CommentController@destroy')->name('comments.delete');
+
         
         Route::post('{wiki_slug}/attachments', 'AttachmentController@store')->name('attachments.store');
         Route::get('{wiki_slug}/attachments', 'AttachmentController@getTemporaryUrl')->name('attachments.url');
