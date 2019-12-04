@@ -6,6 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Attachment extends Model
 {
+    protected $fillable = [
+        'name',
+        'path',
+        'mimetype'
+    ];
     //
     public function attachable(){
         return $this->morphTo();

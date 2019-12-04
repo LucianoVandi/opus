@@ -90,7 +90,9 @@
                                 <ul class="list-unstyled list-inline page-tags pull-left">                                
                                     @foreach($wikiAttachments as $attachment)
                                         <li>
-                                            <a href="#">{{ $attachment->path }}</a>
+                                            <a href="{{route('attachments.url', [$team->slug, $space->slug, $wiki->slug])}}?path={{ $attachment->path }}" target="_blank">
+                                            {{ $attachment->name }}
+                                            </a>
                                         </li>
                                     @endforeach
                                 </ul>

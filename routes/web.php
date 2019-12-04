@@ -143,6 +143,7 @@ Route::group(['prefix' => 'teams', 'middleware' => 'auth'], function () {
         Route::delete('{wiki_slug}/pages/{page_slug}/{comment_id}', 'CommentController@destroy')->name('comments.delete');
         
         Route::post('{wiki_slug}/attachments', 'AttachmentController@store')->name('attachments.store');
+        Route::get('{wiki_slug}/attachments', 'AttachmentController@getTemporaryUrl')->name('attachments.url');
     });
 
     

@@ -5,9 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Team;
 use App\Models\Wiki;
 use App\Models\Space;
-use App\Models\Attachment;
 use App\Models\Activity;
+use App\Models\Attachment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 /**
  * Class AttachmentController
@@ -61,18 +62,44 @@ class AttachmentController extends Controller
      */
     public function store(Team $team, Space $space, Wiki $wiki)
     {
-        $file = $this->request->file('attachment');
-        $disk = \Storage::disk('s3');
-        $result = $disk->put(urlencode($file->getClientOriginalName()), $file, "private");
-        dd($result);
-        // originalName: 
-        // mimeType: "image/jpeg"
         // $this->validate($this->request, Wiki::WIKI_RULES);
+
+        $file = $this->request->file('attachment');
+        $path = $wiki->slug .'/'. urlencode($file->getClientOriginalName());
+
+        $disk = Storage::disk('s3');
+        $disk->makeDirectory($wiki->slug);
+        
+        $result = $disk->put($path, file_get_contents($file), "private");
+
+        if(!$result){
+            // error
+        }
+
+        $attachment = new Attachment([
+            'name' => $file->getClientOriginalName(),
+            'path' => $path,
+            'mimetype' => $file->getClientMimeType()
+        ]);
+
+        $wiki->attachments()->save($attachment);
 
         return redirect()->route('wikis.show', [$team->slug, $wiki->space->slug, $wiki->slug])->with([
             'alert'      => _i('Wiki successfully created.'),
             'alert_type' => 'success',
         ]);
+    }
+
+    public function getTemporaryUrl(){
+        
+        if(!$this->request->path){
+            return abort(404);
+        }
+        
+        $tempUrl = Storage::disk('s3')
+            ->temporaryUrl($this->request->path, \Carbon\Carbon::now()->addMinutes(5));
+        
+        return redirect()->away($tempUrl);
     }
 
     
