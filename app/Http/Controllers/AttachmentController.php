@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Auth;
 use App\Models\Team;
 use App\Models\Wiki;
 use App\Models\Space;
@@ -62,7 +61,10 @@ class AttachmentController extends Controller
      */
     public function store(Team $team, Space $space, Wiki $wiki)
     {
-        dd($this->request->attachment);
+        $file = $this->request->file('attachment');
+        $disk = \Storage::disk('s3');
+        $result = $disk->put(urlencode($file->getClientOriginalName()), $file, "private");
+        dd($result);
         // originalName: 
         // mimeType: "image/jpeg"
         // $this->validate($this->request, Wiki::WIKI_RULES);
