@@ -78,6 +78,38 @@
                 </div>
             </div>
         </div>
+        <div class="row no-container">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div style="border: 1px solid #eee; border-radius: 3px; margin-bottom: 20px; box-shadow: 0 1px 1px rgba(0,0,0,.05); padding: 12px 15px;">
+                    <div class="media">
+                        <div class="pull-left" style="padding-right: 12px;">
+                            <p class="media-object"><i class="fa fa-tag fa-fw"></i> Attachments:</p>
+                        </div>
+                        <div class="media-body" style="line-height: 26px;">
+                            @if($wikiAttachments->count() > 0)
+                                <ul class="list-unstyled list-inline page-tags pull-left">                                
+                                    @foreach($wikiAttachments as $attachment)
+                                        <li>
+                                            <a href="#">{{ $attachment->path }}</a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            @else
+                                <h1 class="nothing-found" style="margin: 0px; line-height: 20px;"><i class="fa fa-exclamation-triangle fa-fw icon"></i> {{_i('Nothing found')}}</h1>
+                            @endif
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div style="border: 1px solid #eee; border-radius: 3px; margin-bottom: 20px; box-shadow: 0 1px 1px rgba(0,0,0,.05); padding: 12px 15px;">
+                    <form action="{{route('attachments.store', [$team->slug, $space->slug, $wiki->slug])}}" method="post" class="form form-inline" enctype="multipart/form-data">
+                        <input type="file" name="attachment" id="attachment" style="display:inline">
+                        <button type="submit">Carica File</button>
+                    </form>
+                </div>
+            </div>
+        </div>
 		<div class="row no-container">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 @include('wiki.partials.comment')

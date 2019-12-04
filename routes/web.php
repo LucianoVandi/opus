@@ -141,6 +141,10 @@ Route::group(['prefix' => 'teams', 'middleware' => 'auth'], function () {
         Route::post('{wiki_slug}/comments', 'CommentController@storeWikiComment')->name('wikis.comments.store');
         Route::post('{wiki_slug}/pages/{page_slug}/comments', 'CommentController@storePageComment')->name('pages.comments.store');
         Route::delete('{wiki_slug}/pages/{page_slug}/{comment_id}', 'CommentController@destroy')->name('comments.delete');
+        
+        Route::post('{wiki_slug}/attachments', 'AttachmentController@store')->name('attachments.store');
     });
+
+    
 
 });

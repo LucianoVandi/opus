@@ -195,6 +195,16 @@ class Page extends Node
     }
 
     /**
+     * Get the attachments owened by page
+     * 
+     * @return \Illuminate\Database\Eloquent\Relations\MorphMany
+     */
+    public function attachments()
+    {
+        return $this->morphMany(Attachment::class, 'attachable');
+    }
+
+    /**
      * Get all the nodes|pages of a wiki.
      *
      * @param $wikiId integer

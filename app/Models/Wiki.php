@@ -187,6 +187,16 @@ class Wiki extends Model
     }
 
     /**
+     * Get the attachments owened by wiki
+     * 
+     * @return \Illuminate\Database\Eloquent\Relations\MorphMany
+     */
+    public function attachments()
+    {
+        return $this->morphMany(Attachment::class, 'attachable');
+    }
+
+    /**
      * Get the wikis of a team.
      *
      * @param int      $teamId
