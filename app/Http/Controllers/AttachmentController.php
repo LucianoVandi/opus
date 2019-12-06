@@ -60,6 +60,12 @@ class AttachmentController extends Controller
      */
     public function store()
     {
+        if(!$this->request->hasFile('attachments')){
+            return response()->json([
+                'error' => true
+            ]);
+        }
+
         // $this->validate($this->request, Wiki::WIKI_RULES);
         switch ($this->request->attachableType){
             case 'wiki':

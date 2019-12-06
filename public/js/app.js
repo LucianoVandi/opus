@@ -335,6 +335,7 @@ var App = {
     uploadAttachments(attachableId, attachableType, element){
         var formData = new FormData();
 
+        // Loop input type files and append single files to formData object
         $.each($(element).find("input[type='file']"), function(i, file){
             $.each(file.files, function(i, f){
                 formData.append('attachments[]', f);
@@ -354,15 +355,24 @@ var App = {
             type: 'POST', // For jQuery < 1.9
             success: function(data){
                 var attachmentLink = '/teams/' + data.teamSlug + '/attachments?path=' + data.attachment.path;
-                var li = $('<li>');
-                var showLink = $('<a href="'+attachmentLink+'" target="_blank">'+data.attachment.name+'</a>');
-                var deleteLink = $('<a href="#" id="delete-attachment" data-attachment-id="'+data.attachment.id+'"></a>');
-                deleteLink.html('<i class="fa fa-trash-o fa-fw" style="font-size: 14px;"></i>&nbsp;');
-                li.append(showLink);
-                li.append(deleteLink);
-                $('.attachments').append(li);
+                var attachment = [
+                    '<li>',
+                        '<a href="'+attachmentLink+'" target="_blank">'+data.attachment.name+'</a>',
+                        '<a href="#" id="delete-attachment" data-attachment-id="'+data.attachment.id+'">',
+                            '<i class="fa fa-trash-o fa-fw" style="font-size: 14px;"></i>&nbsp;',
+                        '</a>',
+                    '</li>'
+                ];
+
+                if($(element).parent().find('.media .nothing-found').length){
+                    var ul = $('<ul class="list-unstyled list-inline attachments pull-left"> ');
+                    $(element).parent().find('.media .media-body').html(ul);
+                }
+
+                $('.attachments').append(attachment.join(''));
             }
         });
+        
         return false;
     },
     deleteAttachment(attachmentId, element) {
@@ -552,6 +562,13 @@ var App = {
             }
         });
 
+        $(document).on('submit', '#upload-attachments', function (e) {
+            e.preventDefault();
+            var attachableId = $(this).data('id');
+            var attachableType = $(this).data('type');
+            that.uploadAttachments(attachableId, attachableType, this);
+        });
+
         $(document).on('click', '#delete-attachment', function (e) {
             e.preventDefault();
             if (confirm(window.Opus.i18n.are_you_sure)) {
@@ -560,19 +577,14 @@ var App = {
                 that.deleteAttachment(attachmentId, this);
             }
         });
-
+        
         $(document).on('change', '#attachment', function (e) {
             e.preventDefault();
             var clone = $(this).clone();
-            $(this).parent().append(clone.val(null));
+            $(this).after(clone.val(null));
         });
 
-        $(document).on('submit', '#upload-attachments', function (e) {
-            e.preventDefault();
-            var attachableId = $(this).data('id');
-            var attachableType = $(this).data('type');
-            that.uploadAttachments(attachableId, attachableType, this);
-        });
+        
         
         $(document).on('click', '#like-wiki', function (e) {
             e.preventDefault();

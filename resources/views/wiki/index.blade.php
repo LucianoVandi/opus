@@ -81,7 +81,7 @@
         <div class="row no-container">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div style="border: 1px solid #eee; border-radius: 3px; margin-bottom: 20px; box-shadow: 0 1px 1px rgba(0,0,0,.05); padding: 12px 15px;">
-                    <div class="media">
+                    <div class="media" style="margin-bottom:10px;">
                         <div class="pull-left" style="padding-right: 12px;">
                             <p class="media-object"><i class="fa fa-tag fa-fw"></i> Attachments:</p>
                         </div>
@@ -106,10 +106,9 @@
                             @endif
                         </div>
                     </div>
-
                     <form id="upload-attachments" action="{{route('attachments.upload')}}" data-id="{{$wiki->id}}" data-type="wiki" method="post" class="form form-inline" enctype="multipart/form-data">
-                        <input type="file" name="attachment[]" id="attachment" multiple style="display:inline">
-                        <button type="submit">Carica File</button>
+                        <input type="file" name="attachment[]" id="attachment">
+                        <button class="btn btn-primary" type="submit">Carica File</button>
                     </form>
                 </div>
             </div>

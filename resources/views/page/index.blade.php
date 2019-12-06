@@ -83,7 +83,7 @@
                         </div>
                         <div class="media-body" style="line-height: 26px;">
                             @if($pageAttachments->count() > 0)
-                                <ul class="list-unstyled list-inline page-tags pull-left">                                
+                                <ul class="list-unstyled list-inline attachments pull-left">                                
                                     @foreach($pageAttachments as $attachment)
                                         <li>
                                             <a href="{{route('attachments.url', [$team->slug])}}?path={{ $attachment->path }}" target="_blank">
@@ -103,8 +103,8 @@
                         </div>
                     </div>
                     <form id="upload-attachments" action="{{route('attachments.upload')}}" data-id="{{$page->id}}" data-type="page" method="post" class="form form-inline" enctype="multipart/form-data">
-                        <input type="file" name="attachment[]" id="attachment" multiple style="display:inline">
-                        <button type="submit">Carica File</button>
+                        <input type="file" name="attachment[]" id="attachment">
+                        <button class="btn btn-primary" type="submit"><i class="fa fa-cloud-upload"></i> Carica File</button>
                     </form>
                 </div>
             </div>
