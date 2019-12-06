@@ -28,6 +28,7 @@ Route::group(['prefix' => 'api', 'middleware' => 'auth'], function () {
     Route::post('/team/members/filter', 'TeamController@filterMembers');
     Route::post('tags', 'TagController@index');
     Route::post('search', 'TeamController@search');
+    Route::post('/attachments', 'AttachmentController@store')->name('attachments.upload');
     Route::delete('/attachments', 'AttachmentController@destroy')->name('attachments.delete');
 });
 
@@ -35,6 +36,8 @@ Route::get('team/{team_slug}/invite/{hash}', 'TeamController@join')->name('team.
 Route::post('team/{team_slug}/invite/{hash}/join', 'TeamController@postJoin')->name('team.postjoin');
 
 Route::group(['prefix' => 'teams', 'middleware' => 'auth'], function () {
+    Route::get('{team_slug}/attachments', 'AttachmentController@getTemporaryUrl')->name('attachments.url');
+
     Route::group(['prefix' => '{team_slug}/users/{user_slug}/settings'], function () {
         Route::get('profile', 'UserController@profileSettings')->name('settings.profile');
         Route::get('account', 'UserController@accountSettings')->name('settings.account');
@@ -142,10 +145,6 @@ Route::group(['prefix' => 'teams', 'middleware' => 'auth'], function () {
         Route::post('{wiki_slug}/comments', 'CommentController@storeWikiComment')->name('wikis.comments.store');
         Route::post('{wiki_slug}/pages/{page_slug}/comments', 'CommentController@storePageComment')->name('pages.comments.store');
         Route::delete('{wiki_slug}/pages/{page_slug}/{comment_id}', 'CommentController@destroy')->name('comments.delete');
-
-        
-        Route::post('{wiki_slug}/attachments', 'AttachmentController@store')->name('attachments.store');
-        Route::get('{wiki_slug}/attachments', 'AttachmentController@getTemporaryUrl')->name('attachments.url');
     });
 
     

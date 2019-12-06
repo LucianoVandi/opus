@@ -87,13 +87,17 @@
                         </div>
                         <div class="media-body" style="line-height: 26px;">
                             @if($wikiAttachments->count() > 0)
-                                <ul class="list-unstyled list-inline page-tags pull-left">                                
+                                <ul class="list-unstyled list-inline attachments pull-left">                                
                                     @foreach($wikiAttachments as $attachment)
                                         <li>
-                                            <a href="{{route('attachments.url', [$team->slug, $space->slug, $wiki->slug])}}?path={{ $attachment->path }}" target="_blank">
+                                            <a href="{{route('attachments.url', [$team->slug])}}?path={{ $attachment->path }}" target="_blank">
                                                 {{ $attachment->name }}
                                             </a>
-                                            <a href="#" id="delete-attachment" data-attachment-id="{{$attachment->id}}">X</a>
+                                            @if(Auth::user()->hasPermission('admin') || Auth::id() == $attachment->user_id)
+                                            <a href="#" id="delete-attachment" data-attachment-id="{{$attachment->id}}">
+                                                <i class="fa fa-trash-o fa-fw" style="font-size: 14px;"></i>&nbsp;
+                                            </a>
+                                            @endif
                                         </li>
                                     @endforeach
                                 </ul>
@@ -102,7 +106,8 @@
                             @endif
                         </div>
                     </div>
-                    <form action="{{route('attachments.store', [$team->slug, $space->slug, $wiki->slug])}}" method="post" class="form form-inline" enctype="multipart/form-data">
+
+                    <form id="upload-attachments" action="{{route('attachments.upload')}}" data-id="{{$wiki->id}}" data-type="wiki" method="post" class="form form-inline" enctype="multipart/form-data">
                         <input type="file" name="attachment[]" id="attachment" multiple style="display:inline">
                         <button type="submit">Carica File</button>
                     </form>

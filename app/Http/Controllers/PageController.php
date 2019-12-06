@@ -364,6 +364,8 @@ class PageController extends Controller
 
         $pageTags = $this->page->find($page->id)->tags()->get();
 
+        $pageAttachments = $page->attachments;
+
         $isUserLikeWiki = false;
         foreach ($wiki->likes as $like) {
             if ($like->user_id === Auth::user()->id) {
@@ -378,7 +380,7 @@ class PageController extends Controller
             }
         }
 
-        return view('page.index', compact('team', 'pageTags', 'page', 'wiki', 'space', 'isUserLikeWiki', 'isUserLikePage', 'isPageInReadList'));
+        return view('page.index', compact('team', 'pageTags', 'page', 'wiki', 'space', 'isUserLikeWiki', 'isUserLikePage', 'isPageInReadList', 'pageAttachments'));
     }
 
     /**

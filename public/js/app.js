@@ -332,6 +332,39 @@ var App = {
             }
         });
     },
+    uploadAttachments(attachableId, attachableType, element){
+        var formData = new FormData();
+
+        $.each($(element).find("input[type='file']"), function(i, file){
+            $.each(file.files, function(i, f){
+                formData.append('attachments[]', f);
+            })
+        });
+
+        formData.append('attachableId', attachableId);
+        formData.append('attachableType', attachableType);
+
+        $.ajax({
+            url: '/api/attachments',
+            data: formData,
+            cache: false,
+            contentType: false,
+            processData: false,
+            method: 'POST',
+            type: 'POST', // For jQuery < 1.9
+            success: function(data){
+                var attachmentLink = '/teams/' + data.teamSlug + '/attachments?path=' + data.attachment.path;
+                var li = $('<li>');
+                var showLink = $('<a href="'+attachmentLink+'" target="_blank">'+data.attachment.name+'</a>');
+                var deleteLink = $('<a href="#" id="delete-attachment" data-attachment-id="'+data.attachment.id+'"></a>');
+                deleteLink.html('<i class="fa fa-trash-o fa-fw" style="font-size: 14px;"></i>&nbsp;');
+                li.append(showLink);
+                li.append(deleteLink);
+                $('.attachments').append(li);
+            }
+        });
+        return false;
+    },
     deleteAttachment(attachmentId, element) {
         var that = this;
         $.ajax({
@@ -532,6 +565,13 @@ var App = {
             e.preventDefault();
             var clone = $(this).clone();
             $(this).parent().append(clone.val(null));
+        });
+
+        $(document).on('submit', '#upload-attachments', function (e) {
+            e.preventDefault();
+            var attachableId = $(this).data('id');
+            var attachableType = $(this).data('type');
+            that.uploadAttachments(attachableId, attachableType, this);
         });
         
         $(document).on('click', '#like-wiki', function (e) {
