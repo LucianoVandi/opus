@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MultilanguageLaravelApplication\n"
-"POT-Creation-Date: 2019-12-03 13:20+0100\n"
-"PO-Revision-Date: 2019-12-03 13:20+0100\n"
+"POT-Creation-Date: 2019-12-06 20:47+0100\n"
+"PO-Revision-Date: 2019-12-06 20:47+0100\n"
 "Last-Translator: James Translator <james@translations.colm>\n"
 "Language-Team: James Translator <james@translations.colm>\n"
 "Language: it_IT\n"
@@ -113,6 +113,7 @@ msgstr "Hai aggiornato un commento dalla pagina"
 #: ../storage/framework/messages/9635778cfa1b3a01fe9ecaf5a2d654a9dc850d7f.php.php:56
 #: ../storage/framework/messages/96d568c48c247e3d65a1d1e2596924ea5110b5fe.php.php:74
 #: ../storage/framework/messages/9b01b17bdab3aa4d5e46a3891786c27700015990.php.php:78
+#: ../storage/framework/messages/a26ba855a53dec290a58adf68829a86034a687c0.php.php:24
 #: ../storage/framework/messages/b068d55011dcacaec75f82fabb823a3c9ccd5322.php.php:71
 #: ../storage/framework/messages/c0b4b738f58d268e9af73c9433d98fbaba0dc8ed.php.php:139
 msgid "Nothing found"
@@ -520,35 +521,35 @@ msgstr "Devi creare degli spazi di lavoro prima di create una wiki!"
 msgid "Wiki successfully created."
 msgstr "Wiki creata con successo."
 
-#: ../storage/framework/messages/4e85b4ee45025a8b8478f8f467b17745fd37271d.php.php:182
-#: ../storage/framework/messages/4e85b4ee45025a8b8478f8f467b17745fd37271d.php.php:210
-#: Http/Controllers/WikiController.php:182
-#: Http/Controllers/WikiController.php:210
+#: ../storage/framework/messages/4e85b4ee45025a8b8478f8f467b17745fd37271d.php.php:189
+#: ../storage/framework/messages/4e85b4ee45025a8b8478f8f467b17745fd37271d.php.php:217
+#: Http/Controllers/WikiController.php:189
+#: Http/Controllers/WikiController.php:217
 msgid "Wiki successfully updated."
 msgstr "Wiki aggiornata con successo."
 
-#: ../storage/framework/messages/4e85b4ee45025a8b8478f8f467b17745fd37271d.php.php:228
-#: Http/Controllers/WikiController.php:228
+#: ../storage/framework/messages/4e85b4ee45025a8b8478f8f467b17745fd37271d.php.php:235
+#: Http/Controllers/WikiController.php:235
 msgid "Wiki successfully deleted."
 msgstr "Wiki eliminata con successo."
 
-#: ../storage/framework/messages/4e85b4ee45025a8b8478f8f467b17745fd37271d.php.php:339
-#: Http/Controllers/WikiController.php:339
+#: ../storage/framework/messages/4e85b4ee45025a8b8478f8f467b17745fd37271d.php.php:346
+#: Http/Controllers/WikiController.php:346
 msgid "You are now watching this wiki."
 msgstr "Ora stai osservando questa wiki."
 
-#: ../storage/framework/messages/4e85b4ee45025a8b8478f8f467b17745fd37271d.php.php:357
-#: Http/Controllers/WikiController.php:357
+#: ../storage/framework/messages/4e85b4ee45025a8b8478f8f467b17745fd37271d.php.php:364
+#: Http/Controllers/WikiController.php:364
 msgid "You are now ignoring this wiki."
 msgstr "Ora stai ignorando questa wiki."
 
-#: ../storage/framework/messages/4e85b4ee45025a8b8478f8f467b17745fd37271d.php.php:375
-#: Http/Controllers/WikiController.php:375
+#: ../storage/framework/messages/4e85b4ee45025a8b8478f8f467b17745fd37271d.php.php:382
+#: Http/Controllers/WikiController.php:382
 msgid "Wiki successfully added to read list."
 msgstr "Wiki aggiunta all’elenco di lettura."
 
-#: ../storage/framework/messages/4e85b4ee45025a8b8478f8f467b17745fd37271d.php.php:393
-#: Http/Controllers/WikiController.php:393
+#: ../storage/framework/messages/4e85b4ee45025a8b8478f8f467b17745fd37271d.php.php:400
+#: Http/Controllers/WikiController.php:400
 msgid "Wiki successfully removed from read list."
 msgstr "Wiki rimossa dall’elenco di lettura."
 
@@ -838,6 +839,14 @@ msgstr "Inviti in Attesa"
 msgid "Remove Invitation"
 msgstr "Rimuovi Invito"
 
+#: ../storage/framework/messages/a26ba855a53dec290a58adf68829a86034a687c0.php.php:4
+msgid "Attachments"
+msgstr "Allegati"
+
+#: ../storage/framework/messages/a26ba855a53dec290a58adf68829a86034a687c0.php.php:30
+msgid "Upload File(s)"
+msgstr "Carica File"
+
 #: ../storage/framework/messages/a3a2fdb4893c0bada02f2fb91ed31fb466eb6383.php.php:6
 msgid "Create a Team"
 msgstr "Crea un Team"
@@ -1065,20 +1074,20 @@ msgstr "Pagina eliminata con successo."
 msgid "Page successfully created."
 msgstr "Pagina creata con successo."
 
-#: ../storage/framework/messages/fcaf76ce0a2aa86e9594d1ff0a68d82437afe9ee.php.php:403
-#: ../storage/framework/messages/fcaf76ce0a2aa86e9594d1ff0a68d82437afe9ee.php.php:548
-#: Http/Controllers/PageController.php:403
-#: Http/Controllers/PageController.php:548
+#: ../storage/framework/messages/fcaf76ce0a2aa86e9594d1ff0a68d82437afe9ee.php.php:409
+#: ../storage/framework/messages/fcaf76ce0a2aa86e9594d1ff0a68d82437afe9ee.php.php:554
+#: Http/Controllers/PageController.php:409
+#: Http/Controllers/PageController.php:554
 msgid "Page successfully updated."
 msgstr "Pagina aggiornata con successo."
 
-#: ../storage/framework/messages/fcaf76ce0a2aa86e9594d1ff0a68d82437afe9ee.php.php:478
-#: Http/Controllers/PageController.php:478
+#: ../storage/framework/messages/fcaf76ce0a2aa86e9594d1ff0a68d82437afe9ee.php.php:484
+#: Http/Controllers/PageController.php:484
 msgid "Page successfully added to read list."
 msgstr "Pagina aggiunta con successo all’elenco di lettura."
 
-#: ../storage/framework/messages/fcaf76ce0a2aa86e9594d1ff0a68d82437afe9ee.php.php:497
-#: Http/Controllers/PageController.php:497
+#: ../storage/framework/messages/fcaf76ce0a2aa86e9594d1ff0a68d82437afe9ee.php.php:503
+#: Http/Controllers/PageController.php:503
 msgid "Page successfully removed from read list."
 msgstr "Pagina rimossa con successo dall’elenco di lettura."
 

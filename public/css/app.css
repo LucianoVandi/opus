@@ -1455,3 +1455,7 @@ i.icon {
 .header-bg ul li a {
     color: white !important;
 }
+
+#upload-attachments input[type="file"]{
+	margin: 10px 0;
+}

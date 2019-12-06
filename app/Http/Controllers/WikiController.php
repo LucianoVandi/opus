@@ -133,7 +133,12 @@ class WikiController extends Controller
 
         $wikiTags = $this->wiki->find($wiki->id)->tags()->get();
 
-        $wikiAttachments = $wiki->attachments;
+        $attachments = $wiki->attachments;
+
+        $attachable = [
+            'id' => $wiki->id,
+            'type' => 'wiki'
+        ];
 
         $isUserLikeWiki = false;
         foreach ($wiki->likes as $like) {
@@ -142,7 +147,7 @@ class WikiController extends Controller
             }
         }
 
-        return view('wiki.index', compact('wiki', 'team', 'space', 'isUserLikeWiki', 'wikiTags', 'isUserWatchWiki', 'isWikiInReadList', 'wikiAttachments'));
+        return view('wiki.index', compact('wiki', 'team', 'space', 'isUserLikeWiki', 'wikiTags', 'isUserWatchWiki', 'isWikiInReadList', 'attachments', 'attachable'));
     }
 
     /**

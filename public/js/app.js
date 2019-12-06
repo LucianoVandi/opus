@@ -333,10 +333,13 @@ var App = {
         });
     },
     uploadAttachments(attachableId, attachableType, element){
+        $(element).find('button[type="submit"]').attr('disabled', true);
+        $(element).find('button[type="submit"]').prepend('<i class="fa fa-spinner fa-spin"></i>&nbsp;');
+
         var formData = new FormData();
 
         // Loop input type files and append single files to formData object
-        $.each($(element).find("input[type='file']"), function(i, file){
+        $.each($(element).find('input[type="file"]'), function(i, file){
             $.each(file.files, function(i, f){
                 formData.append('attachments[]', f);
             })
@@ -354,6 +357,16 @@ var App = {
             method: 'POST',
             type: 'POST', // For jQuery < 1.9
             success: function(data){
+                var inputFile = $(element).find('input[type="file"]').clone().val('');
+                $(element).find('button[type="submit"]').attr('disabled', false);
+                $(element).find('.fa-spinner').remove();
+                $(element).find('input[type="file"]').remove();
+                $(element).prepend(inputFile[0]);
+
+                if(data.error){
+                    return false;
+                }
+
                 var attachmentLink = '/teams/' + data.teamSlug + '/attachments?path=' + data.attachment.path;
                 var attachment = [
                     '<li>',
@@ -370,12 +383,18 @@ var App = {
                 }
 
                 $('.attachments').append(attachment.join(''));
+            },
+            error: function(e){
+                console.error(e);
+                $(element).find('button[type="submit"]').attr('disabled', false);
+                $(element).find('.fa-spinner').remove();
             }
         });
         
         return false;
     },
     deleteAttachment(attachmentId, element) {
+        $(element).find('i.fa').removeClass('fa-trash-o').addClass('fa-spinner fa-spin');
         var that = this;
         $.ajax({
             url: '/api/attachments',
@@ -388,10 +407,13 @@ var App = {
             success(data) {
                 if (data.deleted === true) {
                     $(element).closest('li').remove();
+                }else{
+                    $(element).find('i.fa').removeClass('fa-spinner fa-spin').addClass('fa-trash-o');
                 }
             },
             error(error) {
-                console.log(error);
+                $(element).find('i.fa').removeClass('fa-spinner fa-spin').addClass('fa-trash-o');
+                console.error(error);
             }
         });
     },
