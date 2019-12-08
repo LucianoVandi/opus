@@ -370,7 +370,9 @@ var App = {
                 var attachmentLink = '/teams/' + data.teamSlug + '/attachments?path=' + data.attachment.path;
                 var attachment = [
                     '<li>',
-                        '<a href="'+attachmentLink+'" target="_blank">'+data.attachment.name+'</a>',
+                        '<a href="'+attachmentLink+'" target="_blank">',
+                            '<i class="fa '+data.attachment.file_icon+'"></i> '+data.attachment.name,
+                        '</a>',
                         '<a href="#" id="delete-attachment" data-attachment-id="'+data.attachment.id+'">',
                             '<i class="fa fa-trash-o fa-fw" style="font-size: 14px;"></i>&nbsp;',
                         '</a>',

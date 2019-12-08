@@ -310,7 +310,13 @@ class WikiController extends Controller
         $options = new Options();
         $options->set('defaultFont', 'Helvetica');
         $dompdf = new Dompdf($options);
-        $dompdf->loadHtml($wiki->description);
+        $text = $wiki->description;
+        $text .= '<div style="page-break-after: always;"></div>';
+        foreach($wiki->pages as $page){
+            $text .= $page->description;
+            $text .= '<div style="page-break-after: always;"></div>';
+        }
+        $dompdf->loadHtml($text);
         $dompdf->render();
         return response()->make($dompdf->output())
             ->header("Content-type","application/pdf")

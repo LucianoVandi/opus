@@ -9,6 +9,7 @@
                 @foreach($attachments as $attachment)
                 <li>
                     <a href="{{route('attachments.url', [$team->slug])}}?path={{ $attachment->path }}" target="_blank">
+                        <i class="fa {{$attachment->file_icon}}"></i>
                         {{ $attachment->name }}
                     </a>
                     @if(Auth::user()->hasPermission('admin') || Auth::id() == $attachment->user_id)
