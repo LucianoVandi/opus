@@ -450,7 +450,7 @@ var App = {
     },
     bindUI: function () {
         var that = this;
-
+        // @todo
         $('.overall-search-input').on('keydown', function () {
             let input = this;
             setTimeout(function () {
@@ -646,8 +646,8 @@ var App = {
             templates: {
                 // header: '<div class="aa-suggestions-category">Wiki</div>',
                 suggestion(hit) {
-                    console.log(hit._highlightResult.name);
-                return `<a href="${hit.url}">${hit._highlightResult.name.value}</a> <span>${hit._highlightResult.outline.value}</span>`;
+                    console.log(hit);
+                    return `<a href="${hit.url}">${hit._highlightResult.name.value}: <span>${hit._highlightResult.outline.value}</span></a>`;
                 }
             }
         },{
@@ -656,7 +656,7 @@ var App = {
             templates: {
                 // header: '<div class="aa-suggestions-category">Pagine</div>',
                 suggestion(hit) {
-                return `<a href="${hit.url}">${hit._highlightResult.name.value}</a> <span>${hit._highlightResult.outline.value}</span>`;
+                return `<a href="${hit.url}">${hit.wiki.name} > ${hit._highlightResult.name.value}: <span>${hit._highlightResult.outline.value}</span></a>`;
                 }
             }
         }]);
