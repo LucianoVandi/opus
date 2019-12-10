@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Notifynder;
+use Laravel\Scout\Searchable;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
@@ -20,7 +21,7 @@ use App\Notifications\Wiki\UpdateWikiNotification;
  */
 class Wiki extends Model
 {
-    use Sluggable, RecordsActivity, SoftDeletes, Notifiable;
+    use Sluggable, RecordsActivity, SoftDeletes, Notifiable, Searchable;
 
     /**
      * Return the sluggable configuration array for this model.
@@ -34,6 +35,11 @@ class Wiki extends Model
                 'source' => 'name',
             ],
         ];
+    }
+
+    public function searchableAs()
+    {
+        return "wiki_index";
     }
 
     /**
@@ -51,6 +57,13 @@ class Wiki extends Model
     protected $fillable = [
         'name', 'slug', 'space_id', 'outline', 'description', 'user_id', 'team_id', 'updated_at', 'created_at',
     ];
+
+    /**
+     * The attribute appended to the result
+     * 
+     * @var array
+     */
+    protected $appends = ['url'];
 
     protected $dates = ['deleted_at'];
 
@@ -283,5 +296,18 @@ class Wiki extends Model
     public function getSpaceWikis($spaceId, $teamId)
     {
         return $this->where('team_id', $teamId)->where('space_id', $spaceId)->latest()->paginate(30);
+    }
+
+    /**
+     * Return URL attribute
+     * 
+     * @return string
+     */
+    public function getUrlAttribute(){
+        return route('wikis.show', [
+            $this->team->slug,
+            $this->space->slug,
+            $this->slug
+        ]);
     }
 }

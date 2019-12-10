@@ -15,6 +15,9 @@
 		<link href="/plugins/vakata-jstree/dist/themes/default/style.css" rel="stylesheet">
 		<link href="/plugins/atjs/jquery.atwho.min.css" rel="stylesheet">
 		<link href="/plugins/select2/select2.min.css" rel="stylesheet">
+		<!-- Include AlgoliaSearch JS Client and autocomplete.js library -->
+		<script src="https://cdn.jsdelivr.net/npm/algoliasearch@3/dist/algoliasearchLite.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
 	</head>
 	<body @if(isset($editWiki) && $editWiki === true) style="overflow: hidden;" @endif>
 		<div class="modal fade" id="team-logo-modal" data-keyboard="false" data-backdrop="static">
@@ -54,6 +57,10 @@
 				are_you_sure: "{{_i('Are you sure?')}}",
 				cancel: "{{_i('Cancel')}}",
 				save_changes: "{{_i('Save Changes')}}"
+			};
+			window.Opus.Algolia = {
+				app_id: "{{ config('scout.algolia.id') }}",
+				public_key: "{{ config('scout.algolia.public') }}",
 			};
 		</script>
 		<script type="text/javascript" src="/js/jquery.js"></script>

@@ -7,6 +7,7 @@ var App = {
         this.initCKEditor();
         this.getTeamMembers();
         this.setCategoryItemBgColor();
+        this.algoliaAutocomplete();
 
         $('#permissions-select').val($('#permissions-select').data('val'));
         $('#permissions-select').select2();
@@ -634,6 +635,33 @@ var App = {
             }
         }
     },
+    algoliaAutocomplete: function(){
+        var client = algoliasearch(window.Opus.Algolia.app_id, window.Opus.Algolia.public_key);
+        var wiki = client.initIndex('wiki_index');
+        var page = client.initIndex('page_index');
+
+        autocomplete('#aa-search-input', {}, [{
+            source: autocomplete.sources.hits(wiki, { hitsPerPage: 3 }),
+            displayKey: 'name',
+            templates: {
+                // header: '<div class="aa-suggestions-category">Wiki</div>',
+                suggestion(hit) {
+                    console.log(hit._highlightResult.name);
+                return `<a href="${hit.url}">${hit._highlightResult.name.value}</a> <span>${hit._highlightResult.outline.value}</span>`;
+                }
+            }
+        },{
+            source: autocomplete.sources.hits(page, { hitsPerPage: 3 }),
+            displayKey: 'name',
+            templates: {
+                // header: '<div class="aa-suggestions-category">Pagine</div>',
+                suggestion(hit) {
+                return `<a href="${hit.url}">${hit._highlightResult.name.value}</a> <span>${hit._highlightResult.outline.value}</span>`;
+                }
+            }
+        }]);
+    }
+
 };
 
 $(document).ready(function () {

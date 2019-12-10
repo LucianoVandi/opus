@@ -5,6 +5,7 @@ namespace App\Models;
 use Auth;
 use Baum\Node;
 use Notifynder;
+use Laravel\Scout\Searchable;
 use Illuminate\Notifications\Notifiable;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -20,7 +21,7 @@ use App\Notifications\Page\UpdatePageNotification;
  */
 class Page extends Node
 {
-    use Sluggable, RecordsActivity, SoftDeletes, Notifiable;
+    use Sluggable, RecordsActivity, SoftDeletes, Notifiable, Searchable;
 
     /**
      * Return the sluggable configuration array for this model.
@@ -34,6 +35,11 @@ class Page extends Node
                 'source' => 'name',
             ],
         ];
+    }
+
+    public function searchableAs()
+    {
+        return "page_index";
     }
 
     /**
@@ -59,6 +65,13 @@ class Page extends Node
         'name', 'outline', 'description', 'position', 'parent_id', 'user_id',
         'wiki_id', 'team_id', 'created_at', 'updated_at', 'lft', 'rgt', 'depth',
     ];
+
+    /**
+     * The attribute appended to the result
+     * 
+     * @var array
+     */
+    protected $appends = ['url'];
 
     const PAGE_RULES = [
         'name' => 'required|max:35',
@@ -315,5 +328,20 @@ class Page extends Node
     public function deletePage($id)
     {
         return $this->find($id)->delete();
+    }
+
+
+    /**
+     * Return URL attribute
+     * 
+     * @return string
+     */
+    public function getUrlAttribute(){
+        return route('pages.show', [
+            $this->wiki->team->slug,
+            $this->wiki->space->slug,
+            $this->wiki->slug,
+            $this->slug
+        ]);
     }
 }

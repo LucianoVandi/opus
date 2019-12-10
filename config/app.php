@@ -167,6 +167,7 @@ return [
          * Package Service Providers...
          */
         Xinax\LaravelGettext\LaravelGettextServiceProvider::class,
+        Laravel\Scout\ScoutServiceProvider::class,
 
         //
 

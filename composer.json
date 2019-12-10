@@ -32,7 +32,9 @@
     "laravel/tinker": "^1.0",
     "zerospam/laravel-gettext": "5.0.2",
     "dompdf/dompdf": "^0.8.3",
-    "league/flysystem-aws-s3-v3": "^1.0"
+    "league/flysystem-aws-s3-v3": "^1.0",
+    "laravel/scout": "^7.2",
+    "algolia/algoliasearch-client-php": "^2.5"
   },
   "require-dev": {
     "fzaninotto/faker": "~1.4",
